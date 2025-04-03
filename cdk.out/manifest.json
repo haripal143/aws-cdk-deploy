@@ -25,7 +25,7 @@
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::316607856306:role/cdk-hnb659fds-deploy-role-316607856306-us-east-1",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::316607856306:role/cdk-hnb659fds-cfn-exec-role-316607856306-us-east-1",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-316607856306-us-east-1/540cedb070a79c25650eff203a8553814e38874acd0560a0249180e77ecc15b4.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-316607856306-us-east-1/b69dce261aecbcc32756aed26655ccf316f31f9dd80245405dfc481a5ca94482.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -42,12 +42,6 @@
         "MyAppPipeline.assets"
       ],
       "metadata": {
-        "/MyAppPipeline/Repository/MyAppPipeline43CB504E-main-EventRule/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "RepositoryMyAppPipeline43CB504EmainEventRule3AE0E8E3"
-          }
-        ],
         "/MyAppPipeline/Pipeline/Pipeline/ArtifactsBucket/Resource": [
           {
             "type": "aws:cdk:logicalId",
@@ -78,28 +72,10 @@
             "data": "Pipeline9850B417"
           }
         ],
-        "/MyAppPipeline/Pipeline/Pipeline/Source/my-app-repo/CodePipelineActionRole/Resource": [
+        "/MyAppPipeline/Pipeline/Pipeline/Source/haripal143_aws-cdk-deploy/WebhookResource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "PipelineSourcemyapprepoCodePipelineActionRoleAF373A0C"
-          }
-        ],
-        "/MyAppPipeline/Pipeline/Pipeline/Source/my-app-repo/CodePipelineActionRole/DefaultPolicy/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "PipelineSourcemyapprepoCodePipelineActionRoleDefaultPolicy1A28F8E8"
-          }
-        ],
-        "/MyAppPipeline/Pipeline/Pipeline/EventsRole/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "PipelineEventsRole96280D9B"
-          }
-        ],
-        "/MyAppPipeline/Pipeline/Pipeline/EventsRole/DefaultPolicy/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "PipelineEventsRoleDefaultPolicy62809D8F"
+            "data": "PipelineSourceharipal143awscdkdeployWebhookResource4D7C420A"
           }
         ],
         "/MyAppPipeline/Pipeline/Pipeline/Build/Synth/CdkBuildProject/Role/Resource": [

@@ -1,57 +1,6 @@
 {
  "Description": "CI/CD Pipeline for MyApp multi-region deployment",
  "Resources": {
-  "RepositoryMyAppPipeline43CB504EmainEventRule3AE0E8E3": {
-   "Type": "AWS::Events::Rule",
-   "Properties": {
-    "EventPattern": {
-     "source": [
-      "aws.codecommit"
-     ],
-     "resources": [
-      "arn:aws:codecommit:us-east-1:316607856306:my-app-repo"
-     ],
-     "detail-type": [
-      "CodeCommit Repository State Change"
-     ],
-     "detail": {
-      "event": [
-       "referenceCreated",
-       "referenceUpdated"
-      ],
-      "referenceName": [
-       "main"
-      ]
-     }
-    },
-    "State": "ENABLED",
-    "Targets": [
-     {
-      "Arn": {
-       "Fn::Join": [
-        "",
-        [
-         "arn:aws:codepipeline:us-east-1:316607856306:",
-         {
-          "Ref": "Pipeline9850B417"
-         }
-        ]
-       ]
-      },
-      "Id": "Target0",
-      "RoleArn": {
-       "Fn::GetAtt": [
-        "PipelineEventsRole96280D9B",
-        "Arn"
-       ]
-      }
-     }
-    ]
-   },
-   "Metadata": {
-    "aws:cdk:path": "MyAppPipeline/Repository/MyAppPipeline43CB504E-main-EventRule/Resource"
-   }
-  },
   "PipelineArtifactsBucketAEA9A052": {
    "Type": "AWS::S3::Bucket",
    "Properties": {
@@ -246,12 +195,6 @@
          ]
         },
         {
-         "Fn::GetAtt": [
-          "PipelineSourcemyapprepoCodePipelineActionRoleAF373A0C",
-          "Arn"
-         ]
-        },
-        {
          "Fn::Join": [
           "",
           [
@@ -327,27 +270,23 @@
        {
         "ActionTypeId": {
          "Category": "Source",
-         "Owner": "AWS",
-         "Provider": "CodeCommit",
+         "Owner": "ThirdParty",
+         "Provider": "GitHub",
          "Version": "1"
         },
         "Configuration": {
-         "RepositoryName": "my-app-repo",
-         "BranchName": "main",
+         "Owner": "haripal143",
+         "Repo": "aws-cdk-deploy",
+         "Branch": "main",
+         "OAuthToken": "{{resolve:secretsmanager:github-token:SecretString:::}}",
          "PollForSourceChanges": false
         },
-        "Name": "my-app-repo",
+        "Name": "haripal143_aws-cdk-deploy",
         "OutputArtifacts": [
          {
-          "Name": "my_app_repo_Source"
+          "Name": "haripal143_aws_cdk_deploy_Source"
          }
         ],
-        "RoleArn": {
-         "Fn::GetAtt": [
-          "PipelineSourcemyapprepoCodePipelineActionRoleAF373A0C",
-          "Arn"
-         ]
-        },
         "RunOrder": 1
        }
       ],
@@ -370,7 +309,7 @@
         },
         "InputArtifacts": [
          {
-          "Name": "my_app_repo_Source"
+          "Name": "haripal143_aws_cdk_deploy_Source"
          }
         ],
         "Name": "Synth",
@@ -587,150 +526,28 @@
     "aws:cdk:path": "MyAppPipeline/Pipeline/Pipeline/Resource"
    }
   },
-  "PipelineSourcemyapprepoCodePipelineActionRoleAF373A0C": {
-   "Type": "AWS::IAM::Role",
+  "PipelineSourceharipal143awscdkdeployWebhookResource4D7C420A": {
+   "Type": "AWS::CodePipeline::Webhook",
    "Properties": {
-    "AssumeRolePolicyDocument": {
-     "Statement": [
-      {
-       "Action": "sts:AssumeRole",
-       "Effect": "Allow",
-       "Principal": {
-        "AWS": {
-         "Fn::GetAtt": [
-          "PipelineRoleB27FAA37",
-          "Arn"
-         ]
-        }
-       }
-      }
-     ],
-     "Version": "2012-10-17"
-    }
-   },
-   "Metadata": {
-    "aws:cdk:path": "MyAppPipeline/Pipeline/Pipeline/Source/my-app-repo/CodePipelineActionRole/Resource"
-   }
-  },
-  "PipelineSourcemyapprepoCodePipelineActionRoleDefaultPolicy1A28F8E8": {
-   "Type": "AWS::IAM::Policy",
-   "Properties": {
-    "PolicyDocument": {
-     "Statement": [
-      {
-       "Action": [
-        "s3:Abort*",
-        "s3:DeleteObject*",
-        "s3:GetBucket*",
-        "s3:GetObject*",
-        "s3:List*",
-        "s3:PutObject",
-        "s3:PutObjectLegalHold",
-        "s3:PutObjectRetention",
-        "s3:PutObjectTagging",
-        "s3:PutObjectVersionTagging"
-       ],
-       "Effect": "Allow",
-       "Resource": [
-        {
-         "Fn::GetAtt": [
-          "PipelineArtifactsBucketAEA9A052",
-          "Arn"
-         ]
-        },
-        {
-         "Fn::Join": [
-          "",
-          [
-           {
-            "Fn::GetAtt": [
-             "PipelineArtifactsBucketAEA9A052",
-             "Arn"
-            ]
-           },
-           "/*"
-          ]
-         ]
-        }
-       ]
-      },
-      {
-       "Action": [
-        "codecommit:CancelUploadArchive",
-        "codecommit:GetBranch",
-        "codecommit:GetCommit",
-        "codecommit:GetUploadArchiveStatus",
-        "codecommit:UploadArchive"
-       ],
-       "Effect": "Allow",
-       "Resource": "arn:aws:codecommit:us-east-1:316607856306:my-app-repo"
-      }
-     ],
-     "Version": "2012-10-17"
+    "Authentication": "GITHUB_HMAC",
+    "AuthenticationConfiguration": {
+     "SecretToken": "{{resolve:secretsmanager:github-token:SecretString:::}}"
     },
-    "PolicyName": "PipelineSourcemyapprepoCodePipelineActionRoleDefaultPolicy1A28F8E8",
-    "Roles": [
+    "Filters": [
      {
-      "Ref": "PipelineSourcemyapprepoCodePipelineActionRoleAF373A0C"
+      "JsonPath": "$.ref",
+      "MatchEquals": "refs/heads/{Branch}"
      }
-    ]
-   },
-   "Metadata": {
-    "aws:cdk:path": "MyAppPipeline/Pipeline/Pipeline/Source/my-app-repo/CodePipelineActionRole/DefaultPolicy/Resource"
-   }
-  },
-  "PipelineEventsRole96280D9B": {
-   "Type": "AWS::IAM::Role",
-   "Properties": {
-    "AssumeRolePolicyDocument": {
-     "Statement": [
-      {
-       "Action": "sts:AssumeRole",
-       "Effect": "Allow",
-       "Principal": {
-        "Service": "events.amazonaws.com"
-       }
-      }
-     ],
-     "Version": "2012-10-17"
-    }
-   },
-   "Metadata": {
-    "aws:cdk:path": "MyAppPipeline/Pipeline/Pipeline/EventsRole/Resource"
-   }
-  },
-  "PipelineEventsRoleDefaultPolicy62809D8F": {
-   "Type": "AWS::IAM::Policy",
-   "Properties": {
-    "PolicyDocument": {
-     "Statement": [
-      {
-       "Action": "codepipeline:StartPipelineExecution",
-       "Effect": "Allow",
-       "Resource": {
-        "Fn::Join": [
-         "",
-         [
-          "arn:aws:codepipeline:us-east-1:316607856306:",
-          {
-           "Ref": "Pipeline9850B417"
-          }
-         ]
-        ]
-       }
-      }
-     ],
-     "Version": "2012-10-17"
+    ],
+    "RegisterWithThirdParty": true,
+    "TargetAction": "haripal143_aws-cdk-deploy",
+    "TargetPipeline": {
+     "Ref": "Pipeline9850B417"
     },
-    "PolicyName": "PipelineEventsRoleDefaultPolicy62809D8F",
-    "Roles": [
-     {
-      "Ref": "PipelineEventsRole96280D9B"
-     }
-    ]
+    "TargetPipelineVersion": 1
    },
    "Metadata": {
-    "aws:cdk:path": "MyAppPipeline/Pipeline/Pipeline/EventsRole/DefaultPolicy/Resource"
+    "aws:cdk:path": "MyAppPipeline/Pipeline/Pipeline/Source/haripal143_aws-cdk-deploy/WebhookResource"
    }
   },
   "PipelineBuildSynthCdkBuildProjectRole231EEA2A": {
@@ -1374,11 +1191,6 @@
     "PolicyDocument": {
      "Statement": [
       {
-       "Action": "codecommit:GitPull",
-       "Effect": "Allow",
-       "Resource": "arn:aws:codecommit:us-east-1:316607856306:my-app-repo"
-      },
-      {
        "Action": [
         "s3:Abort*",
         "s3:DeleteObject*",
@@ -1514,19 +1326,12 @@
      ]
     },
     "Source": {
-     "Location": {
-      "Fn::Join": [
-       "",
-       [
-        "https://git-codecommit.us-east-1.",
-        {
-         "Ref": "AWS::URLSuffix"
-        },
-        "/v1/repos/my-app-repo"
-       ]
-      ]
-     },
-     "Type": "CODECOMMIT"
+     "Location": "https://github.com/haripal143/aws-cdk-deploy.git",
+     "ReportBuildStatus": true,
+     "Type": "GITHUB"
+    },
+    "Triggers": {
+     "Webhook": false
     }
    },
    "Metadata": {
@@ -1594,7 +1399,7 @@
   "CDKMetadata": {
    "Type": "AWS::CDK::Metadata",
    "Properties": {
-    "Analytics": "v2:deflate64:H4sIAAAAAAAA/1VQy27CMBD8Fu7OAkWivfQAtFcaharXyjgLWki8kdcGVZb/vXJIGlU+zMw+ZrR+guXLMyxm+i6Fqa9FQ0eIB6/NVVUoHJxBpe/yHfGG1gvEKjSodiebMSnDNXbUYUMWIZYDy/2RJyUriNtgruhzfWAPKLkh8zOVHzop0i3EioekjNPkOJOjj4GaesotHV/Q9DEjHTApNA5ihR0LeXa906SSEmnz3Y7sudROt+jR9T6jSEmNhwrsuMbp2CCe27/f6o1H/q9VOr5RjW6rBdVGBP3B6zPZc975CL4LPqk39nv08zUsYLWew/79c8cON11XfKETYvt6W8FyvoRFfrOLEBUuWE8tQvXAX1QWIUnUAQAA"
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/21PTU/DMAz9Lbun3sqkwYXDVriOqkNwRGlqitcPV3GyCVX576jtSjkgH957fs6LfQfxwz1sVvoqkSmqqKYc+pPTplIddVhTiwIJF5jelNJX+egNFzj70P96yWf7l79j/sVcBSVb6A/eVOiG9o1NkHJN5ntpTzoo0g30Gddj0IjL5DwzbJF7qotlhdTyGc34zUxvGBQaC32GHQs5tmPSooISaYbTLbVlqq1u0KEdc2YRgspQ2FuDKvHiuFnkEPWvlVq+UIH2oAXVXgTdyemS2nJ48+Jd511QT+yO6NY72MB2t4bj82vCFvddF72hFeL28bKFeB3DZqjVWYgi61tHDUI24Q/WQA19yQEAAA=="
    },
    "Metadata": {
     "aws:cdk:path": "MyAppPipeline/CDKMetadata/Default"

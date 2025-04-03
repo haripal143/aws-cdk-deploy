@@ -27,9 +27,13 @@ public class PipelineStack : Stack
             DockerEnabledForSelfMutation = true,
             Synth = new ShellStep("Synth", new ShellStepProps
             {
-                Input = CodePipelineSource.CodeCommit(
-                    Amazon.CDK.AWS.CodeCommit.Repository.FromRepositoryName(this, "Repository", "my-app-repo"),
-                    "main"
+                Input = CodePipelineSource.GitHub(
+                    "haripal143/aws-cdk-deploy",
+                    "main",
+                    new GitHubSourceOptions
+                    {
+                        Authentication = SecretValue.SecretsManager("github-token")
+                    }
                 ),
                 Commands = new[]
                 {
@@ -89,9 +93,12 @@ public class PipelineStack : Stack
                 BuildImage = LinuxBuildImage.AMAZON_LINUX_2_4,
                 Privileged = true
             },
-            Source = Source.CodeCommit(new CodeCommitSourceProps
+            Source = Source.GitHub(new GitHubSourceProps
             {
-                Repository = Amazon.CDK.AWS.CodeCommit.Repository.FromRepositoryName(this, "BuildRepo", "my-app-repo")
+                Owner = "haripal143",
+                Repo = "aws-cdk-deploy",
+                // We won't set up webhooks for the build project, as the pipeline handles that
+                Webhook = false
             }),
             Artifacts = Artifacts.S3(new S3ArtifactsProps
             {

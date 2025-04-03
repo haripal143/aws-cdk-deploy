@@ -18,7 +18,7 @@
         "tags": {
           "Application": "MyApp",
           "AutoDeploy": "True",
-          "DeploymentTime": "2025-04-03-18-21-45",
+          "DeploymentTime": "2025-04-03-18-29-53",
           "DeploymentType": "CDK",
           "Environment": "Staging",
           "Project": "MyApp",
@@ -27,7 +27,7 @@
         "validateOnSynth": true,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::316607856306:role/cdk-hnb659fds-deploy-role-316607856306-us-east-1",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::316607856306:role/cdk-hnb659fds-cfn-exec-role-316607856306-us-east-1",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-316607856306-us-east-1/c62cfc0e1cda7120693675dba0af8dde4bac759fe19487c050d7e7b842359559.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-316607856306-us-east-1/fe7914c2f8e4f9703bace293bdf518cfd23dd97392481416fd8579f4c69d9100.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -49,16 +49,16 @@
             "type": "aws:cdk:error",
             "data": "SSM parameter not available in account 316607856306, region us-east-1: /myapp/image-tag",
             "trace": [
-              "Annotations.addMessage (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-hcJbMA/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1608)",
-              "Annotations.addError (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-hcJbMA/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1100)",
-              "ContextProvider.getValue (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-hcJbMA/node_modules/aws-cdk-lib/core/lib/context-provider.js:2:1628)",
-              "StringParameter.valueFromLookup (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-hcJbMA/node_modules/aws-cdk-lib/aws-ssm/lib/parameter.js:1:7388)",
-              "/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/5hzqnmmf.pvc/lib/program.js:315:152",
-              "Kernel._Kernel_ensureSync (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/5hzqnmmf.pvc/lib/program.js:920:24)",
-              "Kernel.sinvoke (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/5hzqnmmf.pvc/lib/program.js:315:102)",
-              "KernelHost.processRequest (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/5hzqnmmf.pvc/lib/program.js:15471:36)",
-              "KernelHost.run (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/5hzqnmmf.pvc/lib/program.js:15431:22)",
-              "Immediate._onImmediate (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/5hzqnmmf.pvc/lib/program.js:15432:46)",
+              "Annotations.addMessage (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-S709C9/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1608)",
+              "Annotations.addError (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-S709C9/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1100)",
+              "ContextProvider.getValue (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-S709C9/node_modules/aws-cdk-lib/core/lib/context-provider.js:2:1628)",
+              "StringParameter.valueFromLookup (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-S709C9/node_modules/aws-cdk-lib/aws-ssm/lib/parameter.js:1:7388)",
+              "/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/uen1k02v.akh/lib/program.js:315:152",
+              "Kernel._Kernel_ensureSync (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/uen1k02v.akh/lib/program.js:920:24)",
+              "Kernel.sinvoke (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/uen1k02v.akh/lib/program.js:315:102)",
+              "KernelHost.processRequest (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/uen1k02v.akh/lib/program.js:15471:36)",
+              "KernelHost.run (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/uen1k02v.akh/lib/program.js:15431:22)",
+              "Immediate._onImmediate (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/uen1k02v.akh/lib/program.js:15432:46)",
               "process.processImmediate (node:internal/timers:491:21)"
             ]
           },
@@ -75,7 +75,7 @@
               },
               {
                 "Key": "DeploymentTime",
-                "Value": "2025-04-03-18-21-45"
+                "Value": "2025-04-03-18-29-53"
               },
               {
                 "Key": "DeploymentType",
@@ -449,18 +449,18 @@
             "type": "aws:cdk:warning",
             "data": "Proper policies need to be attached before pulling from ECR repository, or use 'fromEcrRepository'. [ack: @aws-cdk/aws-ecs:ecrImageRequiresPolicy]",
             "trace": [
-              "Annotations.addMessage (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-hcJbMA/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1608)",
-              "Annotations.addWarningV2 (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-hcJbMA/node_modules/aws-cdk-lib/core/lib/annotations.js:1:825)",
-              "RepositoryImage.bind (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-hcJbMA/node_modules/aws-cdk-lib/aws-ecs/lib/images/repository.js:1:1306)",
-              "new ContainerDefinition (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-hcJbMA/node_modules/aws-cdk-lib/aws-ecs/lib/container-definition.js:1:3147)",
-              "FargateTaskDefinition.addContainer (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-hcJbMA/node_modules/aws-cdk-lib/aws-ecs/lib/base/task-definition.js:1:10944)",
-              "descriptor.value (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-hcJbMA/node_modules/aws-cdk-lib/core/lib/metadata-resource.js:1:2296)",
-              "new ApplicationLoadBalancedFargateService (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-hcJbMA/node_modules/aws-cdk-lib/aws-ecs-patterns/lib/fargate/application-load-balanced-fargate-service.js:1:2226)",
-              "Kernel._Kernel_create (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/5hzqnmmf.pvc/lib/program.js:548:25)",
-              "Kernel.create (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/5hzqnmmf.pvc/lib/program.js:218:93)",
-              "KernelHost.processRequest (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/5hzqnmmf.pvc/lib/program.js:15471:36)",
-              "KernelHost.run (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/5hzqnmmf.pvc/lib/program.js:15431:22)",
-              "Immediate._onImmediate (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/5hzqnmmf.pvc/lib/program.js:15432:46)",
+              "Annotations.addMessage (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-S709C9/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1608)",
+              "Annotations.addWarningV2 (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-S709C9/node_modules/aws-cdk-lib/core/lib/annotations.js:1:825)",
+              "RepositoryImage.bind (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-S709C9/node_modules/aws-cdk-lib/aws-ecs/lib/images/repository.js:1:1306)",
+              "new ContainerDefinition (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-S709C9/node_modules/aws-cdk-lib/aws-ecs/lib/container-definition.js:1:3147)",
+              "FargateTaskDefinition.addContainer (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-S709C9/node_modules/aws-cdk-lib/aws-ecs/lib/base/task-definition.js:1:10944)",
+              "descriptor.value (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-S709C9/node_modules/aws-cdk-lib/core/lib/metadata-resource.js:1:2296)",
+              "new ApplicationLoadBalancedFargateService (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-S709C9/node_modules/aws-cdk-lib/aws-ecs-patterns/lib/fargate/application-load-balanced-fargate-service.js:1:2226)",
+              "Kernel._Kernel_create (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/uen1k02v.akh/lib/program.js:548:25)",
+              "Kernel.create (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/uen1k02v.akh/lib/program.js:218:93)",
+              "KernelHost.processRequest (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/uen1k02v.akh/lib/program.js:15471:36)",
+              "KernelHost.run (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/uen1k02v.akh/lib/program.js:15431:22)",
+              "Immediate._onImmediate (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/uen1k02v.akh/lib/program.js:15432:46)",
               "process.processImmediate (node:internal/timers:491:21)"
             ]
           }
@@ -476,16 +476,16 @@
             "type": "aws:cdk:warning",
             "data": "minHealthyPercent has not been configured so the default value of 50% is used. The number of running tasks will decrease below the desired count during deployments etc. See https://github.com/aws/aws-cdk/issues/31705 [ack: @aws-cdk/aws-ecs:minHealthyPercent]",
             "trace": [
-              "Annotations.addMessage (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-hcJbMA/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1608)",
-              "Annotations.addWarningV2 (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-hcJbMA/node_modules/aws-cdk-lib/core/lib/annotations.js:1:825)",
-              "new BaseService (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-hcJbMA/node_modules/aws-cdk-lib/aws-ecs/lib/base/base-service.js:1:8100)",
-              "new FargateService (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-hcJbMA/node_modules/aws-cdk-lib/aws-ecs/lib/fargate/fargate-service.js:1:3551)",
-              "new ApplicationLoadBalancedFargateService (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-hcJbMA/node_modules/aws-cdk-lib/aws-ecs-patterns/lib/fargate/application-load-balanced-fargate-service.js:1:3340)",
-              "Kernel._Kernel_create (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/5hzqnmmf.pvc/lib/program.js:548:25)",
-              "Kernel.create (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/5hzqnmmf.pvc/lib/program.js:218:93)",
-              "KernelHost.processRequest (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/5hzqnmmf.pvc/lib/program.js:15471:36)",
-              "KernelHost.run (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/5hzqnmmf.pvc/lib/program.js:15431:22)",
-              "Immediate._onImmediate (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/5hzqnmmf.pvc/lib/program.js:15432:46)",
+              "Annotations.addMessage (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-S709C9/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1608)",
+              "Annotations.addWarningV2 (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-S709C9/node_modules/aws-cdk-lib/core/lib/annotations.js:1:825)",
+              "new BaseService (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-S709C9/node_modules/aws-cdk-lib/aws-ecs/lib/base/base-service.js:1:8100)",
+              "new FargateService (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-S709C9/node_modules/aws-cdk-lib/aws-ecs/lib/fargate/fargate-service.js:1:3551)",
+              "new ApplicationLoadBalancedFargateService (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-S709C9/node_modules/aws-cdk-lib/aws-ecs-patterns/lib/fargate/application-load-balanced-fargate-service.js:1:3340)",
+              "Kernel._Kernel_create (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/uen1k02v.akh/lib/program.js:548:25)",
+              "Kernel.create (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/uen1k02v.akh/lib/program.js:218:93)",
+              "KernelHost.processRequest (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/uen1k02v.akh/lib/program.js:15471:36)",
+              "KernelHost.run (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/uen1k02v.akh/lib/program.js:15431:22)",
+              "Immediate._onImmediate (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/uen1k02v.akh/lib/program.js:15432:46)",
               "process.processImmediate (node:internal/timers:491:21)"
             ]
           }
@@ -576,7 +576,7 @@
         "tags": {
           "Application": "MyApp",
           "AutoDeploy": "True",
-          "DeploymentTime": "2025-04-03-18-21-45",
+          "DeploymentTime": "2025-04-03-18-29-53",
           "DeploymentType": "CDK",
           "Environment": "Staging",
           "Project": "MyApp",
@@ -585,7 +585,7 @@
         "validateOnSynth": true,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::316607856306:role/cdk-hnb659fds-deploy-role-316607856306-us-west-2",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::316607856306:role/cdk-hnb659fds-cfn-exec-role-316607856306-us-west-2",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-316607856306-us-west-2/0595f7db8666526ebba3d3256ecc2977422114a2a5217d5a72fc3ab3bd01f82c.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-316607856306-us-west-2/5091238b93613976eb45dfa0967906f2a2749f8e17ddb0c5e1fc26f0b4f76411.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -607,16 +607,16 @@
             "type": "aws:cdk:error",
             "data": "SSM parameter not available in account 316607856306, region us-west-2: /myapp/image-tag",
             "trace": [
-              "Annotations.addMessage (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-hcJbMA/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1608)",
-              "Annotations.addError (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-hcJbMA/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1100)",
-              "ContextProvider.getValue (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-hcJbMA/node_modules/aws-cdk-lib/core/lib/context-provider.js:2:1628)",
-              "StringParameter.valueFromLookup (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-hcJbMA/node_modules/aws-cdk-lib/aws-ssm/lib/parameter.js:1:7388)",
-              "/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/5hzqnmmf.pvc/lib/program.js:315:152",
-              "Kernel._Kernel_ensureSync (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/5hzqnmmf.pvc/lib/program.js:920:24)",
-              "Kernel.sinvoke (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/5hzqnmmf.pvc/lib/program.js:315:102)",
-              "KernelHost.processRequest (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/5hzqnmmf.pvc/lib/program.js:15471:36)",
-              "KernelHost.run (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/5hzqnmmf.pvc/lib/program.js:15431:22)",
-              "Immediate._onImmediate (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/5hzqnmmf.pvc/lib/program.js:15432:46)",
+              "Annotations.addMessage (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-S709C9/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1608)",
+              "Annotations.addError (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-S709C9/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1100)",
+              "ContextProvider.getValue (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-S709C9/node_modules/aws-cdk-lib/core/lib/context-provider.js:2:1628)",
+              "StringParameter.valueFromLookup (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-S709C9/node_modules/aws-cdk-lib/aws-ssm/lib/parameter.js:1:7388)",
+              "/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/uen1k02v.akh/lib/program.js:315:152",
+              "Kernel._Kernel_ensureSync (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/uen1k02v.akh/lib/program.js:920:24)",
+              "Kernel.sinvoke (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/uen1k02v.akh/lib/program.js:315:102)",
+              "KernelHost.processRequest (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/uen1k02v.akh/lib/program.js:15471:36)",
+              "KernelHost.run (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/uen1k02v.akh/lib/program.js:15431:22)",
+              "Immediate._onImmediate (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/uen1k02v.akh/lib/program.js:15432:46)",
               "process.processImmediate (node:internal/timers:491:21)"
             ]
           },
@@ -624,16 +624,16 @@
             "type": "aws:cdk:error",
             "data": "SSM parameter not available in account 316607856306, region us-west-2: /myapp/ecr-repository-uri",
             "trace": [
-              "Annotations.addMessage (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-hcJbMA/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1608)",
-              "Annotations.addError (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-hcJbMA/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1100)",
-              "ContextProvider.getValue (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-hcJbMA/node_modules/aws-cdk-lib/core/lib/context-provider.js:2:1628)",
-              "StringParameter.valueFromLookup (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-hcJbMA/node_modules/aws-cdk-lib/aws-ssm/lib/parameter.js:1:7388)",
-              "/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/5hzqnmmf.pvc/lib/program.js:315:152",
-              "Kernel._Kernel_ensureSync (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/5hzqnmmf.pvc/lib/program.js:920:24)",
-              "Kernel.sinvoke (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/5hzqnmmf.pvc/lib/program.js:315:102)",
-              "KernelHost.processRequest (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/5hzqnmmf.pvc/lib/program.js:15471:36)",
-              "KernelHost.run (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/5hzqnmmf.pvc/lib/program.js:15431:22)",
-              "Immediate._onImmediate (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/5hzqnmmf.pvc/lib/program.js:15432:46)",
+              "Annotations.addMessage (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-S709C9/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1608)",
+              "Annotations.addError (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-S709C9/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1100)",
+              "ContextProvider.getValue (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-S709C9/node_modules/aws-cdk-lib/core/lib/context-provider.js:2:1628)",
+              "StringParameter.valueFromLookup (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-S709C9/node_modules/aws-cdk-lib/aws-ssm/lib/parameter.js:1:7388)",
+              "/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/uen1k02v.akh/lib/program.js:315:152",
+              "Kernel._Kernel_ensureSync (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/uen1k02v.akh/lib/program.js:920:24)",
+              "Kernel.sinvoke (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/uen1k02v.akh/lib/program.js:315:102)",
+              "KernelHost.processRequest (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/uen1k02v.akh/lib/program.js:15471:36)",
+              "KernelHost.run (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/uen1k02v.akh/lib/program.js:15431:22)",
+              "Immediate._onImmediate (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/uen1k02v.akh/lib/program.js:15432:46)",
               "process.processImmediate (node:internal/timers:491:21)"
             ]
           },
@@ -650,7 +650,7 @@
               },
               {
                 "Key": "DeploymentTime",
-                "Value": "2025-04-03-18-21-45"
+                "Value": "2025-04-03-18-29-53"
               },
               {
                 "Key": "DeploymentType",
@@ -1030,16 +1030,16 @@
             "type": "aws:cdk:warning",
             "data": "minHealthyPercent has not been configured so the default value of 50% is used. The number of running tasks will decrease below the desired count during deployments etc. See https://github.com/aws/aws-cdk/issues/31705 [ack: @aws-cdk/aws-ecs:minHealthyPercent]",
             "trace": [
-              "Annotations.addMessage (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-hcJbMA/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1608)",
-              "Annotations.addWarningV2 (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-hcJbMA/node_modules/aws-cdk-lib/core/lib/annotations.js:1:825)",
-              "new BaseService (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-hcJbMA/node_modules/aws-cdk-lib/aws-ecs/lib/base/base-service.js:1:8100)",
-              "new FargateService (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-hcJbMA/node_modules/aws-cdk-lib/aws-ecs/lib/fargate/fargate-service.js:1:3551)",
-              "new ApplicationLoadBalancedFargateService (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-hcJbMA/node_modules/aws-cdk-lib/aws-ecs-patterns/lib/fargate/application-load-balanced-fargate-service.js:1:3340)",
-              "Kernel._Kernel_create (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/5hzqnmmf.pvc/lib/program.js:548:25)",
-              "Kernel.create (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/5hzqnmmf.pvc/lib/program.js:218:93)",
-              "KernelHost.processRequest (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/5hzqnmmf.pvc/lib/program.js:15471:36)",
-              "KernelHost.run (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/5hzqnmmf.pvc/lib/program.js:15431:22)",
-              "Immediate._onImmediate (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/5hzqnmmf.pvc/lib/program.js:15432:46)",
+              "Annotations.addMessage (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-S709C9/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1608)",
+              "Annotations.addWarningV2 (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-S709C9/node_modules/aws-cdk-lib/core/lib/annotations.js:1:825)",
+              "new BaseService (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-S709C9/node_modules/aws-cdk-lib/aws-ecs/lib/base/base-service.js:1:8100)",
+              "new FargateService (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-S709C9/node_modules/aws-cdk-lib/aws-ecs/lib/fargate/fargate-service.js:1:3551)",
+              "new ApplicationLoadBalancedFargateService (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-S709C9/node_modules/aws-cdk-lib/aws-ecs-patterns/lib/fargate/application-load-balanced-fargate-service.js:1:3340)",
+              "Kernel._Kernel_create (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/uen1k02v.akh/lib/program.js:548:25)",
+              "Kernel.create (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/uen1k02v.akh/lib/program.js:218:93)",
+              "KernelHost.processRequest (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/uen1k02v.akh/lib/program.js:15471:36)",
+              "KernelHost.run (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/uen1k02v.akh/lib/program.js:15431:22)",
+              "Immediate._onImmediate (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/uen1k02v.akh/lib/program.js:15432:46)",
               "process.processImmediate (node:internal/timers:491:21)"
             ]
           }

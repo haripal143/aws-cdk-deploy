@@ -7,7 +7,7 @@ digraph G {
 "BEGIN Build" [shape="cds", style="filled", fillcolor="#b7deff"];
 "END Build" [shape="cds", style="filled", fillcolor="#b7deff"];
 "Build.Synth";
-"Source.my-app-repo" -> "Build.Synth";
+"Source.haripal143/aws-cdk-deploy" -> "Build.Synth";
 "BEGIN Build" -> "Build.Synth";
 "Build.Synth" -> "END Build";
 "BEGIN UpdatePipeline" [shape="cds", style="filled", fillcolor="#b7deff"];
@@ -41,7 +41,7 @@ digraph G {
 "END Staging.MyAppStaginguswest2" -> "END Staging";
 "BEGIN Source" [shape="cds", style="filled", fillcolor="#b7deff"];
 "END Source" [shape="cds", style="filled", fillcolor="#b7deff"];
-"Source.my-app-repo";
-"BEGIN Source" -> "Source.my-app-repo";
-"Source.my-app-repo" -> "END Source";
+"Source.haripal143/aws-cdk-deploy";
+"BEGIN Source" -> "Source.haripal143/aws-cdk-deploy";
+"Source.haripal143/aws-cdk-deploy" -> "END Source";
 }
