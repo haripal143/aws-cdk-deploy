@@ -1,0 +1,11 @@
+{
+  "Tags": {
+    "Application": "MyApp",
+    "AutoDeploy": "True",
+    "DeploymentTime": "2025-04-03-18-21-45",
+    "DeploymentType": "CDK",
+    "Environment": "Staging",
+    "Project": "MyApp",
+    "Region": "us-east-1"
+  }
+}

@@ -1,0 +1,47 @@
+digraph G {
+  # Arrows represent an "unlocks" relationship (opposite of dependency). So chosen
+  # because the layout looks more natural that way.
+  # To represent subgraph dependencies, subgraphs are represented by BEGIN/END nodes.
+  # To render: `dot -Tsvg MyAppPipelineABE64D54.dot > graph.svg`, open in a browser.
+  node [shape="box"];
+"BEGIN Build" [shape="cds", style="filled", fillcolor="#b7deff"];
+"END Build" [shape="cds", style="filled", fillcolor="#b7deff"];
+"Build.Synth";
+"Source.my-app-repo" -> "Build.Synth";
+"BEGIN Build" -> "Build.Synth";
+"Build.Synth" -> "END Build";
+"BEGIN UpdatePipeline" [shape="cds", style="filled", fillcolor="#b7deff"];
+"END UpdatePipeline" [shape="cds", style="filled", fillcolor="#b7deff"];
+"UpdatePipeline.SelfMutate";
+"Build.Synth" -> "UpdatePipeline.SelfMutate";
+"BEGIN UpdatePipeline" -> "UpdatePipeline.SelfMutate";
+"UpdatePipeline.SelfMutate" -> "END UpdatePipeline";
+"BEGIN Staging" [shape="cds", style="filled", fillcolor="#b7deff"];
+"END Staging" [shape="cds", style="filled", fillcolor="#b7deff"];
+"UpdatePipeline.SelfMutate" -> "BEGIN Staging";
+"BEGIN Staging.MyAppStaginguseast1" [shape="cds", style="filled", fillcolor="#b7deff"];
+"END Staging.MyAppStaginguseast1" [shape="cds", style="filled", fillcolor="#b7deff"];
+"Staging.MyAppStaginguseast1.Deploy";
+"Staging.MyAppStaginguseast1.Prepare" -> "Staging.MyAppStaginguseast1.Deploy";
+"Staging.MyAppStaginguseast1.Prepare";
+"Build.Synth" -> "Staging.MyAppStaginguseast1.Prepare";
+"BEGIN Staging.MyAppStaginguseast1" -> "Staging.MyAppStaginguseast1.Prepare";
+"Staging.MyAppStaginguseast1.Deploy" -> "END Staging.MyAppStaginguseast1";
+"BEGIN Staging.MyAppStaginguswest2" [shape="cds", style="filled", fillcolor="#b7deff"];
+"END Staging.MyAppStaginguswest2" [shape="cds", style="filled", fillcolor="#b7deff"];
+"Staging.MyAppStaginguswest2.Deploy";
+"Staging.MyAppStaginguswest2.Prepare" -> "Staging.MyAppStaginguswest2.Deploy";
+"Staging.MyAppStaginguswest2.Prepare";
+"Build.Synth" -> "Staging.MyAppStaginguswest2.Prepare";
+"BEGIN Staging.MyAppStaginguswest2" -> "Staging.MyAppStaginguswest2.Prepare";
+"Staging.MyAppStaginguswest2.Deploy" -> "END Staging.MyAppStaginguswest2";
+"BEGIN Staging" -> "BEGIN Staging.MyAppStaginguseast1";
+"BEGIN Staging" -> "BEGIN Staging.MyAppStaginguswest2";
+"END Staging.MyAppStaginguseast1" -> "END Staging";
+"END Staging.MyAppStaginguswest2" -> "END Staging";
+"BEGIN Source" [shape="cds", style="filled", fillcolor="#b7deff"];
+"END Source" [shape="cds", style="filled", fillcolor="#b7deff"];
+"Source.my-app-repo";
+"BEGIN Source" -> "Source.my-app-repo";
+"Source.my-app-repo" -> "END Source";
+}

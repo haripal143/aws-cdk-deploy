@@ -1,0 +1,36 @@
+{
+  "version": "41.0.0",
+  "files": {
+    "faa95a81ae7d7373f3e1f242268f904eb748d8d0fdd306e8a6fe515a1905a7d6": {
+      "displayName": "MyAppPipeline/Custom::S3AutoDeleteObjectsCustomResourceProvider Code",
+      "source": {
+        "path": "asset.faa95a81ae7d7373f3e1f242268f904eb748d8d0fdd306e8a6fe515a1905a7d6",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "316607856306-us-east-1": {
+          "bucketName": "cdk-hnb659fds-assets-316607856306-us-east-1",
+          "objectKey": "faa95a81ae7d7373f3e1f242268f904eb748d8d0fdd306e8a6fe515a1905a7d6.zip",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::316607856306:role/cdk-hnb659fds-file-publishing-role-316607856306-us-east-1"
+        }
+      }
+    },
+    "540cedb070a79c25650eff203a8553814e38874acd0560a0249180e77ecc15b4": {
+      "displayName": "MyAppPipeline Template",
+      "source": {
+        "path": "MyAppPipeline.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "316607856306-us-east-1": {
+          "bucketName": "cdk-hnb659fds-assets-316607856306-us-east-1",
+          "objectKey": "540cedb070a79c25650eff203a8553814e38874acd0560a0249180e77ecc15b4.json",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::316607856306:role/cdk-hnb659fds-file-publishing-role-316607856306-us-east-1"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}

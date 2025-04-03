@@ -1,7 +1,7 @@
 {
   "version": "41.0.0",
   "files": {
-    "35d546babfd2012d67668044d3cb98cf91705bdfa550c61acef8e26e01080158": {
+    "6770726836820a2b0a15c69ec27917161a0c25df25f185c9db597a58d1181c33": {
       "displayName": "Production-MyAppProductionuswest2 Template",
       "source": {
         "path": "MyAppPipelineProductionMyAppProductionuswest23BD1314A.template.json",
@@ -10,7 +10,7 @@
       "destinations": {
         "316607856306-us-west-2": {
           "bucketName": "cdk-hnb659fds-assets-316607856306-us-west-2",
-          "objectKey": "35d546babfd2012d67668044d3cb98cf91705bdfa550c61acef8e26e01080158.json",
+          "objectKey": "6770726836820a2b0a15c69ec27917161a0c25df25f185c9db597a58d1181c33.json",
           "region": "us-west-2",
           "assumeRoleArn": "arn:${AWS::Partition}:iam::316607856306:role/cdk-hnb659fds-file-publishing-role-316607856306-us-west-2"
         }

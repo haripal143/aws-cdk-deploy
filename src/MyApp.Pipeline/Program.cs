@@ -12,7 +12,6 @@ namespace MyApp.Pipeline
             new PipelineStack(app, "MyAppPipeline", new StackProps
             {
                 Env = new Amazon.CDK.Environment
-
                 {
                     Account = System.Environment.GetEnvironmentVariable("CDK_DEFAULT_ACCOUNT"),
                     Region = "us-east-1"

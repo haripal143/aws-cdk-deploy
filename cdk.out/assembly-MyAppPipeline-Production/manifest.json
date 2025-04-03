@@ -19,7 +19,7 @@
           "Application": "MyApp",
           "AutoDeploy": "False",
           "CriticalityLevel": "High",
-          "DeploymentTime": "2025-04-03-04-03-09",
+          "DeploymentTime": "2025-04-03-17-47-31",
           "DeploymentType": "CDK",
           "Environment": "Production",
           "Project": "MyApp",
@@ -28,7 +28,7 @@
         "validateOnSynth": true,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::316607856306:role/cdk-hnb659fds-deploy-role-316607856306-us-east-1",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::316607856306:role/cdk-hnb659fds-cfn-exec-role-316607856306-us-east-1",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-316607856306-us-east-1/fc3454d06ce630ac7c068d6bf6be7b7360dae8c39a6b4fca080eaa9fd569dc33.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-316607856306-us-east-1/2da51f1f08466534f9e02e8f45bd43b029a3003f5e42e7296c5fdf4a3db941c4.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -63,7 +63,7 @@
               },
               {
                 "Key": "DeploymentTime",
-                "Value": "2025-04-03-04-03-09"
+                "Value": "2025-04-03-17-47-31"
               },
               {
                 "Key": "DeploymentType",
@@ -467,16 +467,16 @@
             "type": "aws:cdk:warning",
             "data": "minHealthyPercent has not been configured so the default value of 50% is used. The number of running tasks will decrease below the desired count during deployments etc. See https://github.com/aws/aws-cdk/issues/31705 [ack: @aws-cdk/aws-ecs:minHealthyPercent]",
             "trace": [
-              "Annotations.addMessage (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-OilvgR/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1608)",
-              "Annotations.addWarningV2 (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-OilvgR/node_modules/aws-cdk-lib/core/lib/annotations.js:1:825)",
-              "new BaseService (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-OilvgR/node_modules/aws-cdk-lib/aws-ecs/lib/base/base-service.js:1:8100)",
-              "new FargateService (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-OilvgR/node_modules/aws-cdk-lib/aws-ecs/lib/fargate/fargate-service.js:1:3551)",
-              "new ApplicationLoadBalancedFargateService (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-OilvgR/node_modules/aws-cdk-lib/aws-ecs-patterns/lib/fargate/application-load-balanced-fargate-service.js:1:3340)",
-              "Kernel._Kernel_create (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/0gmqlten.sd4/lib/program.js:548:25)",
-              "Kernel.create (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/0gmqlten.sd4/lib/program.js:218:93)",
-              "KernelHost.processRequest (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/0gmqlten.sd4/lib/program.js:15471:36)",
-              "KernelHost.run (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/0gmqlten.sd4/lib/program.js:15431:22)",
-              "Immediate._onImmediate (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/0gmqlten.sd4/lib/program.js:15432:46)",
+              "Annotations.addMessage (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-Xi1OFr/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1608)",
+              "Annotations.addWarningV2 (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-Xi1OFr/node_modules/aws-cdk-lib/core/lib/annotations.js:1:825)",
+              "new BaseService (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-Xi1OFr/node_modules/aws-cdk-lib/aws-ecs/lib/base/base-service.js:1:8100)",
+              "new FargateService (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-Xi1OFr/node_modules/aws-cdk-lib/aws-ecs/lib/fargate/fargate-service.js:1:3551)",
+              "new ApplicationLoadBalancedFargateService (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-Xi1OFr/node_modules/aws-cdk-lib/aws-ecs-patterns/lib/fargate/application-load-balanced-fargate-service.js:1:3340)",
+              "Kernel._Kernel_create (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/ysjq15yh.4kd/lib/program.js:548:25)",
+              "Kernel.create (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/ysjq15yh.4kd/lib/program.js:218:93)",
+              "KernelHost.processRequest (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/ysjq15yh.4kd/lib/program.js:15471:36)",
+              "KernelHost.run (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/ysjq15yh.4kd/lib/program.js:15431:22)",
+              "Immediate._onImmediate (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/ysjq15yh.4kd/lib/program.js:15432:46)",
               "process.processImmediate (node:internal/timers:491:21)"
             ]
           }
@@ -586,7 +586,7 @@
           "Application": "MyApp",
           "AutoDeploy": "False",
           "CriticalityLevel": "High",
-          "DeploymentTime": "2025-04-03-04-03-09",
+          "DeploymentTime": "2025-04-03-17-47-31",
           "DeploymentType": "CDK",
           "Environment": "Production",
           "Project": "MyApp",
@@ -595,7 +595,7 @@
         "validateOnSynth": true,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::316607856306:role/cdk-hnb659fds-deploy-role-316607856306-us-west-2",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::316607856306:role/cdk-hnb659fds-cfn-exec-role-316607856306-us-west-2",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-316607856306-us-west-2/35d546babfd2012d67668044d3cb98cf91705bdfa550c61acef8e26e01080158.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-316607856306-us-west-2/6770726836820a2b0a15c69ec27917161a0c25df25f185c9db597a58d1181c33.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -630,7 +630,7 @@
               },
               {
                 "Key": "DeploymentTime",
-                "Value": "2025-04-03-04-03-09"
+                "Value": "2025-04-03-17-47-31"
               },
               {
                 "Key": "DeploymentType",
@@ -1034,16 +1034,16 @@
             "type": "aws:cdk:warning",
             "data": "minHealthyPercent has not been configured so the default value of 50% is used. The number of running tasks will decrease below the desired count during deployments etc. See https://github.com/aws/aws-cdk/issues/31705 [ack: @aws-cdk/aws-ecs:minHealthyPercent]",
             "trace": [
-              "Annotations.addMessage (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-OilvgR/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1608)",
-              "Annotations.addWarningV2 (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-OilvgR/node_modules/aws-cdk-lib/core/lib/annotations.js:1:825)",
-              "new BaseService (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-OilvgR/node_modules/aws-cdk-lib/aws-ecs/lib/base/base-service.js:1:8100)",
-              "new FargateService (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-OilvgR/node_modules/aws-cdk-lib/aws-ecs/lib/fargate/fargate-service.js:1:3551)",
-              "new ApplicationLoadBalancedFargateService (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-OilvgR/node_modules/aws-cdk-lib/aws-ecs-patterns/lib/fargate/application-load-balanced-fargate-service.js:1:3340)",
-              "Kernel._Kernel_create (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/0gmqlten.sd4/lib/program.js:548:25)",
-              "Kernel.create (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/0gmqlten.sd4/lib/program.js:218:93)",
-              "KernelHost.processRequest (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/0gmqlten.sd4/lib/program.js:15471:36)",
-              "KernelHost.run (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/0gmqlten.sd4/lib/program.js:15431:22)",
-              "Immediate._onImmediate (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/0gmqlten.sd4/lib/program.js:15432:46)",
+              "Annotations.addMessage (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-Xi1OFr/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1608)",
+              "Annotations.addWarningV2 (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-Xi1OFr/node_modules/aws-cdk-lib/core/lib/annotations.js:1:825)",
+              "new BaseService (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-Xi1OFr/node_modules/aws-cdk-lib/aws-ecs/lib/base/base-service.js:1:8100)",
+              "new FargateService (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-Xi1OFr/node_modules/aws-cdk-lib/aws-ecs/lib/fargate/fargate-service.js:1:3551)",
+              "new ApplicationLoadBalancedFargateService (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-Xi1OFr/node_modules/aws-cdk-lib/aws-ecs-patterns/lib/fargate/application-load-balanced-fargate-service.js:1:3340)",
+              "Kernel._Kernel_create (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/ysjq15yh.4kd/lib/program.js:548:25)",
+              "Kernel.create (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/ysjq15yh.4kd/lib/program.js:218:93)",
+              "KernelHost.processRequest (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/ysjq15yh.4kd/lib/program.js:15471:36)",
+              "KernelHost.run (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/ysjq15yh.4kd/lib/program.js:15431:22)",
+              "Immediate._onImmediate (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/ysjq15yh.4kd/lib/program.js:15432:46)",
               "process.processImmediate (node:internal/timers:491:21)"
             ]
           }

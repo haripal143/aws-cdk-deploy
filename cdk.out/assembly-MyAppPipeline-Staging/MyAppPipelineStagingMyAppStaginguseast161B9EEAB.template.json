@@ -10,7 +10,7 @@
     "Tags": [
      {
       "Key": "DeploymentTime",
-      "Value": "2025-04-03-04-03-08"
+      "Value": "2025-04-03-18-21-45"
      },
      {
       "Key": "Environment",
@@ -41,7 +41,7 @@
   "NetworkStagingVpcPublicSubnet1Subnet1695C13B": {
    "Type": "AWS::EC2::Subnet",
    "Properties": {
-    "AvailabilityZone": "dummy1a",
+    "AvailabilityZone": "us-east-1a",
     "CidrBlock": "10.0.0.0/24",
     "MapPublicIpOnLaunch": true,
     "Tags": [
@@ -55,7 +55,7 @@
      },
      {
       "Key": "DeploymentTime",
-      "Value": "2025-04-03-04-03-08"
+      "Value": "2025-04-03-18-21-45"
      },
      {
       "Key": "Environment",
@@ -92,7 +92,7 @@
     "Tags": [
      {
       "Key": "DeploymentTime",
-      "Value": "2025-04-03-04-03-08"
+      "Value": "2025-04-03-18-21-45"
      },
      {
       "Key": "Environment",
@@ -162,7 +162,7 @@
     "Tags": [
      {
       "Key": "DeploymentTime",
-      "Value": "2025-04-03-04-03-08"
+      "Value": "2025-04-03-18-21-45"
      },
      {
       "Key": "Environment",
@@ -205,7 +205,7 @@
     "Tags": [
      {
       "Key": "DeploymentTime",
-      "Value": "2025-04-03-04-03-08"
+      "Value": "2025-04-03-18-21-45"
      },
      {
       "Key": "Environment",
@@ -240,7 +240,7 @@
   "NetworkStagingVpcPublicSubnet2Subnet1DE6EC41": {
    "Type": "AWS::EC2::Subnet",
    "Properties": {
-    "AvailabilityZone": "dummy1b",
+    "AvailabilityZone": "us-east-1b",
     "CidrBlock": "10.0.1.0/24",
     "MapPublicIpOnLaunch": true,
     "Tags": [
@@ -254,7 +254,7 @@
      },
      {
       "Key": "DeploymentTime",
-      "Value": "2025-04-03-04-03-08"
+      "Value": "2025-04-03-18-21-45"
      },
      {
       "Key": "Environment",
@@ -291,7 +291,7 @@
     "Tags": [
      {
       "Key": "DeploymentTime",
-      "Value": "2025-04-03-04-03-08"
+      "Value": "2025-04-03-18-21-45"
      },
      {
       "Key": "Environment",
@@ -357,7 +357,7 @@
   "NetworkStagingVpcPublicSubnet3SubnetC2DB3694": {
    "Type": "AWS::EC2::Subnet",
    "Properties": {
-    "AvailabilityZone": "dummy1c",
+    "AvailabilityZone": "us-east-1c",
     "CidrBlock": "10.0.2.0/24",
     "MapPublicIpOnLaunch": true,
     "Tags": [
@@ -371,7 +371,7 @@
      },
      {
       "Key": "DeploymentTime",
-      "Value": "2025-04-03-04-03-08"
+      "Value": "2025-04-03-18-21-45"
      },
      {
       "Key": "Environment",
@@ -408,7 +408,7 @@
     "Tags": [
      {
       "Key": "DeploymentTime",
-      "Value": "2025-04-03-04-03-08"
+      "Value": "2025-04-03-18-21-45"
      },
      {
       "Key": "Environment",
@@ -474,7 +474,7 @@
   "NetworkStagingVpcPrivateSubnet1Subnet3D7A6564": {
    "Type": "AWS::EC2::Subnet",
    "Properties": {
-    "AvailabilityZone": "dummy1a",
+    "AvailabilityZone": "us-east-1a",
     "CidrBlock": "10.0.3.0/24",
     "MapPublicIpOnLaunch": false,
     "Tags": [
@@ -488,7 +488,7 @@
      },
      {
       "Key": "DeploymentTime",
-      "Value": "2025-04-03-04-03-08"
+      "Value": "2025-04-03-18-21-45"
      },
      {
       "Key": "Environment",
@@ -525,7 +525,7 @@
     "Tags": [
      {
       "Key": "DeploymentTime",
-      "Value": "2025-04-03-04-03-08"
+      "Value": "2025-04-03-18-21-45"
      },
      {
       "Key": "Environment",
@@ -588,7 +588,7 @@
   "NetworkStagingVpcPrivateSubnet2Subnet2ADC3E54": {
    "Type": "AWS::EC2::Subnet",
    "Properties": {
-    "AvailabilityZone": "dummy1b",
+    "AvailabilityZone": "us-east-1b",
     "CidrBlock": "10.0.4.0/24",
     "MapPublicIpOnLaunch": false,
     "Tags": [
@@ -602,7 +602,7 @@
      },
      {
       "Key": "DeploymentTime",
-      "Value": "2025-04-03-04-03-08"
+      "Value": "2025-04-03-18-21-45"
      },
      {
       "Key": "Environment",
@@ -639,7 +639,7 @@
     "Tags": [
      {
       "Key": "DeploymentTime",
-      "Value": "2025-04-03-04-03-08"
+      "Value": "2025-04-03-18-21-45"
      },
      {
       "Key": "Environment",
@@ -702,7 +702,7 @@
   "NetworkStagingVpcPrivateSubnet3SubnetDFFA4536": {
    "Type": "AWS::EC2::Subnet",
    "Properties": {
-    "AvailabilityZone": "dummy1c",
+    "AvailabilityZone": "us-east-1c",
     "CidrBlock": "10.0.5.0/24",
     "MapPublicIpOnLaunch": false,
     "Tags": [
@@ -716,7 +716,7 @@
      },
      {
       "Key": "DeploymentTime",
-      "Value": "2025-04-03-04-03-08"
+      "Value": "2025-04-03-18-21-45"
      },
      {
       "Key": "Environment",
@@ -753,7 +753,7 @@
     "Tags": [
      {
       "Key": "DeploymentTime",
-      "Value": "2025-04-03-04-03-08"
+      "Value": "2025-04-03-18-21-45"
      },
      {
       "Key": "Environment",
@@ -816,7 +816,7 @@
   "NetworkStagingVpcIsolatedSubnet1Subnet21D966E6": {
    "Type": "AWS::EC2::Subnet",
    "Properties": {
-    "AvailabilityZone": "dummy1a",
+    "AvailabilityZone": "us-east-1a",
     "CidrBlock": "10.0.6.0/24",
     "MapPublicIpOnLaunch": false,
     "Tags": [
@@ -830,7 +830,7 @@
      },
      {
       "Key": "DeploymentTime",
-      "Value": "2025-04-03-04-03-08"
+      "Value": "2025-04-03-18-21-45"
      },
      {
       "Key": "Environment",
@@ -867,7 +867,7 @@
     "Tags": [
      {
       "Key": "DeploymentTime",
-      "Value": "2025-04-03-04-03-08"
+      "Value": "2025-04-03-18-21-45"
      },
      {
       "Key": "Environment",
@@ -915,7 +915,7 @@
   "NetworkStagingVpcIsolatedSubnet2SubnetC5F2B685": {
    "Type": "AWS::EC2::Subnet",
    "Properties": {
-    "AvailabilityZone": "dummy1b",
+    "AvailabilityZone": "us-east-1b",
     "CidrBlock": "10.0.7.0/24",
     "MapPublicIpOnLaunch": false,
     "Tags": [
@@ -929,7 +929,7 @@
      },
      {
       "Key": "DeploymentTime",
-      "Value": "2025-04-03-04-03-08"
+      "Value": "2025-04-03-18-21-45"
      },
      {
       "Key": "Environment",
@@ -966,7 +966,7 @@
     "Tags": [
      {
       "Key": "DeploymentTime",
-      "Value": "2025-04-03-04-03-08"
+      "Value": "2025-04-03-18-21-45"
      },
      {
       "Key": "Environment",
@@ -1014,7 +1014,7 @@
   "NetworkStagingVpcIsolatedSubnet3Subnet65B39F37": {
    "Type": "AWS::EC2::Subnet",
    "Properties": {
-    "AvailabilityZone": "dummy1c",
+    "AvailabilityZone": "us-east-1c",
     "CidrBlock": "10.0.8.0/24",
     "MapPublicIpOnLaunch": false,
     "Tags": [
@@ -1028,7 +1028,7 @@
      },
      {
       "Key": "DeploymentTime",
-      "Value": "2025-04-03-04-03-08"
+      "Value": "2025-04-03-18-21-45"
      },
      {
       "Key": "Environment",
@@ -1065,7 +1065,7 @@
     "Tags": [
      {
       "Key": "DeploymentTime",
-      "Value": "2025-04-03-04-03-08"
+      "Value": "2025-04-03-18-21-45"
      },
      {
       "Key": "Environment",
@@ -1116,7 +1116,7 @@
     "Tags": [
      {
       "Key": "DeploymentTime",
-      "Value": "2025-04-03-04-03-08"
+      "Value": "2025-04-03-18-21-45"
      },
      {
       "Key": "Environment",
@@ -1178,7 +1178,7 @@
     "Tags": [
      {
       "Key": "DeploymentTime",
-      "Value": "2025-04-03-04-03-08"
+      "Value": "2025-04-03-18-21-45"
      },
      {
       "Key": "Environment",
@@ -1225,7 +1225,7 @@
     "Tags": [
      {
       "Key": "DeploymentTime",
-      "Value": "2025-04-03-04-03-08"
+      "Value": "2025-04-03-18-21-45"
      },
      {
       "Key": "Environment",
@@ -1299,7 +1299,7 @@
     "Tags": [
      {
       "Key": "DeploymentTime",
-      "Value": "2025-04-03-04-03-08"
+      "Value": "2025-04-03-18-21-45"
      },
      {
       "Key": "Environment",
@@ -1341,7 +1341,7 @@
     "Tags": [
      {
       "Key": "DeploymentTime",
-      "Value": "2025-04-03-04-03-08"
+      "Value": "2025-04-03-18-21-45"
      },
      {
       "Key": "Environment",
@@ -1384,7 +1384,7 @@
     "Tags": [
      {
       "Key": "DeploymentTime",
-      "Value": "2025-04-03-04-03-08"
+      "Value": "2025-04-03-18-21-45"
      },
      {
       "Key": "Environment",
@@ -1467,7 +1467,7 @@
     "Tags": [
      {
       "Key": "DeploymentTime",
-      "Value": "2025-04-03-04-03-08"
+      "Value": "2025-04-03-18-21-45"
      },
      {
       "Key": "Environment",
@@ -1541,7 +1541,7 @@
     "Tags": [
      {
       "Key": "DeploymentTime",
-      "Value": "2025-04-03-04-03-08"
+      "Value": "2025-04-03-18-21-45"
      },
      {
       "Key": "Environment",
@@ -1613,7 +1613,7 @@
     "Tags": [
      {
       "Key": "DeploymentTime",
-      "Value": "2025-04-03-04-03-08"
+      "Value": "2025-04-03-18-21-45"
      },
      {
       "Key": "Environment",
@@ -1670,7 +1670,7 @@
     "Tags": [
      {
       "Key": "DeploymentTime",
-      "Value": "2025-04-03-04-03-08"
+      "Value": "2025-04-03-18-21-45"
      },
      {
       "Key": "Environment",
@@ -1719,7 +1719,7 @@
     "Tags": [
      {
       "Key": "DeploymentTime",
-      "Value": "2025-04-03-04-03-08"
+      "Value": "2025-04-03-18-21-45"
      },
      {
       "Key": "Environment",
@@ -1805,7 +1805,7 @@
     "Tags": [
      {
       "Key": "DeploymentTime",
-      "Value": "2025-04-03-04-03-08"
+      "Value": "2025-04-03-18-21-45"
      },
      {
       "Key": "Environment",
@@ -1855,7 +1855,7 @@
        }
       ],
       "Essential": true,
-      "Image": "dummy-value-for-/myapp/ecr-repository-uri:dummy-value-for-/myapp/image-tag",
+      "Image": "316607856306.dkr.ecr.us-east-1.amazonaws.com/my-app-repository:dummy-value-for-/myapp/image-tag",
       "LogConfiguration": {
        "LogDriver": "awslogs",
        "Options": {
@@ -1891,7 +1891,7 @@
     "Tags": [
      {
       "Key": "DeploymentTime",
-      "Value": "2025-04-03-04-03-08"
+      "Value": "2025-04-03-18-21-45"
      },
      {
       "Key": "Environment",
@@ -1927,7 +1927,7 @@
     "Tags": [
      {
       "Key": "DeploymentTime",
-      "Value": "2025-04-03-04-03-08"
+      "Value": "2025-04-03-18-21-45"
      },
      {
       "Key": "Environment",
@@ -2016,7 +2016,7 @@
     "Tags": [
      {
       "Key": "DeploymentTime",
-      "Value": "2025-04-03-04-03-08"
+      "Value": "2025-04-03-18-21-45"
      },
      {
       "Key": "Environment",
@@ -2072,7 +2072,7 @@
     "Tags": [
      {
       "Key": "DeploymentTime",
-      "Value": "2025-04-03-04-03-08"
+      "Value": "2025-04-03-18-21-45"
      },
      {
       "Key": "Environment",
@@ -2222,7 +2222,7 @@
     "Description": "DNS name for the load balancer in Staging environment, us-east-1 region",
     "Name": "/myapp/Staging/us-east-1/loadbalancer-dns",
     "Tags": {
-     "DeploymentTime": "2025-04-03-04-03-08",
+     "DeploymentTime": "2025-04-03-18-21-45",
      "Environment": "Staging",
      "Project": "MyApp",
      "Region": "us-east-1"
