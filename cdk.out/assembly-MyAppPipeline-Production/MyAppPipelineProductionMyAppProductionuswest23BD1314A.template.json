@@ -1,0 +1,2628 @@
+{
+ "Resources": {
+  "NetworkProductionVpc2531860E": {
+   "Type": "AWS::EC2::VPC",
+   "Properties": {
+    "CidrBlock": "10.0.0.0/16",
+    "EnableDnsHostnames": true,
+    "EnableDnsSupport": true,
+    "InstanceTenancy": "default",
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-09"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Production"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/Resource"
+   }
+  },
+  "NetworkProductionVpcPublicSubnet1SubnetE689D222": {
+   "Type": "AWS::EC2::Subnet",
+   "Properties": {
+    "AvailabilityZone": "dummy1a",
+    "CidrBlock": "10.0.0.0/24",
+    "MapPublicIpOnLaunch": true,
+    "Tags": [
+     {
+      "Key": "aws-cdk:subnet-name",
+      "Value": "Public"
+     },
+     {
+      "Key": "aws-cdk:subnet-type",
+      "Value": "Public"
+     },
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-09"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Production"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet1"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NetworkProductionVpc2531860E"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet1/Subnet"
+   }
+  },
+  "NetworkProductionVpcPublicSubnet1RouteTableDC639D8D": {
+   "Type": "AWS::EC2::RouteTable",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-09"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Production"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet1"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NetworkProductionVpc2531860E"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet1/RouteTable"
+   }
+  },
+  "NetworkProductionVpcPublicSubnet1RouteTableAssociation350B5413": {
+   "Type": "AWS::EC2::SubnetRouteTableAssociation",
+   "Properties": {
+    "RouteTableId": {
+     "Ref": "NetworkProductionVpcPublicSubnet1RouteTableDC639D8D"
+    },
+    "SubnetId": {
+     "Ref": "NetworkProductionVpcPublicSubnet1SubnetE689D222"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet1/RouteTableAssociation"
+   }
+  },
+  "NetworkProductionVpcPublicSubnet1DefaultRouteEE1AD7F6": {
+   "Type": "AWS::EC2::Route",
+   "Properties": {
+    "DestinationCidrBlock": "0.0.0.0/0",
+    "GatewayId": {
+     "Ref": "NetworkProductionVpcIGW777D5899"
+    },
+    "RouteTableId": {
+     "Ref": "NetworkProductionVpcPublicSubnet1RouteTableDC639D8D"
+    }
+   },
+   "DependsOn": [
+    "NetworkProductionVpcVPCGWC39C2DF9"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet1/DefaultRoute"
+   }
+  },
+  "NetworkProductionVpcPublicSubnet1EIP1345B7CD": {
+   "Type": "AWS::EC2::EIP",
+   "Properties": {
+    "Domain": "vpc",
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-09"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Production"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet1"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet1/EIP"
+   }
+  },
+  "NetworkProductionVpcPublicSubnet1NATGatewayE07600D0": {
+   "Type": "AWS::EC2::NatGateway",
+   "Properties": {
+    "AllocationId": {
+     "Fn::GetAtt": [
+      "NetworkProductionVpcPublicSubnet1EIP1345B7CD",
+      "AllocationId"
+     ]
+    },
+    "SubnetId": {
+     "Ref": "NetworkProductionVpcPublicSubnet1SubnetE689D222"
+    },
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-09"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Production"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet1"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ]
+   },
+   "DependsOn": [
+    "NetworkProductionVpcPublicSubnet1DefaultRouteEE1AD7F6",
+    "NetworkProductionVpcPublicSubnet1RouteTableAssociation350B5413"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet1/NATGateway"
+   }
+  },
+  "NetworkProductionVpcPublicSubnet2Subnet0551CA43": {
+   "Type": "AWS::EC2::Subnet",
+   "Properties": {
+    "AvailabilityZone": "dummy1b",
+    "CidrBlock": "10.0.1.0/24",
+    "MapPublicIpOnLaunch": true,
+    "Tags": [
+     {
+      "Key": "aws-cdk:subnet-name",
+      "Value": "Public"
+     },
+     {
+      "Key": "aws-cdk:subnet-type",
+      "Value": "Public"
+     },
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-09"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Production"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet2"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NetworkProductionVpc2531860E"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet2/Subnet"
+   }
+  },
+  "NetworkProductionVpcPublicSubnet2RouteTableE2E0F08C": {
+   "Type": "AWS::EC2::RouteTable",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-09"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Production"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet2"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NetworkProductionVpc2531860E"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet2/RouteTable"
+   }
+  },
+  "NetworkProductionVpcPublicSubnet2RouteTableAssociationCCFF41E0": {
+   "Type": "AWS::EC2::SubnetRouteTableAssociation",
+   "Properties": {
+    "RouteTableId": {
+     "Ref": "NetworkProductionVpcPublicSubnet2RouteTableE2E0F08C"
+    },
+    "SubnetId": {
+     "Ref": "NetworkProductionVpcPublicSubnet2Subnet0551CA43"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet2/RouteTableAssociation"
+   }
+  },
+  "NetworkProductionVpcPublicSubnet2DefaultRoute979940E3": {
+   "Type": "AWS::EC2::Route",
+   "Properties": {
+    "DestinationCidrBlock": "0.0.0.0/0",
+    "GatewayId": {
+     "Ref": "NetworkProductionVpcIGW777D5899"
+    },
+    "RouteTableId": {
+     "Ref": "NetworkProductionVpcPublicSubnet2RouteTableE2E0F08C"
+    }
+   },
+   "DependsOn": [
+    "NetworkProductionVpcVPCGWC39C2DF9"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet2/DefaultRoute"
+   }
+  },
+  "NetworkProductionVpcPublicSubnet2EIP2CD600DD": {
+   "Type": "AWS::EC2::EIP",
+   "Properties": {
+    "Domain": "vpc",
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-09"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Production"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet2"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet2/EIP"
+   }
+  },
+  "NetworkProductionVpcPublicSubnet2NATGatewayB2E6D356": {
+   "Type": "AWS::EC2::NatGateway",
+   "Properties": {
+    "AllocationId": {
+     "Fn::GetAtt": [
+      "NetworkProductionVpcPublicSubnet2EIP2CD600DD",
+      "AllocationId"
+     ]
+    },
+    "SubnetId": {
+     "Ref": "NetworkProductionVpcPublicSubnet2Subnet0551CA43"
+    },
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-09"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Production"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet2"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ]
+   },
+   "DependsOn": [
+    "NetworkProductionVpcPublicSubnet2DefaultRoute979940E3",
+    "NetworkProductionVpcPublicSubnet2RouteTableAssociationCCFF41E0"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet2/NATGateway"
+   }
+  },
+  "NetworkProductionVpcPublicSubnet3SubnetD9F0C0B3": {
+   "Type": "AWS::EC2::Subnet",
+   "Properties": {
+    "AvailabilityZone": "dummy1c",
+    "CidrBlock": "10.0.2.0/24",
+    "MapPublicIpOnLaunch": true,
+    "Tags": [
+     {
+      "Key": "aws-cdk:subnet-name",
+      "Value": "Public"
+     },
+     {
+      "Key": "aws-cdk:subnet-type",
+      "Value": "Public"
+     },
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-09"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Production"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet3"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NetworkProductionVpc2531860E"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet3/Subnet"
+   }
+  },
+  "NetworkProductionVpcPublicSubnet3RouteTable063E8317": {
+   "Type": "AWS::EC2::RouteTable",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-09"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Production"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet3"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NetworkProductionVpc2531860E"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet3/RouteTable"
+   }
+  },
+  "NetworkProductionVpcPublicSubnet3RouteTableAssociation1F05CEF2": {
+   "Type": "AWS::EC2::SubnetRouteTableAssociation",
+   "Properties": {
+    "RouteTableId": {
+     "Ref": "NetworkProductionVpcPublicSubnet3RouteTable063E8317"
+    },
+    "SubnetId": {
+     "Ref": "NetworkProductionVpcPublicSubnet3SubnetD9F0C0B3"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet3/RouteTableAssociation"
+   }
+  },
+  "NetworkProductionVpcPublicSubnet3DefaultRoute9BD1C3B8": {
+   "Type": "AWS::EC2::Route",
+   "Properties": {
+    "DestinationCidrBlock": "0.0.0.0/0",
+    "GatewayId": {
+     "Ref": "NetworkProductionVpcIGW777D5899"
+    },
+    "RouteTableId": {
+     "Ref": "NetworkProductionVpcPublicSubnet3RouteTable063E8317"
+    }
+   },
+   "DependsOn": [
+    "NetworkProductionVpcVPCGWC39C2DF9"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet3/DefaultRoute"
+   }
+  },
+  "NetworkProductionVpcPublicSubnet3EIP93ADEC33": {
+   "Type": "AWS::EC2::EIP",
+   "Properties": {
+    "Domain": "vpc",
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-09"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Production"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet3"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet3/EIP"
+   }
+  },
+  "NetworkProductionVpcPublicSubnet3NATGateway0503B089": {
+   "Type": "AWS::EC2::NatGateway",
+   "Properties": {
+    "AllocationId": {
+     "Fn::GetAtt": [
+      "NetworkProductionVpcPublicSubnet3EIP93ADEC33",
+      "AllocationId"
+     ]
+    },
+    "SubnetId": {
+     "Ref": "NetworkProductionVpcPublicSubnet3SubnetD9F0C0B3"
+    },
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-09"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Production"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet3"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ]
+   },
+   "DependsOn": [
+    "NetworkProductionVpcPublicSubnet3DefaultRoute9BD1C3B8",
+    "NetworkProductionVpcPublicSubnet3RouteTableAssociation1F05CEF2"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet3/NATGateway"
+   }
+  },
+  "NetworkProductionVpcPrivateSubnet1Subnet040CC461": {
+   "Type": "AWS::EC2::Subnet",
+   "Properties": {
+    "AvailabilityZone": "dummy1a",
+    "CidrBlock": "10.0.3.0/24",
+    "MapPublicIpOnLaunch": false,
+    "Tags": [
+     {
+      "Key": "aws-cdk:subnet-name",
+      "Value": "Private"
+     },
+     {
+      "Key": "aws-cdk:subnet-type",
+      "Value": "Private"
+     },
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-09"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Production"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PrivateSubnet1"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NetworkProductionVpc2531860E"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PrivateSubnet1/Subnet"
+   }
+  },
+  "NetworkProductionVpcPrivateSubnet1RouteTable8E8CA153": {
+   "Type": "AWS::EC2::RouteTable",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-09"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Production"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PrivateSubnet1"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NetworkProductionVpc2531860E"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PrivateSubnet1/RouteTable"
+   }
+  },
+  "NetworkProductionVpcPrivateSubnet1RouteTableAssociationF4CA60DF": {
+   "Type": "AWS::EC2::SubnetRouteTableAssociation",
+   "Properties": {
+    "RouteTableId": {
+     "Ref": "NetworkProductionVpcPrivateSubnet1RouteTable8E8CA153"
+    },
+    "SubnetId": {
+     "Ref": "NetworkProductionVpcPrivateSubnet1Subnet040CC461"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PrivateSubnet1/RouteTableAssociation"
+   }
+  },
+  "NetworkProductionVpcPrivateSubnet1DefaultRoute1B033C9F": {
+   "Type": "AWS::EC2::Route",
+   "Properties": {
+    "DestinationCidrBlock": "0.0.0.0/0",
+    "NatGatewayId": {
+     "Ref": "NetworkProductionVpcPublicSubnet1NATGatewayE07600D0"
+    },
+    "RouteTableId": {
+     "Ref": "NetworkProductionVpcPrivateSubnet1RouteTable8E8CA153"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PrivateSubnet1/DefaultRoute"
+   }
+  },
+  "NetworkProductionVpcPrivateSubnet2Subnet6376BD63": {
+   "Type": "AWS::EC2::Subnet",
+   "Properties": {
+    "AvailabilityZone": "dummy1b",
+    "CidrBlock": "10.0.4.0/24",
+    "MapPublicIpOnLaunch": false,
+    "Tags": [
+     {
+      "Key": "aws-cdk:subnet-name",
+      "Value": "Private"
+     },
+     {
+      "Key": "aws-cdk:subnet-type",
+      "Value": "Private"
+     },
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-09"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Production"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PrivateSubnet2"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NetworkProductionVpc2531860E"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PrivateSubnet2/Subnet"
+   }
+  },
+  "NetworkProductionVpcPrivateSubnet2RouteTable0BD2E896": {
+   "Type": "AWS::EC2::RouteTable",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-09"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Production"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PrivateSubnet2"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NetworkProductionVpc2531860E"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PrivateSubnet2/RouteTable"
+   }
+  },
+  "NetworkProductionVpcPrivateSubnet2RouteTableAssociationF92C5515": {
+   "Type": "AWS::EC2::SubnetRouteTableAssociation",
+   "Properties": {
+    "RouteTableId": {
+     "Ref": "NetworkProductionVpcPrivateSubnet2RouteTable0BD2E896"
+    },
+    "SubnetId": {
+     "Ref": "NetworkProductionVpcPrivateSubnet2Subnet6376BD63"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PrivateSubnet2/RouteTableAssociation"
+   }
+  },
+  "NetworkProductionVpcPrivateSubnet2DefaultRoute3AF4890B": {
+   "Type": "AWS::EC2::Route",
+   "Properties": {
+    "DestinationCidrBlock": "0.0.0.0/0",
+    "NatGatewayId": {
+     "Ref": "NetworkProductionVpcPublicSubnet2NATGatewayB2E6D356"
+    },
+    "RouteTableId": {
+     "Ref": "NetworkProductionVpcPrivateSubnet2RouteTable0BD2E896"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PrivateSubnet2/DefaultRoute"
+   }
+  },
+  "NetworkProductionVpcPrivateSubnet3Subnet235D6939": {
+   "Type": "AWS::EC2::Subnet",
+   "Properties": {
+    "AvailabilityZone": "dummy1c",
+    "CidrBlock": "10.0.5.0/24",
+    "MapPublicIpOnLaunch": false,
+    "Tags": [
+     {
+      "Key": "aws-cdk:subnet-name",
+      "Value": "Private"
+     },
+     {
+      "Key": "aws-cdk:subnet-type",
+      "Value": "Private"
+     },
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-09"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Production"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PrivateSubnet3"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NetworkProductionVpc2531860E"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PrivateSubnet3/Subnet"
+   }
+  },
+  "NetworkProductionVpcPrivateSubnet3RouteTableCC1AEC30": {
+   "Type": "AWS::EC2::RouteTable",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-09"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Production"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PrivateSubnet3"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NetworkProductionVpc2531860E"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PrivateSubnet3/RouteTable"
+   }
+  },
+  "NetworkProductionVpcPrivateSubnet3RouteTableAssociation186B585A": {
+   "Type": "AWS::EC2::SubnetRouteTableAssociation",
+   "Properties": {
+    "RouteTableId": {
+     "Ref": "NetworkProductionVpcPrivateSubnet3RouteTableCC1AEC30"
+    },
+    "SubnetId": {
+     "Ref": "NetworkProductionVpcPrivateSubnet3Subnet235D6939"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PrivateSubnet3/RouteTableAssociation"
+   }
+  },
+  "NetworkProductionVpcPrivateSubnet3DefaultRouteA6387300": {
+   "Type": "AWS::EC2::Route",
+   "Properties": {
+    "DestinationCidrBlock": "0.0.0.0/0",
+    "NatGatewayId": {
+     "Ref": "NetworkProductionVpcPublicSubnet3NATGateway0503B089"
+    },
+    "RouteTableId": {
+     "Ref": "NetworkProductionVpcPrivateSubnet3RouteTableCC1AEC30"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PrivateSubnet3/DefaultRoute"
+   }
+  },
+  "NetworkProductionVpcIsolatedSubnet1Subnet5BFB91E9": {
+   "Type": "AWS::EC2::Subnet",
+   "Properties": {
+    "AvailabilityZone": "dummy1a",
+    "CidrBlock": "10.0.6.0/24",
+    "MapPublicIpOnLaunch": false,
+    "Tags": [
+     {
+      "Key": "aws-cdk:subnet-name",
+      "Value": "Isolated"
+     },
+     {
+      "Key": "aws-cdk:subnet-type",
+      "Value": "Isolated"
+     },
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-09"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Production"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/IsolatedSubnet1"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NetworkProductionVpc2531860E"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/IsolatedSubnet1/Subnet"
+   }
+  },
+  "NetworkProductionVpcIsolatedSubnet1RouteTable80440730": {
+   "Type": "AWS::EC2::RouteTable",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-09"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Production"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/IsolatedSubnet1"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NetworkProductionVpc2531860E"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/IsolatedSubnet1/RouteTable"
+   }
+  },
+  "NetworkProductionVpcIsolatedSubnet1RouteTableAssociation6EAE40A6": {
+   "Type": "AWS::EC2::SubnetRouteTableAssociation",
+   "Properties": {
+    "RouteTableId": {
+     "Ref": "NetworkProductionVpcIsolatedSubnet1RouteTable80440730"
+    },
+    "SubnetId": {
+     "Ref": "NetworkProductionVpcIsolatedSubnet1Subnet5BFB91E9"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/IsolatedSubnet1/RouteTableAssociation"
+   }
+  },
+  "NetworkProductionVpcIsolatedSubnet2Subnet3E06EAF4": {
+   "Type": "AWS::EC2::Subnet",
+   "Properties": {
+    "AvailabilityZone": "dummy1b",
+    "CidrBlock": "10.0.7.0/24",
+    "MapPublicIpOnLaunch": false,
+    "Tags": [
+     {
+      "Key": "aws-cdk:subnet-name",
+      "Value": "Isolated"
+     },
+     {
+      "Key": "aws-cdk:subnet-type",
+      "Value": "Isolated"
+     },
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-09"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Production"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/IsolatedSubnet2"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NetworkProductionVpc2531860E"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/IsolatedSubnet2/Subnet"
+   }
+  },
+  "NetworkProductionVpcIsolatedSubnet2RouteTableF4CCC503": {
+   "Type": "AWS::EC2::RouteTable",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-09"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Production"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/IsolatedSubnet2"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NetworkProductionVpc2531860E"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/IsolatedSubnet2/RouteTable"
+   }
+  },
+  "NetworkProductionVpcIsolatedSubnet2RouteTableAssociationEF7F584E": {
+   "Type": "AWS::EC2::SubnetRouteTableAssociation",
+   "Properties": {
+    "RouteTableId": {
+     "Ref": "NetworkProductionVpcIsolatedSubnet2RouteTableF4CCC503"
+    },
+    "SubnetId": {
+     "Ref": "NetworkProductionVpcIsolatedSubnet2Subnet3E06EAF4"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/IsolatedSubnet2/RouteTableAssociation"
+   }
+  },
+  "NetworkProductionVpcIsolatedSubnet3Subnet2E96A9A8": {
+   "Type": "AWS::EC2::Subnet",
+   "Properties": {
+    "AvailabilityZone": "dummy1c",
+    "CidrBlock": "10.0.8.0/24",
+    "MapPublicIpOnLaunch": false,
+    "Tags": [
+     {
+      "Key": "aws-cdk:subnet-name",
+      "Value": "Isolated"
+     },
+     {
+      "Key": "aws-cdk:subnet-type",
+      "Value": "Isolated"
+     },
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-09"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Production"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/IsolatedSubnet3"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NetworkProductionVpc2531860E"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/IsolatedSubnet3/Subnet"
+   }
+  },
+  "NetworkProductionVpcIsolatedSubnet3RouteTable8B2E9902": {
+   "Type": "AWS::EC2::RouteTable",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-09"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Production"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/IsolatedSubnet3"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NetworkProductionVpc2531860E"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/IsolatedSubnet3/RouteTable"
+   }
+  },
+  "NetworkProductionVpcIsolatedSubnet3RouteTableAssociation5E87CB18": {
+   "Type": "AWS::EC2::SubnetRouteTableAssociation",
+   "Properties": {
+    "RouteTableId": {
+     "Ref": "NetworkProductionVpcIsolatedSubnet3RouteTable8B2E9902"
+    },
+    "SubnetId": {
+     "Ref": "NetworkProductionVpcIsolatedSubnet3Subnet2E96A9A8"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/IsolatedSubnet3/RouteTableAssociation"
+   }
+  },
+  "NetworkProductionVpcIGW777D5899": {
+   "Type": "AWS::EC2::InternetGateway",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-09"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Production"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/IGW"
+   }
+  },
+  "NetworkProductionVpcVPCGWC39C2DF9": {
+   "Type": "AWS::EC2::VPCGatewayAttachment",
+   "Properties": {
+    "InternetGatewayId": {
+     "Ref": "NetworkProductionVpcIGW777D5899"
+    },
+    "VpcId": {
+     "Ref": "NetworkProductionVpc2531860E"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/VPCGW"
+   }
+  },
+  "NetworkProductionVpcProductionFlowLog5908EA15": {
+   "Type": "AWS::EC2::FlowLog",
+   "Properties": {
+    "DeliverLogsPermissionArn": {
+     "Fn::GetAtt": [
+      "NetworkProductionFlowLogRoleBF2C287A",
+      "Arn"
+     ]
+    },
+    "LogDestinationType": "cloud-watch-logs",
+    "LogGroupName": {
+     "Ref": "NetworkProductionFlowLogGroupC4291442"
+    },
+    "ResourceId": {
+     "Ref": "NetworkProductionVpc2531860E"
+    },
+    "ResourceType": "VPC",
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-09"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Production"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/ProductionFlowLog"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ],
+    "TrafficType": "ALL"
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/ProductionFlowLog/FlowLog"
+   }
+  },
+  "NetworkProductionFlowLogRoleBF2C287A": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "vpc-flow-logs.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-09"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Production"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionFlowLogRole/Resource"
+   }
+  },
+  "NetworkProductionFlowLogRoleDefaultPolicy14520A67": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "logs:CreateLogStream",
+        "logs:DescribeLogStreams",
+        "logs:PutLogEvents"
+       ],
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::GetAtt": [
+         "NetworkProductionFlowLogGroupC4291442",
+         "Arn"
+        ]
+       }
+      },
+      {
+       "Action": "iam:PassRole",
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::GetAtt": [
+         "NetworkProductionFlowLogRoleBF2C287A",
+         "Arn"
+        ]
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "NetworkProductionFlowLogRoleDefaultPolicy14520A67",
+    "Roles": [
+     {
+      "Ref": "NetworkProductionFlowLogRoleBF2C287A"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionFlowLogRole/DefaultPolicy/Resource"
+   }
+  },
+  "NetworkProductionFlowLogGroupC4291442": {
+   "Type": "AWS::Logs::LogGroup",
+   "Properties": {
+    "RetentionInDays": 30,
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-09"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Production"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ]
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionFlowLogGroup/Resource"
+   }
+  },
+  "NetworkProductionApiSecurityGroupFCB0DA05": {
+   "Type": "AWS::EC2::SecurityGroup",
+   "Properties": {
+    "GroupDescription": "Security Group for API services",
+    "SecurityGroupEgress": [
+     {
+      "CidrIp": "0.0.0.0/0",
+      "Description": "Allow HTTPS outbound traffic",
+      "FromPort": 443,
+      "IpProtocol": "tcp",
+      "ToPort": 443
+     }
+    ],
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-09"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Production"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NetworkProductionVpc2531860E"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionApiSecurityGroup/Resource"
+   }
+  },
+  "NetworkProductionDbSecurityGroup3F5A6C89": {
+   "Type": "AWS::EC2::SecurityGroup",
+   "Properties": {
+    "GroupDescription": "Security group for database access",
+    "SecurityGroupEgress": [
+     {
+      "CidrIp": "255.255.255.255/32",
+      "Description": "Disallow all traffic",
+      "FromPort": 252,
+      "IpProtocol": "icmp",
+      "ToPort": 86
+     }
+    ],
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-09"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Production"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NetworkProductionVpc2531860E"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionDbSecurityGroup/Resource"
+   }
+  },
+  "NetworkProductionDbSecurityGroupfromMyAppPipelineProductionMyAppProductionuswest2NetworkProductionApiSecurityGroup3D4CE6DC3306D7F6EC54": {
+   "Type": "AWS::EC2::SecurityGroupIngress",
+   "Properties": {
+    "Description": "Allow MySQL access from API",
+    "FromPort": 3306,
+    "GroupId": {
+     "Fn::GetAtt": [
+      "NetworkProductionDbSecurityGroup3F5A6C89",
+      "GroupId"
+     ]
+    },
+    "IpProtocol": "tcp",
+    "SourceSecurityGroupId": {
+     "Fn::GetAtt": [
+      "NetworkProductionApiSecurityGroupFCB0DA05",
+      "GroupId"
+     ]
+    },
+    "ToPort": 3306
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionDbSecurityGroup/from MyAppPipelineProductionMyAppProductionuswest2NetworkProductionApiSecurityGroup3D4CE6DC:3306"
+   }
+  },
+  "SecurityProductionTaskExecutionRole9F4560AF": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "ecs-tasks.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy"
+       ]
+      ]
+     }
+    ],
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-09"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Production"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Security"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Security/ProductionTaskExecutionRole/Resource"
+   }
+  },
+  "SecurityProductionTaskExecutionRoleDefaultPolicy298121F1": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+       ],
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::GetAtt": [
+         "ComputeProductionServiceTaskDefwebLogGroup851560DF",
+         "Arn"
+        ]
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "SecurityProductionTaskExecutionRoleDefaultPolicy298121F1",
+    "Roles": [
+     {
+      "Ref": "SecurityProductionTaskExecutionRole9F4560AF"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Security/ProductionTaskExecutionRole/DefaultPolicy/Resource"
+   }
+  },
+  "SecurityProductionTaskRoleD2828276": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "ecs-tasks.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-09"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Production"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Security"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Security/ProductionTaskRole/Resource"
+   }
+  },
+  "SecurityProductionTaskRoleDefaultPolicy1FC1629A": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "s3:GetObject",
+        "s3:ListBucket"
+       ],
+       "Effect": "Allow",
+       "Resource": "arn:aws:s3:::my-app-*"
+      },
+      {
+       "Action": [
+        "ssm:GetParameter",
+        "ssm:GetParameters"
+       ],
+       "Effect": "Allow",
+       "Resource": "arn:aws:ssm:us-west-2:*:parameter/myapp/Production/*"
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "SecurityProductionTaskRoleDefaultPolicy1FC1629A",
+    "Roles": [
+     {
+      "Ref": "SecurityProductionTaskRoleD2828276"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Security/ProductionTaskRole/DefaultPolicy/Resource"
+   }
+  },
+  "ComputeProductionClusterF870AD55": {
+   "Type": "AWS::ECS::Cluster",
+   "Properties": {
+    "ClusterName": "myapp-production-us-west-2",
+    "ClusterSettings": [
+     {
+      "Name": "containerInsights",
+      "Value": "enabled"
+     }
+    ],
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-09"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Production"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Compute"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Compute/ProductionCluster/Resource"
+   }
+  },
+  "ComputeProductionServiceLBC48603AE": {
+   "Type": "AWS::ElasticLoadBalancingV2::LoadBalancer",
+   "Properties": {
+    "LoadBalancerAttributes": [
+     {
+      "Key": "deletion_protection.enabled",
+      "Value": "false"
+     }
+    ],
+    "Name": "myapp-production-us-west-2",
+    "Scheme": "internet-facing",
+    "SecurityGroups": [
+     {
+      "Fn::GetAtt": [
+       "ComputeProductionServiceLBSecurityGroup607F8ECF",
+       "GroupId"
+      ]
+     }
+    ],
+    "Subnets": [
+     {
+      "Ref": "NetworkProductionVpcPublicSubnet1SubnetE689D222"
+     },
+     {
+      "Ref": "NetworkProductionVpcPublicSubnet2Subnet0551CA43"
+     },
+     {
+      "Ref": "NetworkProductionVpcPublicSubnet3SubnetD9F0C0B3"
+     }
+    ],
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-09"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Production"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Compute"
+     }
+    ],
+    "Type": "application"
+   },
+   "DependsOn": [
+    "NetworkProductionVpcPublicSubnet1DefaultRouteEE1AD7F6",
+    "NetworkProductionVpcPublicSubnet1RouteTableAssociation350B5413",
+    "NetworkProductionVpcPublicSubnet2DefaultRoute979940E3",
+    "NetworkProductionVpcPublicSubnet2RouteTableAssociationCCFF41E0",
+    "NetworkProductionVpcPublicSubnet3DefaultRoute9BD1C3B8",
+    "NetworkProductionVpcPublicSubnet3RouteTableAssociation1F05CEF2"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Compute/ProductionService/LB/Resource"
+   }
+  },
+  "ComputeProductionServiceLBSecurityGroup607F8ECF": {
+   "Type": "AWS::EC2::SecurityGroup",
+   "Properties": {
+    "GroupDescription": "Automatically created Security Group for ELB MyAppPipelineProductionMyAppProductionuswest2ComputeProductionServiceLBA03F5569",
+    "SecurityGroupIngress": [
+     {
+      "CidrIp": "0.0.0.0/0",
+      "Description": "Allow from anyone on port 80",
+      "FromPort": 80,
+      "IpProtocol": "tcp",
+      "ToPort": 80
+     }
+    ],
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-09"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Production"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Compute"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NetworkProductionVpc2531860E"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Compute/ProductionService/LB/SecurityGroup/Resource"
+   }
+  },
+  "ComputeProductionServiceLBSecurityGrouptoMyAppPipelineProductionMyAppProductionuswest2ComputeProductionServiceSecurityGroup4062424F80047B78CE": {
+   "Type": "AWS::EC2::SecurityGroupEgress",
+   "Properties": {
+    "Description": "Load balancer to target",
+    "DestinationSecurityGroupId": {
+     "Fn::GetAtt": [
+      "ComputeProductionServiceSecurityGroup1FB57DD7",
+      "GroupId"
+     ]
+    },
+    "FromPort": 80,
+    "GroupId": {
+     "Fn::GetAtt": [
+      "ComputeProductionServiceLBSecurityGroup607F8ECF",
+      "GroupId"
+     ]
+    },
+    "IpProtocol": "tcp",
+    "ToPort": 80
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Compute/ProductionService/LB/SecurityGroup/to MyAppPipelineProductionMyAppProductionuswest2ComputeProductionServiceSecurityGroup4062424F:80"
+   }
+  },
+  "ComputeProductionServiceLBPublicListenerD9A0455F": {
+   "Type": "AWS::ElasticLoadBalancingV2::Listener",
+   "Properties": {
+    "DefaultActions": [
+     {
+      "TargetGroupArn": {
+       "Ref": "ComputeProductionServiceLBPublicListenerECSGroup4BEA1607"
+      },
+      "Type": "forward"
+     }
+    ],
+    "LoadBalancerArn": {
+     "Ref": "ComputeProductionServiceLBC48603AE"
+    },
+    "Port": 80,
+    "Protocol": "HTTP"
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Compute/ProductionService/LB/PublicListener/Resource"
+   }
+  },
+  "ComputeProductionServiceLBPublicListenerECSGroup4BEA1607": {
+   "Type": "AWS::ElasticLoadBalancingV2::TargetGroup",
+   "Properties": {
+    "HealthCheckIntervalSeconds": 15,
+    "HealthCheckPath": "/health",
+    "HealthCheckTimeoutSeconds": 5,
+    "HealthyThresholdCount": 3,
+    "Matcher": {
+     "HttpCode": "200"
+    },
+    "Port": 80,
+    "Protocol": "HTTP",
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-09"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Production"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Compute"
+     }
+    ],
+    "TargetGroupAttributes": [
+     {
+      "Key": "stickiness.enabled",
+      "Value": "false"
+     }
+    ],
+    "TargetType": "ip",
+    "UnhealthyThresholdCount": 2,
+    "VpcId": {
+     "Ref": "NetworkProductionVpc2531860E"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Compute/ProductionService/LB/PublicListener/ECSGroup/Resource"
+   }
+  },
+  "ComputeProductionServiceTaskDef68EDF901": {
+   "Type": "AWS::ECS::TaskDefinition",
+   "Properties": {
+    "ContainerDefinitions": [
+     {
+      "Environment": [
+       {
+        "Name": "ENVIRONMENT",
+        "Value": "Production"
+       },
+       {
+        "Name": "REGION",
+        "Value": "us-west-2"
+       }
+      ],
+      "Essential": true,
+      "Image": "dummy-value-for-/myapp/ecr-repository-uri:dummy-value-for-/myapp/image-tag",
+      "LogConfiguration": {
+       "LogDriver": "awslogs",
+       "Options": {
+        "awslogs-group": {
+         "Ref": "ComputeProductionServiceTaskDefwebLogGroup851560DF"
+        },
+        "awslogs-stream-prefix": "production",
+        "awslogs-region": "us-west-2"
+       }
+      },
+      "Name": "web",
+      "PortMappings": [
+       {
+        "ContainerPort": 80,
+        "Protocol": "tcp"
+       }
+      ]
+     }
+    ],
+    "Cpu": "1024",
+    "ExecutionRoleArn": {
+     "Fn::GetAtt": [
+      "SecurityProductionTaskExecutionRole9F4560AF",
+      "Arn"
+     ]
+    },
+    "Family": "MyAppPipelineProductionMyAppProductionuswest2ComputeProductionServiceTaskDefC06D565C",
+    "Memory": "2048",
+    "NetworkMode": "awsvpc",
+    "RequiresCompatibilities": [
+     "FARGATE"
+    ],
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-09"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Production"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Compute"
+     }
+    ],
+    "TaskRoleArn": {
+     "Fn::GetAtt": [
+      "SecurityProductionTaskRoleD2828276",
+      "Arn"
+     ]
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Compute/ProductionService/TaskDef/Resource"
+   }
+  },
+  "ComputeProductionServiceTaskDefwebLogGroup851560DF": {
+   "Type": "AWS::Logs::LogGroup",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-09"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Production"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Compute"
+     }
+    ]
+   },
+   "UpdateReplacePolicy": "Retain",
+   "DeletionPolicy": "Retain",
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Compute/ProductionService/TaskDef/web/LogGroup/Resource"
+   }
+  },
+  "ComputeProductionServiceF726B584": {
+   "Type": "AWS::ECS::Service",
+   "Properties": {
+    "Cluster": {
+     "Ref": "ComputeProductionClusterF870AD55"
+    },
+    "DeploymentConfiguration": {
+     "Alarms": {
+      "AlarmNames": [],
+      "Enable": false,
+      "Rollback": false
+     },
+     "DeploymentCircuitBreaker": {
+      "Enable": true,
+      "Rollback": true
+     },
+     "MaximumPercent": 200,
+     "MinimumHealthyPercent": 50
+    },
+    "DeploymentController": {
+     "Type": "ECS"
+    },
+    "DesiredCount": 3,
+    "EnableECSManagedTags": false,
+    "HealthCheckGracePeriodSeconds": 60,
+    "LaunchType": "FARGATE",
+    "LoadBalancers": [
+     {
+      "ContainerName": "web",
+      "ContainerPort": 80,
+      "TargetGroupArn": {
+       "Ref": "ComputeProductionServiceLBPublicListenerECSGroup4BEA1607"
+      }
+     }
+    ],
+    "NetworkConfiguration": {
+     "AwsvpcConfiguration": {
+      "AssignPublicIp": "DISABLED",
+      "SecurityGroups": [
+       {
+        "Fn::GetAtt": [
+         "ComputeProductionServiceSecurityGroup1FB57DD7",
+         "GroupId"
+        ]
+       }
+      ],
+      "Subnets": [
+       {
+        "Ref": "NetworkProductionVpcPrivateSubnet1Subnet040CC461"
+       },
+       {
+        "Ref": "NetworkProductionVpcPrivateSubnet2Subnet6376BD63"
+       },
+       {
+        "Ref": "NetworkProductionVpcPrivateSubnet3Subnet235D6939"
+       }
+      ]
+     }
+    },
+    "ServiceName": "myapp-production-us-west-2",
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-09"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Production"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Compute"
+     }
+    ],
+    "TaskDefinition": {
+     "Ref": "ComputeProductionServiceTaskDef68EDF901"
+    }
+   },
+   "DependsOn": [
+    "ComputeProductionServiceLBPublicListenerECSGroup4BEA1607",
+    "ComputeProductionServiceLBPublicListenerD9A0455F",
+    "SecurityProductionTaskRoleDefaultPolicy1FC1629A",
+    "SecurityProductionTaskRoleD2828276"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Compute/ProductionService/Service/Service"
+   }
+  },
+  "ComputeProductionServiceSecurityGroup1FB57DD7": {
+   "Type": "AWS::EC2::SecurityGroup",
+   "Properties": {
+    "GroupDescription": "MyAppPipeline/Production/MyAppProductionuswest2/Compute/ProductionService/Service/SecurityGroup",
+    "SecurityGroupEgress": [
+     {
+      "CidrIp": "0.0.0.0/0",
+      "Description": "Allow all outbound traffic by default",
+      "IpProtocol": "-1"
+     }
+    ],
+    "SecurityGroupIngress": [
+     {
+      "CidrIp": "10.0.0.0/8",
+      "Description": "Allow only from trusted IP ranges",
+      "FromPort": 80,
+      "IpProtocol": "tcp",
+      "ToPort": 80
+     }
+    ],
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-09"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Production"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Compute"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NetworkProductionVpc2531860E"
+    }
+   },
+   "DependsOn": [
+    "SecurityProductionTaskRoleDefaultPolicy1FC1629A",
+    "SecurityProductionTaskRoleD2828276"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Compute/ProductionService/Service/SecurityGroup/Resource"
+   }
+  },
+  "ComputeProductionServiceSecurityGroupfromMyAppPipelineProductionMyAppProductionuswest2ComputeProductionServiceLBSecurityGroupBFB317F2808F9DEDE9": {
+   "Type": "AWS::EC2::SecurityGroupIngress",
+   "Properties": {
+    "Description": "Load balancer to target",
+    "FromPort": 80,
+    "GroupId": {
+     "Fn::GetAtt": [
+      "ComputeProductionServiceSecurityGroup1FB57DD7",
+      "GroupId"
+     ]
+    },
+    "IpProtocol": "tcp",
+    "SourceSecurityGroupId": {
+     "Fn::GetAtt": [
+      "ComputeProductionServiceLBSecurityGroup607F8ECF",
+      "GroupId"
+     ]
+    },
+    "ToPort": 80
+   },
+   "DependsOn": [
+    "SecurityProductionTaskRoleDefaultPolicy1FC1629A",
+    "SecurityProductionTaskRoleD2828276"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Compute/ProductionService/Service/SecurityGroup/from MyAppPipelineProductionMyAppProductionuswest2ComputeProductionServiceLBSecurityGroupBFB317F2:80"
+   }
+  },
+  "ComputeProductionServiceTaskCountTarget1283BAAC": {
+   "Type": "AWS::ApplicationAutoScaling::ScalableTarget",
+   "Properties": {
+    "MaxCapacity": 10,
+    "MinCapacity": 3,
+    "ResourceId": {
+     "Fn::Join": [
+      "",
+      [
+       "service/",
+       {
+        "Ref": "ComputeProductionClusterF870AD55"
+       },
+       "/",
+       {
+        "Fn::GetAtt": [
+         "ComputeProductionServiceF726B584",
+         "Name"
+        ]
+       }
+      ]
+     ]
+    },
+    "RoleARN": "arn:aws:iam::316607856306:role/aws-service-role/ecs.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_ECSService",
+    "ScalableDimension": "ecs:service:DesiredCount",
+    "ServiceNamespace": "ecs"
+   },
+   "DependsOn": [
+    "SecurityProductionTaskRoleDefaultPolicy1FC1629A",
+    "SecurityProductionTaskRoleD2828276"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Compute/ProductionService/Service/TaskCount/Target/Resource"
+   }
+  },
+  "ComputeProductionServiceTaskCountTargetProductionCpuScalingC75CB9EF": {
+   "Type": "AWS::ApplicationAutoScaling::ScalingPolicy",
+   "Properties": {
+    "PolicyName": "MyAppPipelineProductionMyAppProductionuswest2ComputeProductionServiceTaskCountTargetProductionCpuScalingBA292418",
+    "PolicyType": "TargetTrackingScaling",
+    "ScalingTargetId": {
+     "Ref": "ComputeProductionServiceTaskCountTarget1283BAAC"
+    },
+    "TargetTrackingScalingPolicyConfiguration": {
+     "PredefinedMetricSpecification": {
+      "PredefinedMetricType": "ECSServiceAverageCPUUtilization"
+     },
+     "ScaleInCooldown": 60,
+     "ScaleOutCooldown": 60,
+     "TargetValue": 70
+    }
+   },
+   "DependsOn": [
+    "SecurityProductionTaskRoleDefaultPolicy1FC1629A",
+    "SecurityProductionTaskRoleD2828276"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Compute/ProductionService/Service/TaskCount/Target/ProductionCpuScaling/Resource"
+   }
+  },
+  "ComputeProductionServiceTaskCountTargetProductionMemoryScaling5B2B44E8": {
+   "Type": "AWS::ApplicationAutoScaling::ScalingPolicy",
+   "Properties": {
+    "PolicyName": "MyAppPipelineProductionMyAppProductionuswest2ComputeProductionServiceTaskCountTargetProductionMemoryScaling3F1F2EE2",
+    "PolicyType": "TargetTrackingScaling",
+    "ScalingTargetId": {
+     "Ref": "ComputeProductionServiceTaskCountTarget1283BAAC"
+    },
+    "TargetTrackingScalingPolicyConfiguration": {
+     "PredefinedMetricSpecification": {
+      "PredefinedMetricType": "ECSServiceAverageMemoryUtilization"
+     },
+     "ScaleInCooldown": 60,
+     "ScaleOutCooldown": 60,
+     "TargetValue": 70
+    }
+   },
+   "DependsOn": [
+    "SecurityProductionTaskRoleDefaultPolicy1FC1629A",
+    "SecurityProductionTaskRoleD2828276"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Compute/ProductionService/Service/TaskCount/Target/ProductionMemoryScaling/Resource"
+   }
+  },
+  "ComputeProductionWebACL632E8F2C": {
+   "Type": "AWS::WAFv2::WebACL",
+   "Properties": {
+    "DefaultAction": {
+     "Allow": {}
+    },
+    "Name": "myapp-production-us-west-2",
+    "Rules": [
+     {
+      "Name": "AWS-AWSManagedRulesCommonRuleSet",
+      "OverrideAction": {
+       "None": {}
+      },
+      "Priority": 0,
+      "Statement": {
+       "ManagedRuleGroupStatement": {
+        "Name": "AWSManagedRulesCommonRuleSet",
+        "VendorName": "AWS"
+       }
+      },
+      "VisibilityConfig": {
+       "CloudWatchMetricsEnabled": true,
+       "MetricName": "AWS-AWSManagedRulesCommonRuleSet",
+       "SampledRequestsEnabled": true
+      }
+     },
+     {
+      "Action": {
+       "Block": {}
+      },
+      "Name": "RateLimitRule",
+      "Priority": 1,
+      "Statement": {
+       "RateBasedStatement": {
+        "AggregateKeyType": "IP",
+        "Limit": 2000
+       }
+      },
+      "VisibilityConfig": {
+       "CloudWatchMetricsEnabled": true,
+       "MetricName": "RateLimitRule",
+       "SampledRequestsEnabled": true
+      }
+     },
+     {
+      "Name": "AWS-AWSManagedRulesSQLiRuleSet",
+      "OverrideAction": {
+       "None": {}
+      },
+      "Priority": 2,
+      "Statement": {
+       "ManagedRuleGroupStatement": {
+        "Name": "AWSManagedRulesSQLiRuleSet",
+        "VendorName": "AWS"
+       }
+      },
+      "VisibilityConfig": {
+       "CloudWatchMetricsEnabled": true,
+       "MetricName": "AWS-AWSManagedRulesSQLiRuleSet",
+       "SampledRequestsEnabled": true
+      }
+     }
+    ],
+    "Scope": "REGIONAL",
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-09"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Production"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Compute"
+     }
+    ],
+    "VisibilityConfig": {
+     "CloudWatchMetricsEnabled": true,
+     "MetricName": "myapp-production-us-west-2-WebACLMetrics",
+     "SampledRequestsEnabled": true
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Compute/ProductionWebACL"
+   }
+  },
+  "ComputeProductionWebACLAssociation2A63A5B9": {
+   "Type": "AWS::WAFv2::WebACLAssociation",
+   "Properties": {
+    "ResourceArn": {
+     "Ref": "ComputeProductionServiceLBC48603AE"
+    },
+    "WebACLArn": {
+     "Fn::GetAtt": [
+      "ComputeProductionWebACL632E8F2C",
+      "Arn"
+     ]
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Compute/ProductionWebACLAssociation"
+   }
+  },
+  "Productionuswest2LoadBalancerDnsBDBF263D": {
+   "Type": "AWS::SSM::Parameter",
+   "Properties": {
+    "Description": "DNS name for the load balancer in Production environment, us-west-2 region",
+    "Name": "/myapp/Production/us-west-2/loadbalancer-dns",
+    "Tags": {
+     "DeploymentTime": "2025-04-03-04-03-09",
+     "Environment": "Production",
+     "Project": "MyApp",
+     "Region": "us-west-2"
+    },
+    "Type": "String",
+    "Value": {
+     "Fn::GetAtt": [
+      "ComputeProductionServiceLBC48603AE",
+      "DNSName"
+     ]
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/Productionus-west-2LoadBalancerDns/Resource"
+   }
+  },
+  "ProductionDnsRecord1BBBEBE6": {
+   "Type": "AWS::Route53::RecordSet",
+   "Properties": {
+    "AliasTarget": {
+     "DNSName": {
+      "Fn::Join": [
+       "",
+       [
+        "dualstack.",
+        {
+         "Fn::GetAtt": [
+          "ComputeProductionServiceLBC48603AE",
+          "DNSName"
+         ]
+        }
+       ]
+      ]
+     },
+     "HostedZoneId": {
+      "Fn::GetAtt": [
+       "ComputeProductionServiceLBC48603AE",
+       "CanonicalHostedZoneID"
+      ]
+     }
+    },
+    "HostedZoneId": "DUMMY",
+    "Name": "app-us-west-2.example.com.",
+    "Type": "A"
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/ProductionDnsRecord/Resource"
+   }
+  },
+  "CDKMetadata": {
+   "Type": "AWS::CDK::Metadata",
+   "Properties": {
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/31TTW/bMAz9Lb0ryhfW7bKD66ZFgCAL4iA7FrTCeFwUyZCoBIXh/z7ITmy3GwYf+Pj0SPNDmsnpt69y8gBXP1KH00hTLquMQZ0EXP1bhWomq32pRHo0+00qNiHXpLKQG+TI9WhrA+MOco0933OJ91YRMFnTiSNYLDfRrIFfgfEK72Lj6AKMfeKlYXQGO0Fbyc1LmEH9OqNh8aLtdWWLeH6HGargiN9fnQ1lU9Z/iaUpHHr/F79o6FoQnGW1tW2Hjd1YTaopqUW10LbwslrZovvFHdcClZdVqoNndPHkDl/AFRAH5U/PeCRD9zF9ZqxhIINuwN1iM3QXUu3obzBToOPoY5LUBsNNAW8lcJynl0lZalLNSlYWDk+gwSg8fEqIGjyT0hYOeaMgU1xmsvp3tGsbHvhDHXlGc9Pc8eB8B65A7uY2cGsBvQwCW69Akylk1TcZxU37H5nW7ByoE5kia+P6tX0ganGFY2wuPZqfmCfpSnRocIFr4f05vhIXI8HBGW8L7ZxauHjDv8xllWxRWXdorkyDMuS6Flv0Nrh2Yz8Cl4Fr8Wx5jTx+lBM5fxzL9WKXWodJWY726DxZ8/0yl9PxVE7i9/DbE41cMExnlNvW/gHFnPc90AMAAA=="
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Production/MyAppProductionuswest2/CDKMetadata/Default"
+   }
+  }
+ },
+ "Outputs": {
+  "ComputeProductionServiceLoadBalancerDNSFAFB0358": {
+   "Value": {
+    "Fn::GetAtt": [
+     "ComputeProductionServiceLBC48603AE",
+     "DNSName"
+    ]
+   }
+  },
+  "ComputeProductionServiceServiceURLA154373A": {
+   "Value": {
+    "Fn::Join": [
+     "",
+     [
+      "http://",
+      {
+       "Fn::GetAtt": [
+        "ComputeProductionServiceLBC48603AE",
+        "DNSName"
+       ]
+      }
+     ]
+    ]
+   }
+  },
+  "DisasterRecoveryProcedures": {
+   "Description": "Link to disaster recovery procedures document",
+   "Value": "https://wiki.example.com/disaster-recovery-procedures"
+  }
+ },
+ "Parameters": {
+  "BootstrapVersion": {
+   "Type": "AWS::SSM::Parameter::Value<String>",
+   "Default": "/cdk-bootstrap/hnb659fds/version",
+   "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]"
+  }
+ },
+ "Rules": {
+  "CheckBootstrapVersion": {
+   "Assertions": [
+    {
+     "Assert": {
+      "Fn::Not": [
+       {
+        "Fn::Contains": [
+         [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+         ],
+         {
+          "Ref": "BootstrapVersion"
+         }
+        ]
+       }
+      ]
+     },
+     "AssertDescription": "CDK bootstrap stack version 6 required. Please run 'cdk bootstrap' with a recent version of the CDK CLI."
+    }
+   ]
+  }
+ }
+}

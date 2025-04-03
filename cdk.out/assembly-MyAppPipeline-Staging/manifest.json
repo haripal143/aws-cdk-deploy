@@ -1,0 +1,1123 @@
+{
+  "version": "41.0.0",
+  "artifacts": {
+    "MyAppPipelineStagingMyAppStaginguseast161B9EEAB.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "MyAppPipelineStagingMyAppStaginguseast161B9EEAB.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "MyAppPipelineStagingMyAppStaginguseast161B9EEAB": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://316607856306/us-east-1",
+      "properties": {
+        "templateFile": "MyAppPipelineStagingMyAppStaginguseast161B9EEAB.template.json",
+        "terminationProtection": false,
+        "tags": {
+          "Application": "MyApp",
+          "AutoDeploy": "True",
+          "DeploymentTime": "2025-04-03-04-03-08",
+          "DeploymentType": "CDK",
+          "Environment": "Staging",
+          "Project": "MyApp",
+          "Region": "us-east-1"
+        },
+        "validateOnSynth": true,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::316607856306:role/cdk-hnb659fds-deploy-role-316607856306-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::316607856306:role/cdk-hnb659fds-cfn-exec-role-316607856306-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-316607856306-us-east-1/531514ad102692921aa4e9dfc6f15d323ed7bfb08d2e4f43c9ef89559302d991.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "MyAppPipelineStagingMyAppStaginguseast161B9EEAB.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::316607856306:role/cdk-hnb659fds-lookup-role-316607856306-us-east-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        },
+        "stackName": "Staging-MyAppStaginguseast1"
+      },
+      "dependencies": [
+        "MyAppPipelineStagingMyAppStaginguseast161B9EEAB.assets"
+      ],
+      "metadata": {
+        "/MyAppPipeline/Staging/MyAppStaginguseast1": [
+          {
+            "type": "aws:cdk:stack-tags",
+            "data": [
+              {
+                "Key": "Application",
+                "Value": "MyApp"
+              },
+              {
+                "Key": "AutoDeploy",
+                "Value": "True"
+              },
+              {
+                "Key": "DeploymentTime",
+                "Value": "2025-04-03-04-03-08"
+              },
+              {
+                "Key": "DeploymentType",
+                "Value": "CDK"
+              },
+              {
+                "Key": "Environment",
+                "Value": "Staging"
+              },
+              {
+                "Key": "Project",
+                "Value": "MyApp"
+              },
+              {
+                "Key": "Region",
+                "Value": "us-east-1"
+              }
+            ]
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Network/StagingVpc/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpc3D0A177D"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Network/StagingVpc/PublicSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPublicSubnet1Subnet1695C13B"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Network/StagingVpc/PublicSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPublicSubnet1RouteTable16EAF1F2"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Network/StagingVpc/PublicSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPublicSubnet1RouteTableAssociationEBB89F27"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Network/StagingVpc/PublicSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPublicSubnet1DefaultRoute2BB8E675"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Network/StagingVpc/PublicSubnet1/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPublicSubnet1EIPDF7D6C85"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Network/StagingVpc/PublicSubnet1/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPublicSubnet1NATGateway5E5D62C4"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Network/StagingVpc/PublicSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPublicSubnet2Subnet1DE6EC41"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Network/StagingVpc/PublicSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPublicSubnet2RouteTable20D27301"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Network/StagingVpc/PublicSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPublicSubnet2RouteTableAssociation94D9C5C8"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Network/StagingVpc/PublicSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPublicSubnet2DefaultRouteD3696066"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Network/StagingVpc/PublicSubnet3/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPublicSubnet3SubnetC2DB3694"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Network/StagingVpc/PublicSubnet3/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPublicSubnet3RouteTable6B4926E2"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Network/StagingVpc/PublicSubnet3/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPublicSubnet3RouteTableAssociation8CF44ADD"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Network/StagingVpc/PublicSubnet3/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPublicSubnet3DefaultRoute7F29FBF7"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Network/StagingVpc/PrivateSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPrivateSubnet1Subnet3D7A6564"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Network/StagingVpc/PrivateSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPrivateSubnet1RouteTable39BA3684"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Network/StagingVpc/PrivateSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPrivateSubnet1RouteTableAssociation81E87A0A"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Network/StagingVpc/PrivateSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPrivateSubnet1DefaultRoute9E0C0816"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Network/StagingVpc/PrivateSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPrivateSubnet2Subnet2ADC3E54"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Network/StagingVpc/PrivateSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPrivateSubnet2RouteTable1040C36E"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Network/StagingVpc/PrivateSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPrivateSubnet2RouteTableAssociation62E88762"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Network/StagingVpc/PrivateSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPrivateSubnet2DefaultRouteC543B767"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Network/StagingVpc/PrivateSubnet3/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPrivateSubnet3SubnetDFFA4536"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Network/StagingVpc/PrivateSubnet3/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPrivateSubnet3RouteTableB7C56FE3"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Network/StagingVpc/PrivateSubnet3/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPrivateSubnet3RouteTableAssociation24AD040C"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Network/StagingVpc/PrivateSubnet3/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPrivateSubnet3DefaultRoute665B639E"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Network/StagingVpc/IsolatedSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcIsolatedSubnet1Subnet21D966E6"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Network/StagingVpc/IsolatedSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcIsolatedSubnet1RouteTable4EB99065"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Network/StagingVpc/IsolatedSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcIsolatedSubnet1RouteTableAssociationA5FBB1B7"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Network/StagingVpc/IsolatedSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcIsolatedSubnet2SubnetC5F2B685"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Network/StagingVpc/IsolatedSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcIsolatedSubnet2RouteTableBF884A3B"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Network/StagingVpc/IsolatedSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcIsolatedSubnet2RouteTableAssociation3075CEF9"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Network/StagingVpc/IsolatedSubnet3/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcIsolatedSubnet3Subnet65B39F37"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Network/StagingVpc/IsolatedSubnet3/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcIsolatedSubnet3RouteTableD723E261"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Network/StagingVpc/IsolatedSubnet3/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcIsolatedSubnet3RouteTableAssociationF89FD715"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Network/StagingVpc/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcIGW98BA3B20"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Network/StagingVpc/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcVPCGW6AFECB82"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Network/StagingVpc/StagingFlowLog/FlowLog": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcStagingFlowLogE3F41182"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Network/StagingFlowLogRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingFlowLogRoleBE00BD0A"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Network/StagingFlowLogRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingFlowLogRoleDefaultPolicyA445D68E"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Network/StagingFlowLogGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingFlowLogGroup77C31BA9"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Network/StagingApiSecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingApiSecurityGroup0D3A90D0"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Network/StagingDbSecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingDbSecurityGroupD97A561E"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Network/StagingDbSecurityGroup/from MyAppPipelineStagingMyAppStaginguseast1NetworkStagingApiSecurityGroup223534F5:3306": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingDbSecurityGroupfromMyAppPipelineStagingMyAppStaginguseast1NetworkStagingApiSecurityGroup223534F53306DE8DD736"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Security/StagingTaskExecutionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SecurityStagingTaskExecutionRole26712782"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Security/StagingTaskExecutionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SecurityStagingTaskExecutionRoleDefaultPolicyE3DA90A3"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Security/StagingTaskRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SecurityStagingTaskRoleD27A2CAD"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Security/StagingTaskRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SecurityStagingTaskRoleDefaultPolicyD86683CA"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Compute/StagingCluster/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeStagingClusterB264C5C3"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Compute/StagingService/LB/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeStagingServiceLB05721D8D"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Compute/StagingService/LB/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeStagingServiceLBSecurityGroup6959B9BF"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Compute/StagingService/LB/SecurityGroup/to MyAppPipelineStagingMyAppStaginguseast1ComputeStagingServiceSecurityGroup8B2E077B:80": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeStagingServiceLBSecurityGrouptoMyAppPipelineStagingMyAppStaginguseast1ComputeStagingServiceSecurityGroup8B2E077B800CBC8AB7"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Compute/StagingService/LB/PublicListener/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeStagingServiceLBPublicListenerE3D21B44"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Compute/StagingService/LB/PublicListener/ECSGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeStagingServiceLBPublicListenerECSGroupB4EA5B1B"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Compute/StagingService/LoadBalancerDNS": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeStagingServiceLoadBalancerDNS96B34E29"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Compute/StagingService/ServiceURL": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeStagingServiceServiceURLCA8BA06D"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Compute/StagingService/TaskDef/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeStagingServiceTaskDef28821877"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Compute/StagingService/TaskDef/web/LogGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeStagingServiceTaskDefwebLogGroupE2678CF5"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Compute/StagingService/Service": [
+          {
+            "type": "aws:cdk:warning",
+            "data": "minHealthyPercent has not been configured so the default value of 50% is used. The number of running tasks will decrease below the desired count during deployments etc. See https://github.com/aws/aws-cdk/issues/31705 [ack: @aws-cdk/aws-ecs:minHealthyPercent]",
+            "trace": [
+              "Annotations.addMessage (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-OilvgR/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1608)",
+              "Annotations.addWarningV2 (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-OilvgR/node_modules/aws-cdk-lib/core/lib/annotations.js:1:825)",
+              "new BaseService (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-OilvgR/node_modules/aws-cdk-lib/aws-ecs/lib/base/base-service.js:1:8100)",
+              "new FargateService (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-OilvgR/node_modules/aws-cdk-lib/aws-ecs/lib/fargate/fargate-service.js:1:3551)",
+              "new ApplicationLoadBalancedFargateService (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-OilvgR/node_modules/aws-cdk-lib/aws-ecs-patterns/lib/fargate/application-load-balanced-fargate-service.js:1:3340)",
+              "Kernel._Kernel_create (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/0gmqlten.sd4/lib/program.js:548:25)",
+              "Kernel.create (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/0gmqlten.sd4/lib/program.js:218:93)",
+              "KernelHost.processRequest (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/0gmqlten.sd4/lib/program.js:15471:36)",
+              "KernelHost.run (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/0gmqlten.sd4/lib/program.js:15431:22)",
+              "Immediate._onImmediate (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/0gmqlten.sd4/lib/program.js:15432:46)",
+              "process.processImmediate (node:internal/timers:491:21)"
+            ]
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Compute/StagingService/Service/Service": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeStagingServiceBF33237D"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Compute/StagingService/Service/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeStagingServiceSecurityGroup8AA0F40A"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Compute/StagingService/Service/SecurityGroup/from MyAppPipelineStagingMyAppStaginguseast1ComputeStagingServiceLBSecurityGroup18B2F3E5:80": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeStagingServiceSecurityGroupfromMyAppPipelineStagingMyAppStaginguseast1ComputeStagingServiceLBSecurityGroup18B2F3E580189FE8ED"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Compute/StagingService/Service/TaskCount/Target/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeStagingServiceTaskCountTarget327FA14E"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Compute/StagingService/Service/TaskCount/Target/StagingCpuScaling/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeStagingServiceTaskCountTargetStagingCpuScaling1D4B0C7C"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Compute/StagingService/Service/TaskCount/Target/StagingMemoryScaling/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeStagingServiceTaskCountTargetStagingMemoryScalingA528456C"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/Stagingus-east-1LoadBalancerDns/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Staginguseast1LoadBalancerDnsC02DA868"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/StagingEndpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StagingEndpoint"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguseast1/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "MyAppPipeline/Staging/MyAppStaginguseast1"
+    },
+    "MyAppPipelineStagingMyAppStaginguswest23B80A317.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "MyAppPipelineStagingMyAppStaginguswest23B80A317.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "MyAppPipelineStagingMyAppStaginguswest23B80A317": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://316607856306/us-west-2",
+      "properties": {
+        "templateFile": "MyAppPipelineStagingMyAppStaginguswest23B80A317.template.json",
+        "terminationProtection": false,
+        "tags": {
+          "Application": "MyApp",
+          "AutoDeploy": "True",
+          "DeploymentTime": "2025-04-03-04-03-08",
+          "DeploymentType": "CDK",
+          "Environment": "Staging",
+          "Project": "MyApp",
+          "Region": "us-west-2"
+        },
+        "validateOnSynth": true,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::316607856306:role/cdk-hnb659fds-deploy-role-316607856306-us-west-2",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::316607856306:role/cdk-hnb659fds-cfn-exec-role-316607856306-us-west-2",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-316607856306-us-west-2/a6417930c8bf9a72b4b32535c26251d5b8f1fe4cbe56783d93d7ceda0defd498.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "MyAppPipelineStagingMyAppStaginguswest23B80A317.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::316607856306:role/cdk-hnb659fds-lookup-role-316607856306-us-west-2",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        },
+        "stackName": "Staging-MyAppStaginguswest2"
+      },
+      "dependencies": [
+        "MyAppPipelineStagingMyAppStaginguswest23B80A317.assets"
+      ],
+      "metadata": {
+        "/MyAppPipeline/Staging/MyAppStaginguswest2": [
+          {
+            "type": "aws:cdk:stack-tags",
+            "data": [
+              {
+                "Key": "Application",
+                "Value": "MyApp"
+              },
+              {
+                "Key": "AutoDeploy",
+                "Value": "True"
+              },
+              {
+                "Key": "DeploymentTime",
+                "Value": "2025-04-03-04-03-08"
+              },
+              {
+                "Key": "DeploymentType",
+                "Value": "CDK"
+              },
+              {
+                "Key": "Environment",
+                "Value": "Staging"
+              },
+              {
+                "Key": "Project",
+                "Value": "MyApp"
+              },
+              {
+                "Key": "Region",
+                "Value": "us-west-2"
+              }
+            ]
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpc3D0A177D"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PublicSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPublicSubnet1Subnet1695C13B"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PublicSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPublicSubnet1RouteTable16EAF1F2"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PublicSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPublicSubnet1RouteTableAssociationEBB89F27"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PublicSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPublicSubnet1DefaultRoute2BB8E675"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PublicSubnet1/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPublicSubnet1EIPDF7D6C85"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PublicSubnet1/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPublicSubnet1NATGateway5E5D62C4"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PublicSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPublicSubnet2Subnet1DE6EC41"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PublicSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPublicSubnet2RouteTable20D27301"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PublicSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPublicSubnet2RouteTableAssociation94D9C5C8"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PublicSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPublicSubnet2DefaultRouteD3696066"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PublicSubnet3/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPublicSubnet3SubnetC2DB3694"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PublicSubnet3/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPublicSubnet3RouteTable6B4926E2"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PublicSubnet3/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPublicSubnet3RouteTableAssociation8CF44ADD"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PublicSubnet3/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPublicSubnet3DefaultRoute7F29FBF7"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PrivateSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPrivateSubnet1Subnet3D7A6564"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PrivateSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPrivateSubnet1RouteTable39BA3684"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PrivateSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPrivateSubnet1RouteTableAssociation81E87A0A"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PrivateSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPrivateSubnet1DefaultRoute9E0C0816"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PrivateSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPrivateSubnet2Subnet2ADC3E54"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PrivateSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPrivateSubnet2RouteTable1040C36E"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PrivateSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPrivateSubnet2RouteTableAssociation62E88762"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PrivateSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPrivateSubnet2DefaultRouteC543B767"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PrivateSubnet3/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPrivateSubnet3SubnetDFFA4536"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PrivateSubnet3/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPrivateSubnet3RouteTableB7C56FE3"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PrivateSubnet3/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPrivateSubnet3RouteTableAssociation24AD040C"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PrivateSubnet3/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcPrivateSubnet3DefaultRoute665B639E"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/IsolatedSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcIsolatedSubnet1Subnet21D966E6"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/IsolatedSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcIsolatedSubnet1RouteTable4EB99065"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/IsolatedSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcIsolatedSubnet1RouteTableAssociationA5FBB1B7"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/IsolatedSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcIsolatedSubnet2SubnetC5F2B685"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/IsolatedSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcIsolatedSubnet2RouteTableBF884A3B"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/IsolatedSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcIsolatedSubnet2RouteTableAssociation3075CEF9"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/IsolatedSubnet3/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcIsolatedSubnet3Subnet65B39F37"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/IsolatedSubnet3/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcIsolatedSubnet3RouteTableD723E261"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/IsolatedSubnet3/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcIsolatedSubnet3RouteTableAssociationF89FD715"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcIGW98BA3B20"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcVPCGW6AFECB82"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/StagingFlowLog/FlowLog": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingVpcStagingFlowLogE3F41182"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingFlowLogRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingFlowLogRoleBE00BD0A"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingFlowLogRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingFlowLogRoleDefaultPolicyA445D68E"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingFlowLogGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingFlowLogGroup77C31BA9"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingApiSecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingApiSecurityGroup0D3A90D0"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingDbSecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingDbSecurityGroupD97A561E"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingDbSecurityGroup/from MyAppPipelineStagingMyAppStaginguswest2NetworkStagingApiSecurityGroup22B799B4:3306": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkStagingDbSecurityGroupfromMyAppPipelineStagingMyAppStaginguswest2NetworkStagingApiSecurityGroup22B799B43306D78B1F88"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Security/StagingTaskExecutionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SecurityStagingTaskExecutionRole26712782"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Security/StagingTaskExecutionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SecurityStagingTaskExecutionRoleDefaultPolicyE3DA90A3"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Security/StagingTaskRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SecurityStagingTaskRoleD27A2CAD"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Security/StagingTaskRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SecurityStagingTaskRoleDefaultPolicyD86683CA"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Compute/StagingCluster/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeStagingClusterB264C5C3"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Compute/StagingService/LB/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeStagingServiceLB05721D8D"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Compute/StagingService/LB/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeStagingServiceLBSecurityGroup6959B9BF"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Compute/StagingService/LB/SecurityGroup/to MyAppPipelineStagingMyAppStaginguswest2ComputeStagingServiceSecurityGroup0E097DC7:80": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeStagingServiceLBSecurityGrouptoMyAppPipelineStagingMyAppStaginguswest2ComputeStagingServiceSecurityGroup0E097DC780FBC31686"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Compute/StagingService/LB/PublicListener/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeStagingServiceLBPublicListenerE3D21B44"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Compute/StagingService/LB/PublicListener/ECSGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeStagingServiceLBPublicListenerECSGroupB4EA5B1B"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Compute/StagingService/LoadBalancerDNS": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeStagingServiceLoadBalancerDNS96B34E29"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Compute/StagingService/ServiceURL": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeStagingServiceServiceURLCA8BA06D"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Compute/StagingService/TaskDef/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeStagingServiceTaskDef28821877"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Compute/StagingService/TaskDef/web/LogGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeStagingServiceTaskDefwebLogGroupE2678CF5"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Compute/StagingService/Service": [
+          {
+            "type": "aws:cdk:warning",
+            "data": "minHealthyPercent has not been configured so the default value of 50% is used. The number of running tasks will decrease below the desired count during deployments etc. See https://github.com/aws/aws-cdk/issues/31705 [ack: @aws-cdk/aws-ecs:minHealthyPercent]",
+            "trace": [
+              "Annotations.addMessage (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-OilvgR/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1608)",
+              "Annotations.addWarningV2 (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-OilvgR/node_modules/aws-cdk-lib/core/lib/annotations.js:1:825)",
+              "new BaseService (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-OilvgR/node_modules/aws-cdk-lib/aws-ecs/lib/base/base-service.js:1:8100)",
+              "new FargateService (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-OilvgR/node_modules/aws-cdk-lib/aws-ecs/lib/fargate/fargate-service.js:1:3551)",
+              "new ApplicationLoadBalancedFargateService (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-OilvgR/node_modules/aws-cdk-lib/aws-ecs-patterns/lib/fargate/application-load-balanced-fargate-service.js:1:3340)",
+              "Kernel._Kernel_create (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/0gmqlten.sd4/lib/program.js:548:25)",
+              "Kernel.create (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/0gmqlten.sd4/lib/program.js:218:93)",
+              "KernelHost.processRequest (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/0gmqlten.sd4/lib/program.js:15471:36)",
+              "KernelHost.run (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/0gmqlten.sd4/lib/program.js:15431:22)",
+              "Immediate._onImmediate (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/0gmqlten.sd4/lib/program.js:15432:46)",
+              "process.processImmediate (node:internal/timers:491:21)"
+            ]
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Compute/StagingService/Service/Service": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeStagingServiceBF33237D"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Compute/StagingService/Service/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeStagingServiceSecurityGroup8AA0F40A"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Compute/StagingService/Service/SecurityGroup/from MyAppPipelineStagingMyAppStaginguswest2ComputeStagingServiceLBSecurityGroup36236B4C:80": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeStagingServiceSecurityGroupfromMyAppPipelineStagingMyAppStaginguswest2ComputeStagingServiceLBSecurityGroup36236B4C80813C3698"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Compute/StagingService/Service/TaskCount/Target/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeStagingServiceTaskCountTarget327FA14E"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Compute/StagingService/Service/TaskCount/Target/StagingCpuScaling/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeStagingServiceTaskCountTargetStagingCpuScaling1D4B0C7C"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Compute/StagingService/Service/TaskCount/Target/StagingMemoryScaling/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeStagingServiceTaskCountTargetStagingMemoryScalingA528456C"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/Stagingus-west-2LoadBalancerDns/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Staginguswest2LoadBalancerDnsBAF9AAD3"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/StagingEndpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StagingEndpoint"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/MyAppPipeline/Staging/MyAppStaginguswest2/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "MyAppPipeline/Staging/MyAppStaginguswest2"
+    }
+  },
+  "missing": [
+    {
+      "key": "ssm:account=316607856306:parameterName=/myapp/image-tag:region=us-east-1",
+      "provider": "ssm",
+      "props": {
+        "dummyValue": "dummy-value-for-/myapp/image-tag",
+        "ignoreErrorOnMissingContext": false,
+        "account": "316607856306",
+        "region": "us-east-1",
+        "parameterName": "/myapp/image-tag",
+        "lookupRoleArn": "arn:${AWS::Partition}:iam::316607856306:role/cdk-hnb659fds-lookup-role-316607856306-us-east-1"
+      }
+    },
+    {
+      "key": "ssm:account=316607856306:parameterName=/myapp/ecr-repository-uri:region=us-east-1",
+      "provider": "ssm",
+      "props": {
+        "dummyValue": "dummy-value-for-/myapp/ecr-repository-uri",
+        "ignoreErrorOnMissingContext": false,
+        "account": "316607856306",
+        "region": "us-east-1",
+        "parameterName": "/myapp/ecr-repository-uri",
+        "lookupRoleArn": "arn:${AWS::Partition}:iam::316607856306:role/cdk-hnb659fds-lookup-role-316607856306-us-east-1"
+      }
+    },
+    {
+      "key": "availability-zones:account=316607856306:region=us-east-1",
+      "provider": "availability-zones",
+      "props": {
+        "dummyValue": [
+          "dummy1a",
+          "dummy1b",
+          "dummy1c"
+        ],
+        "account": "316607856306",
+        "region": "us-east-1",
+        "lookupRoleArn": "arn:${AWS::Partition}:iam::316607856306:role/cdk-hnb659fds-lookup-role-316607856306-us-east-1"
+      }
+    },
+    {
+      "key": "ssm:account=316607856306:parameterName=/myapp/image-tag:region=us-west-2",
+      "provider": "ssm",
+      "props": {
+        "dummyValue": "dummy-value-for-/myapp/image-tag",
+        "ignoreErrorOnMissingContext": false,
+        "account": "316607856306",
+        "region": "us-west-2",
+        "parameterName": "/myapp/image-tag",
+        "lookupRoleArn": "arn:${AWS::Partition}:iam::316607856306:role/cdk-hnb659fds-lookup-role-316607856306-us-west-2"
+      }
+    },
+    {
+      "key": "ssm:account=316607856306:parameterName=/myapp/ecr-repository-uri:region=us-west-2",
+      "provider": "ssm",
+      "props": {
+        "dummyValue": "dummy-value-for-/myapp/ecr-repository-uri",
+        "ignoreErrorOnMissingContext": false,
+        "account": "316607856306",
+        "region": "us-west-2",
+        "parameterName": "/myapp/ecr-repository-uri",
+        "lookupRoleArn": "arn:${AWS::Partition}:iam::316607856306:role/cdk-hnb659fds-lookup-role-316607856306-us-west-2"
+      }
+    },
+    {
+      "key": "availability-zones:account=316607856306:region=us-west-2",
+      "provider": "availability-zones",
+      "props": {
+        "dummyValue": [
+          "dummy1a",
+          "dummy1b",
+          "dummy1c"
+        ],
+        "account": "316607856306",
+        "region": "us-west-2",
+        "lookupRoleArn": "arn:${AWS::Partition}:iam::316607856306:role/cdk-hnb659fds-lookup-role-316607856306-us-west-2"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1245 @@
+{
+  "version": "41.0.0",
+  "artifacts": {
+    "MyAppPipelineProductionMyAppProductionuseast1D1911D5E.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "MyAppPipelineProductionMyAppProductionuseast1D1911D5E.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "MyAppPipelineProductionMyAppProductionuseast1D1911D5E": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://316607856306/us-east-1",
+      "properties": {
+        "templateFile": "MyAppPipelineProductionMyAppProductionuseast1D1911D5E.template.json",
+        "terminationProtection": false,
+        "tags": {
+          "Application": "MyApp",
+          "AutoDeploy": "False",
+          "CriticalityLevel": "High",
+          "DeploymentTime": "2025-04-03-04-03-09",
+          "DeploymentType": "CDK",
+          "Environment": "Production",
+          "Project": "MyApp",
+          "Region": "us-east-1"
+        },
+        "validateOnSynth": true,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::316607856306:role/cdk-hnb659fds-deploy-role-316607856306-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::316607856306:role/cdk-hnb659fds-cfn-exec-role-316607856306-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-316607856306-us-east-1/fc3454d06ce630ac7c068d6bf6be7b7360dae8c39a6b4fca080eaa9fd569dc33.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "MyAppPipelineProductionMyAppProductionuseast1D1911D5E.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::316607856306:role/cdk-hnb659fds-lookup-role-316607856306-us-east-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        },
+        "stackName": "Production-MyAppProductionuseast1"
+      },
+      "dependencies": [
+        "MyAppPipelineProductionMyAppProductionuseast1D1911D5E.assets"
+      ],
+      "metadata": {
+        "/MyAppPipeline/Production/MyAppProductionuseast1": [
+          {
+            "type": "aws:cdk:stack-tags",
+            "data": [
+              {
+                "Key": "Application",
+                "Value": "MyApp"
+              },
+              {
+                "Key": "AutoDeploy",
+                "Value": "False"
+              },
+              {
+                "Key": "CriticalityLevel",
+                "Value": "High"
+              },
+              {
+                "Key": "DeploymentTime",
+                "Value": "2025-04-03-04-03-09"
+              },
+              {
+                "Key": "DeploymentType",
+                "Value": "CDK"
+              },
+              {
+                "Key": "Environment",
+                "Value": "Production"
+              },
+              {
+                "Key": "Project",
+                "Value": "MyApp"
+              },
+              {
+                "Key": "Region",
+                "Value": "us-east-1"
+              }
+            ]
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionVpc/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpc2531860E"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionVpc/PublicSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPublicSubnet1SubnetE689D222"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionVpc/PublicSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPublicSubnet1RouteTableDC639D8D"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionVpc/PublicSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPublicSubnet1RouteTableAssociation350B5413"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionVpc/PublicSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPublicSubnet1DefaultRouteEE1AD7F6"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionVpc/PublicSubnet1/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPublicSubnet1EIP1345B7CD"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionVpc/PublicSubnet1/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPublicSubnet1NATGatewayE07600D0"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionVpc/PublicSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPublicSubnet2Subnet0551CA43"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionVpc/PublicSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPublicSubnet2RouteTableE2E0F08C"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionVpc/PublicSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPublicSubnet2RouteTableAssociationCCFF41E0"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionVpc/PublicSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPublicSubnet2DefaultRoute979940E3"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionVpc/PublicSubnet2/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPublicSubnet2EIP2CD600DD"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionVpc/PublicSubnet2/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPublicSubnet2NATGatewayB2E6D356"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionVpc/PublicSubnet3/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPublicSubnet3SubnetD9F0C0B3"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionVpc/PublicSubnet3/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPublicSubnet3RouteTable063E8317"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionVpc/PublicSubnet3/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPublicSubnet3RouteTableAssociation1F05CEF2"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionVpc/PublicSubnet3/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPublicSubnet3DefaultRoute9BD1C3B8"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionVpc/PublicSubnet3/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPublicSubnet3EIP93ADEC33"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionVpc/PublicSubnet3/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPublicSubnet3NATGateway0503B089"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionVpc/PrivateSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPrivateSubnet1Subnet040CC461"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionVpc/PrivateSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPrivateSubnet1RouteTable8E8CA153"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionVpc/PrivateSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPrivateSubnet1RouteTableAssociationF4CA60DF"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionVpc/PrivateSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPrivateSubnet1DefaultRoute1B033C9F"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionVpc/PrivateSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPrivateSubnet2Subnet6376BD63"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionVpc/PrivateSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPrivateSubnet2RouteTable0BD2E896"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionVpc/PrivateSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPrivateSubnet2RouteTableAssociationF92C5515"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionVpc/PrivateSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPrivateSubnet2DefaultRoute3AF4890B"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionVpc/PrivateSubnet3/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPrivateSubnet3Subnet235D6939"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionVpc/PrivateSubnet3/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPrivateSubnet3RouteTableCC1AEC30"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionVpc/PrivateSubnet3/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPrivateSubnet3RouteTableAssociation186B585A"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionVpc/PrivateSubnet3/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPrivateSubnet3DefaultRouteA6387300"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionVpc/IsolatedSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcIsolatedSubnet1Subnet5BFB91E9"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionVpc/IsolatedSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcIsolatedSubnet1RouteTable80440730"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionVpc/IsolatedSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcIsolatedSubnet1RouteTableAssociation6EAE40A6"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionVpc/IsolatedSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcIsolatedSubnet2Subnet3E06EAF4"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionVpc/IsolatedSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcIsolatedSubnet2RouteTableF4CCC503"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionVpc/IsolatedSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcIsolatedSubnet2RouteTableAssociationEF7F584E"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionVpc/IsolatedSubnet3/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcIsolatedSubnet3Subnet2E96A9A8"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionVpc/IsolatedSubnet3/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcIsolatedSubnet3RouteTable8B2E9902"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionVpc/IsolatedSubnet3/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcIsolatedSubnet3RouteTableAssociation5E87CB18"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionVpc/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcIGW777D5899"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionVpc/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcVPCGWC39C2DF9"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionVpc/ProductionFlowLog/FlowLog": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcProductionFlowLog5908EA15"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionFlowLogRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionFlowLogRoleBF2C287A"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionFlowLogRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionFlowLogRoleDefaultPolicy14520A67"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionFlowLogGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionFlowLogGroupC4291442"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionApiSecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionApiSecurityGroupFCB0DA05"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionDbSecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionDbSecurityGroup3F5A6C89"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Network/ProductionDbSecurityGroup/from MyAppPipelineProductionMyAppProductionuseast1NetworkProductionApiSecurityGroupD4A5293A:3306": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionDbSecurityGroupfromMyAppPipelineProductionMyAppProductionuseast1NetworkProductionApiSecurityGroupD4A5293A33068BCAE4AB"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Security/ProductionTaskExecutionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SecurityProductionTaskExecutionRole9F4560AF"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Security/ProductionTaskExecutionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SecurityProductionTaskExecutionRoleDefaultPolicy298121F1"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Security/ProductionTaskRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SecurityProductionTaskRoleD2828276"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Security/ProductionTaskRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SecurityProductionTaskRoleDefaultPolicy1FC1629A"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Compute/ProductionCluster/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeProductionClusterF870AD55"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Compute/ProductionService/LB/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeProductionServiceLBC48603AE"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Compute/ProductionService/LB/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeProductionServiceLBSecurityGroup607F8ECF"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Compute/ProductionService/LB/SecurityGroup/to MyAppPipelineProductionMyAppProductionuseast1ComputeProductionServiceSecurityGroup3FA64317:80": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeProductionServiceLBSecurityGrouptoMyAppPipelineProductionMyAppProductionuseast1ComputeProductionServiceSecurityGroup3FA6431780F4172129"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Compute/ProductionService/LB/PublicListener/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeProductionServiceLBPublicListenerD9A0455F"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Compute/ProductionService/LB/PublicListener/ECSGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeProductionServiceLBPublicListenerECSGroup4BEA1607"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Compute/ProductionService/LoadBalancerDNS": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeProductionServiceLoadBalancerDNSFAFB0358"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Compute/ProductionService/ServiceURL": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeProductionServiceServiceURLA154373A"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Compute/ProductionService/TaskDef/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeProductionServiceTaskDef68EDF901"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Compute/ProductionService/TaskDef/web/LogGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeProductionServiceTaskDefwebLogGroup851560DF"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Compute/ProductionService/Service": [
+          {
+            "type": "aws:cdk:warning",
+            "data": "minHealthyPercent has not been configured so the default value of 50% is used. The number of running tasks will decrease below the desired count during deployments etc. See https://github.com/aws/aws-cdk/issues/31705 [ack: @aws-cdk/aws-ecs:minHealthyPercent]",
+            "trace": [
+              "Annotations.addMessage (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-OilvgR/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1608)",
+              "Annotations.addWarningV2 (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-OilvgR/node_modules/aws-cdk-lib/core/lib/annotations.js:1:825)",
+              "new BaseService (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-OilvgR/node_modules/aws-cdk-lib/aws-ecs/lib/base/base-service.js:1:8100)",
+              "new FargateService (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-OilvgR/node_modules/aws-cdk-lib/aws-ecs/lib/fargate/fargate-service.js:1:3551)",
+              "new ApplicationLoadBalancedFargateService (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-OilvgR/node_modules/aws-cdk-lib/aws-ecs-patterns/lib/fargate/application-load-balanced-fargate-service.js:1:3340)",
+              "Kernel._Kernel_create (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/0gmqlten.sd4/lib/program.js:548:25)",
+              "Kernel.create (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/0gmqlten.sd4/lib/program.js:218:93)",
+              "KernelHost.processRequest (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/0gmqlten.sd4/lib/program.js:15471:36)",
+              "KernelHost.run (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/0gmqlten.sd4/lib/program.js:15431:22)",
+              "Immediate._onImmediate (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/0gmqlten.sd4/lib/program.js:15432:46)",
+              "process.processImmediate (node:internal/timers:491:21)"
+            ]
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Compute/ProductionService/Service/Service": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeProductionServiceF726B584"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Compute/ProductionService/Service/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeProductionServiceSecurityGroup1FB57DD7"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Compute/ProductionService/Service/SecurityGroup/from MyAppPipelineProductionMyAppProductionuseast1ComputeProductionServiceLBSecurityGroup5C1B1808:80": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeProductionServiceSecurityGroupfromMyAppPipelineProductionMyAppProductionuseast1ComputeProductionServiceLBSecurityGroup5C1B18088011AD4929"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Compute/ProductionService/Service/TaskCount/Target/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeProductionServiceTaskCountTarget1283BAAC"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Compute/ProductionService/Service/TaskCount/Target/ProductionCpuScaling/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeProductionServiceTaskCountTargetProductionCpuScalingC75CB9EF"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Compute/ProductionService/Service/TaskCount/Target/ProductionMemoryScaling/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeProductionServiceTaskCountTargetProductionMemoryScaling5B2B44E8"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Compute/ProductionWebACL": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeProductionWebACL632E8F2C"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Compute/ProductionWebACLAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeProductionWebACLAssociation2A63A5B9"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/Productionus-east-1LoadBalancerDns/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Productionuseast1LoadBalancerDns1FF272AC"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/ProductionDnsRecord/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductionDnsRecord1BBBEBE6"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/DisasterRecoveryProcedures": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DisasterRecoveryProcedures"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuseast1/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "MyAppPipeline/Production/MyAppProductionuseast1"
+    },
+    "MyAppPipelineProductionMyAppProductionuswest23BD1314A.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "MyAppPipelineProductionMyAppProductionuswest23BD1314A.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "MyAppPipelineProductionMyAppProductionuswest23BD1314A": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://316607856306/us-west-2",
+      "properties": {
+        "templateFile": "MyAppPipelineProductionMyAppProductionuswest23BD1314A.template.json",
+        "terminationProtection": false,
+        "tags": {
+          "Application": "MyApp",
+          "AutoDeploy": "False",
+          "CriticalityLevel": "High",
+          "DeploymentTime": "2025-04-03-04-03-09",
+          "DeploymentType": "CDK",
+          "Environment": "Production",
+          "Project": "MyApp",
+          "Region": "us-west-2"
+        },
+        "validateOnSynth": true,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::316607856306:role/cdk-hnb659fds-deploy-role-316607856306-us-west-2",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::316607856306:role/cdk-hnb659fds-cfn-exec-role-316607856306-us-west-2",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-316607856306-us-west-2/35d546babfd2012d67668044d3cb98cf91705bdfa550c61acef8e26e01080158.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "MyAppPipelineProductionMyAppProductionuswest23BD1314A.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::316607856306:role/cdk-hnb659fds-lookup-role-316607856306-us-west-2",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        },
+        "stackName": "Production-MyAppProductionuswest2"
+      },
+      "dependencies": [
+        "MyAppPipelineProductionMyAppProductionuswest23BD1314A.assets"
+      ],
+      "metadata": {
+        "/MyAppPipeline/Production/MyAppProductionuswest2": [
+          {
+            "type": "aws:cdk:stack-tags",
+            "data": [
+              {
+                "Key": "Application",
+                "Value": "MyApp"
+              },
+              {
+                "Key": "AutoDeploy",
+                "Value": "False"
+              },
+              {
+                "Key": "CriticalityLevel",
+                "Value": "High"
+              },
+              {
+                "Key": "DeploymentTime",
+                "Value": "2025-04-03-04-03-09"
+              },
+              {
+                "Key": "DeploymentType",
+                "Value": "CDK"
+              },
+              {
+                "Key": "Environment",
+                "Value": "Production"
+              },
+              {
+                "Key": "Project",
+                "Value": "MyApp"
+              },
+              {
+                "Key": "Region",
+                "Value": "us-west-2"
+              }
+            ]
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpc2531860E"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPublicSubnet1SubnetE689D222"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPublicSubnet1RouteTableDC639D8D"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPublicSubnet1RouteTableAssociation350B5413"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPublicSubnet1DefaultRouteEE1AD7F6"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet1/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPublicSubnet1EIP1345B7CD"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet1/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPublicSubnet1NATGatewayE07600D0"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPublicSubnet2Subnet0551CA43"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPublicSubnet2RouteTableE2E0F08C"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPublicSubnet2RouteTableAssociationCCFF41E0"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPublicSubnet2DefaultRoute979940E3"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet2/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPublicSubnet2EIP2CD600DD"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet2/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPublicSubnet2NATGatewayB2E6D356"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet3/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPublicSubnet3SubnetD9F0C0B3"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet3/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPublicSubnet3RouteTable063E8317"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet3/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPublicSubnet3RouteTableAssociation1F05CEF2"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet3/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPublicSubnet3DefaultRoute9BD1C3B8"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet3/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPublicSubnet3EIP93ADEC33"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PublicSubnet3/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPublicSubnet3NATGateway0503B089"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PrivateSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPrivateSubnet1Subnet040CC461"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PrivateSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPrivateSubnet1RouteTable8E8CA153"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PrivateSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPrivateSubnet1RouteTableAssociationF4CA60DF"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PrivateSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPrivateSubnet1DefaultRoute1B033C9F"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PrivateSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPrivateSubnet2Subnet6376BD63"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PrivateSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPrivateSubnet2RouteTable0BD2E896"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PrivateSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPrivateSubnet2RouteTableAssociationF92C5515"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PrivateSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPrivateSubnet2DefaultRoute3AF4890B"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PrivateSubnet3/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPrivateSubnet3Subnet235D6939"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PrivateSubnet3/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPrivateSubnet3RouteTableCC1AEC30"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PrivateSubnet3/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPrivateSubnet3RouteTableAssociation186B585A"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/PrivateSubnet3/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcPrivateSubnet3DefaultRouteA6387300"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/IsolatedSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcIsolatedSubnet1Subnet5BFB91E9"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/IsolatedSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcIsolatedSubnet1RouteTable80440730"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/IsolatedSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcIsolatedSubnet1RouteTableAssociation6EAE40A6"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/IsolatedSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcIsolatedSubnet2Subnet3E06EAF4"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/IsolatedSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcIsolatedSubnet2RouteTableF4CCC503"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/IsolatedSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcIsolatedSubnet2RouteTableAssociationEF7F584E"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/IsolatedSubnet3/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcIsolatedSubnet3Subnet2E96A9A8"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/IsolatedSubnet3/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcIsolatedSubnet3RouteTable8B2E9902"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/IsolatedSubnet3/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcIsolatedSubnet3RouteTableAssociation5E87CB18"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcIGW777D5899"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcVPCGWC39C2DF9"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionVpc/ProductionFlowLog/FlowLog": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionVpcProductionFlowLog5908EA15"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionFlowLogRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionFlowLogRoleBF2C287A"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionFlowLogRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionFlowLogRoleDefaultPolicy14520A67"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionFlowLogGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionFlowLogGroupC4291442"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionApiSecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionApiSecurityGroupFCB0DA05"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionDbSecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionDbSecurityGroup3F5A6C89"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Network/ProductionDbSecurityGroup/from MyAppPipelineProductionMyAppProductionuswest2NetworkProductionApiSecurityGroup3D4CE6DC:3306": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkProductionDbSecurityGroupfromMyAppPipelineProductionMyAppProductionuswest2NetworkProductionApiSecurityGroup3D4CE6DC3306D7F6EC54"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Security/ProductionTaskExecutionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SecurityProductionTaskExecutionRole9F4560AF"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Security/ProductionTaskExecutionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SecurityProductionTaskExecutionRoleDefaultPolicy298121F1"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Security/ProductionTaskRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SecurityProductionTaskRoleD2828276"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Security/ProductionTaskRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SecurityProductionTaskRoleDefaultPolicy1FC1629A"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Compute/ProductionCluster/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeProductionClusterF870AD55"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Compute/ProductionService/LB/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeProductionServiceLBC48603AE"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Compute/ProductionService/LB/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeProductionServiceLBSecurityGroup607F8ECF"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Compute/ProductionService/LB/SecurityGroup/to MyAppPipelineProductionMyAppProductionuswest2ComputeProductionServiceSecurityGroup4062424F:80": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeProductionServiceLBSecurityGrouptoMyAppPipelineProductionMyAppProductionuswest2ComputeProductionServiceSecurityGroup4062424F80047B78CE"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Compute/ProductionService/LB/PublicListener/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeProductionServiceLBPublicListenerD9A0455F"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Compute/ProductionService/LB/PublicListener/ECSGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeProductionServiceLBPublicListenerECSGroup4BEA1607"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Compute/ProductionService/LoadBalancerDNS": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeProductionServiceLoadBalancerDNSFAFB0358"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Compute/ProductionService/ServiceURL": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeProductionServiceServiceURLA154373A"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Compute/ProductionService/TaskDef/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeProductionServiceTaskDef68EDF901"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Compute/ProductionService/TaskDef/web/LogGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeProductionServiceTaskDefwebLogGroup851560DF"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Compute/ProductionService/Service": [
+          {
+            "type": "aws:cdk:warning",
+            "data": "minHealthyPercent has not been configured so the default value of 50% is used. The number of running tasks will decrease below the desired count during deployments etc. See https://github.com/aws/aws-cdk/issues/31705 [ack: @aws-cdk/aws-ecs:minHealthyPercent]",
+            "trace": [
+              "Annotations.addMessage (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-OilvgR/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1608)",
+              "Annotations.addWarningV2 (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-OilvgR/node_modules/aws-cdk-lib/core/lib/annotations.js:1:825)",
+              "new BaseService (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-OilvgR/node_modules/aws-cdk-lib/aws-ecs/lib/base/base-service.js:1:8100)",
+              "new FargateService (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-OilvgR/node_modules/aws-cdk-lib/aws-ecs/lib/fargate/fargate-service.js:1:3551)",
+              "new ApplicationLoadBalancedFargateService (/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/jsii-kernel-OilvgR/node_modules/aws-cdk-lib/aws-ecs-patterns/lib/fargate/application-load-balanced-fargate-service.js:1:3340)",
+              "Kernel._Kernel_create (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/0gmqlten.sd4/lib/program.js:548:25)",
+              "Kernel.create (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/0gmqlten.sd4/lib/program.js:218:93)",
+              "KernelHost.processRequest (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/0gmqlten.sd4/lib/program.js:15471:36)",
+              "KernelHost.run (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/0gmqlten.sd4/lib/program.js:15431:22)",
+              "Immediate._onImmediate (/private/var/folders/wl/kpn1t0cs0ng8b3_jn3xrlbfh0000gn/T/0gmqlten.sd4/lib/program.js:15432:46)",
+              "process.processImmediate (node:internal/timers:491:21)"
+            ]
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Compute/ProductionService/Service/Service": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeProductionServiceF726B584"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Compute/ProductionService/Service/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeProductionServiceSecurityGroup1FB57DD7"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Compute/ProductionService/Service/SecurityGroup/from MyAppPipelineProductionMyAppProductionuswest2ComputeProductionServiceLBSecurityGroupBFB317F2:80": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeProductionServiceSecurityGroupfromMyAppPipelineProductionMyAppProductionuswest2ComputeProductionServiceLBSecurityGroupBFB317F2808F9DEDE9"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Compute/ProductionService/Service/TaskCount/Target/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeProductionServiceTaskCountTarget1283BAAC"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Compute/ProductionService/Service/TaskCount/Target/ProductionCpuScaling/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeProductionServiceTaskCountTargetProductionCpuScalingC75CB9EF"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Compute/ProductionService/Service/TaskCount/Target/ProductionMemoryScaling/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeProductionServiceTaskCountTargetProductionMemoryScaling5B2B44E8"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Compute/ProductionWebACL": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeProductionWebACL632E8F2C"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Compute/ProductionWebACLAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ComputeProductionWebACLAssociation2A63A5B9"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/Productionus-west-2LoadBalancerDns/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Productionuswest2LoadBalancerDnsBDBF263D"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/ProductionDnsRecord/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductionDnsRecord1BBBEBE6"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/DisasterRecoveryProcedures": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DisasterRecoveryProcedures"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/MyAppPipeline/Production/MyAppProductionuswest2/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "MyAppPipeline/Production/MyAppProductionuswest2"
+    }
+  },
+  "missing": [
+    {
+      "key": "ssm:account=316607856306:parameterName=/myapp/image-tag:region=us-east-1",
+      "provider": "ssm",
+      "props": {
+        "dummyValue": "dummy-value-for-/myapp/image-tag",
+        "ignoreErrorOnMissingContext": false,
+        "account": "316607856306",
+        "region": "us-east-1",
+        "parameterName": "/myapp/image-tag",
+        "lookupRoleArn": "arn:${AWS::Partition}:iam::316607856306:role/cdk-hnb659fds-lookup-role-316607856306-us-east-1"
+      }
+    },
+    {
+      "key": "ssm:account=316607856306:parameterName=/myapp/ecr-repository-uri:region=us-east-1",
+      "provider": "ssm",
+      "props": {
+        "dummyValue": "dummy-value-for-/myapp/ecr-repository-uri",
+        "ignoreErrorOnMissingContext": false,
+        "account": "316607856306",
+        "region": "us-east-1",
+        "parameterName": "/myapp/ecr-repository-uri",
+        "lookupRoleArn": "arn:${AWS::Partition}:iam::316607856306:role/cdk-hnb659fds-lookup-role-316607856306-us-east-1"
+      }
+    },
+    {
+      "key": "availability-zones:account=316607856306:region=us-east-1",
+      "provider": "availability-zones",
+      "props": {
+        "dummyValue": [
+          "dummy1a",
+          "dummy1b",
+          "dummy1c"
+        ],
+        "account": "316607856306",
+        "region": "us-east-1",
+        "lookupRoleArn": "arn:${AWS::Partition}:iam::316607856306:role/cdk-hnb659fds-lookup-role-316607856306-us-east-1"
+      }
+    },
+    {
+      "key": "hosted-zone:account=316607856306:domainName=example.com:region=us-east-1",
+      "provider": "hosted-zone",
+      "props": {
+        "dummyValue": {
+          "Id": "DUMMY",
+          "Name": "example.com"
+        },
+        "account": "316607856306",
+        "region": "us-east-1",
+        "domainName": "example.com",
+        "lookupRoleArn": "arn:${AWS::Partition}:iam::316607856306:role/cdk-hnb659fds-lookup-role-316607856306-us-east-1"
+      }
+    },
+    {
+      "key": "ssm:account=316607856306:parameterName=/myapp/image-tag:region=us-west-2",
+      "provider": "ssm",
+      "props": {
+        "dummyValue": "dummy-value-for-/myapp/image-tag",
+        "ignoreErrorOnMissingContext": false,
+        "account": "316607856306",
+        "region": "us-west-2",
+        "parameterName": "/myapp/image-tag",
+        "lookupRoleArn": "arn:${AWS::Partition}:iam::316607856306:role/cdk-hnb659fds-lookup-role-316607856306-us-west-2"
+      }
+    },
+    {
+      "key": "ssm:account=316607856306:parameterName=/myapp/ecr-repository-uri:region=us-west-2",
+      "provider": "ssm",
+      "props": {
+        "dummyValue": "dummy-value-for-/myapp/ecr-repository-uri",
+        "ignoreErrorOnMissingContext": false,
+        "account": "316607856306",
+        "region": "us-west-2",
+        "parameterName": "/myapp/ecr-repository-uri",
+        "lookupRoleArn": "arn:${AWS::Partition}:iam::316607856306:role/cdk-hnb659fds-lookup-role-316607856306-us-west-2"
+      }
+    },
+    {
+      "key": "availability-zones:account=316607856306:region=us-west-2",
+      "provider": "availability-zones",
+      "props": {
+        "dummyValue": [
+          "dummy1a",
+          "dummy1b",
+          "dummy1c"
+        ],
+        "account": "316607856306",
+        "region": "us-west-2",
+        "lookupRoleArn": "arn:${AWS::Partition}:iam::316607856306:role/cdk-hnb659fds-lookup-role-316607856306-us-west-2"
+      }
+    },
+    {
+      "key": "hosted-zone:account=316607856306:domainName=example.com:region=us-west-2",
+      "provider": "hosted-zone",
+      "props": {
+        "dummyValue": {
+          "Id": "DUMMY",
+          "Name": "example.com"
+        },
+        "account": "316607856306",
+        "region": "us-west-2",
+        "domainName": "example.com",
+        "lookupRoleArn": "arn:${AWS::Partition}:iam::316607856306:role/cdk-hnb659fds-lookup-role-316607856306-us-west-2"
+      }
+    }
+  ]
+}

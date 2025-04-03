@@ -1,0 +1,85 @@
+{
+    "app": "dotnet run --project src/MyApp.Pipeline/MyApp.Pipeline.csproj",
+    "watch": {
+      "include": [
+        "**"
+      ],
+      "exclude": [
+        "README.md",
+        "cdk*.json",
+        "src/*/obj",
+        "src/*/bin",
+        "src/*.sln",
+        "test"
+      ]
+    },
+    "context": {
+      "@aws-cdk/aws-apigateway:usagePlanKeyOrderInsensitiveId": true,
+      "@aws-cdk/core:stackRelativeExports": true,
+      "@aws-cdk/aws-rds:lowercaseDbIdentifier": true,
+      "@aws-cdk/aws-lambda:recognizeVersionProps": true,
+      "@aws-cdk/aws-lambda:recognizeLayerVersion": true,
+      "@aws-cdk/aws-cloudfront:defaultSecurityPolicyTLSv1.2_2021": true,
+      "@aws-cdk-containers/ecs-service-extensions:enableDefaultLogDriver": true,
+      "@aws-cdk/aws-ec2:uniqueImdsv2TemplateName": true,
+      "@aws-cdk/aws-s3:serverAccessLogsUseBucketPolicy": true,
+      "@aws-cdk/core:checkSecretUsage": true,
+      "@aws-cdk/aws-iam:minimizePolicies": true,
+      "@aws-cdk/aws-ecs:arnFormatIncludesClusterName": true,
+      "@aws-cdk/core:validateSnapshotRemovalPolicy": true,
+      "@aws-cdk/aws-codepipeline:crossAccountKeyAliasStackSafeResourceName": true,
+      "@aws-cdk/aws-s3:createDefaultLoggingPolicy": true,
+      "@aws-cdk/aws-sns-subscriptions:restrictSqsDescryption": true,
+      "@aws-cdk/aws-apigateway:disableCloudWatchRole": true,
+      "@aws-cdk/core:enablePartitionLiterals": true,
+      "@aws-cdk/core:target-partitions": ["aws", "aws-cn"],
+      
+      "app:environment-config": {
+        "Staging": {
+          "us-east-1": {
+            "vpcCidr": "10.0.0.0/16",
+            "maxAzs": 3,
+            "domain": "staging-east.example.com"
+          },
+          "us-west-2": {
+            "vpcCidr": "10.1.0.0/16",
+            "maxAzs": 3,
+            "domain": "staging-west.example.com"
+          }
+        },
+        "Production": {
+          "us-east-1": {
+            "vpcCidr": "10.10.0.0/16",
+            "maxAzs": 3,
+            "domain": "app.example.com"
+          },
+          "us-west-2": {
+            "vpcCidr": "10.11.0.0/16",
+            "maxAzs": 3,
+            "domain": "app-west.example.com"
+          }
+        }
+      },
+      
+      "app:alert-emails": [
+        "devops@example.com",
+        "oncall@example.com"
+      ],
+      
+      "app:enable-waf": {
+        "Staging": false,
+        "Production": true
+      },
+      
+      "app:enable-detailed-monitoring": {
+        "Staging": false,
+        "Production": true
+      },
+      
+      "app:trusted-ip-ranges": [
+        "10.0.0.0/8",
+        "172.16.0.0/12",
+        "192.168.0.0/16"
+      ]
+    }
+  }

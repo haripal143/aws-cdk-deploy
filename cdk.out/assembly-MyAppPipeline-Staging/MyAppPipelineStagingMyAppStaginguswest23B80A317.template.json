@@ -1,0 +1,2324 @@
+{
+ "Resources": {
+  "NetworkStagingVpc3D0A177D": {
+   "Type": "AWS::EC2::VPC",
+   "Properties": {
+    "CidrBlock": "10.0.0.0/16",
+    "EnableDnsHostnames": true,
+    "EnableDnsSupport": true,
+    "InstanceTenancy": "default",
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-08"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Staging"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/Resource"
+   }
+  },
+  "NetworkStagingVpcPublicSubnet1Subnet1695C13B": {
+   "Type": "AWS::EC2::Subnet",
+   "Properties": {
+    "AvailabilityZone": "dummy1a",
+    "CidrBlock": "10.0.0.0/24",
+    "MapPublicIpOnLaunch": true,
+    "Tags": [
+     {
+      "Key": "aws-cdk:subnet-name",
+      "Value": "Public"
+     },
+     {
+      "Key": "aws-cdk:subnet-type",
+      "Value": "Public"
+     },
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-08"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Staging"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PublicSubnet1"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NetworkStagingVpc3D0A177D"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PublicSubnet1/Subnet"
+   }
+  },
+  "NetworkStagingVpcPublicSubnet1RouteTable16EAF1F2": {
+   "Type": "AWS::EC2::RouteTable",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-08"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Staging"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PublicSubnet1"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NetworkStagingVpc3D0A177D"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PublicSubnet1/RouteTable"
+   }
+  },
+  "NetworkStagingVpcPublicSubnet1RouteTableAssociationEBB89F27": {
+   "Type": "AWS::EC2::SubnetRouteTableAssociation",
+   "Properties": {
+    "RouteTableId": {
+     "Ref": "NetworkStagingVpcPublicSubnet1RouteTable16EAF1F2"
+    },
+    "SubnetId": {
+     "Ref": "NetworkStagingVpcPublicSubnet1Subnet1695C13B"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PublicSubnet1/RouteTableAssociation"
+   }
+  },
+  "NetworkStagingVpcPublicSubnet1DefaultRoute2BB8E675": {
+   "Type": "AWS::EC2::Route",
+   "Properties": {
+    "DestinationCidrBlock": "0.0.0.0/0",
+    "GatewayId": {
+     "Ref": "NetworkStagingVpcIGW98BA3B20"
+    },
+    "RouteTableId": {
+     "Ref": "NetworkStagingVpcPublicSubnet1RouteTable16EAF1F2"
+    }
+   },
+   "DependsOn": [
+    "NetworkStagingVpcVPCGW6AFECB82"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PublicSubnet1/DefaultRoute"
+   }
+  },
+  "NetworkStagingVpcPublicSubnet1EIPDF7D6C85": {
+   "Type": "AWS::EC2::EIP",
+   "Properties": {
+    "Domain": "vpc",
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-08"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Staging"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PublicSubnet1"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PublicSubnet1/EIP"
+   }
+  },
+  "NetworkStagingVpcPublicSubnet1NATGateway5E5D62C4": {
+   "Type": "AWS::EC2::NatGateway",
+   "Properties": {
+    "AllocationId": {
+     "Fn::GetAtt": [
+      "NetworkStagingVpcPublicSubnet1EIPDF7D6C85",
+      "AllocationId"
+     ]
+    },
+    "SubnetId": {
+     "Ref": "NetworkStagingVpcPublicSubnet1Subnet1695C13B"
+    },
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-08"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Staging"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PublicSubnet1"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ]
+   },
+   "DependsOn": [
+    "NetworkStagingVpcPublicSubnet1DefaultRoute2BB8E675",
+    "NetworkStagingVpcPublicSubnet1RouteTableAssociationEBB89F27"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PublicSubnet1/NATGateway"
+   }
+  },
+  "NetworkStagingVpcPublicSubnet2Subnet1DE6EC41": {
+   "Type": "AWS::EC2::Subnet",
+   "Properties": {
+    "AvailabilityZone": "dummy1b",
+    "CidrBlock": "10.0.1.0/24",
+    "MapPublicIpOnLaunch": true,
+    "Tags": [
+     {
+      "Key": "aws-cdk:subnet-name",
+      "Value": "Public"
+     },
+     {
+      "Key": "aws-cdk:subnet-type",
+      "Value": "Public"
+     },
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-08"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Staging"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PublicSubnet2"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NetworkStagingVpc3D0A177D"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PublicSubnet2/Subnet"
+   }
+  },
+  "NetworkStagingVpcPublicSubnet2RouteTable20D27301": {
+   "Type": "AWS::EC2::RouteTable",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-08"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Staging"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PublicSubnet2"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NetworkStagingVpc3D0A177D"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PublicSubnet2/RouteTable"
+   }
+  },
+  "NetworkStagingVpcPublicSubnet2RouteTableAssociation94D9C5C8": {
+   "Type": "AWS::EC2::SubnetRouteTableAssociation",
+   "Properties": {
+    "RouteTableId": {
+     "Ref": "NetworkStagingVpcPublicSubnet2RouteTable20D27301"
+    },
+    "SubnetId": {
+     "Ref": "NetworkStagingVpcPublicSubnet2Subnet1DE6EC41"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PublicSubnet2/RouteTableAssociation"
+   }
+  },
+  "NetworkStagingVpcPublicSubnet2DefaultRouteD3696066": {
+   "Type": "AWS::EC2::Route",
+   "Properties": {
+    "DestinationCidrBlock": "0.0.0.0/0",
+    "GatewayId": {
+     "Ref": "NetworkStagingVpcIGW98BA3B20"
+    },
+    "RouteTableId": {
+     "Ref": "NetworkStagingVpcPublicSubnet2RouteTable20D27301"
+    }
+   },
+   "DependsOn": [
+    "NetworkStagingVpcVPCGW6AFECB82"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PublicSubnet2/DefaultRoute"
+   }
+  },
+  "NetworkStagingVpcPublicSubnet3SubnetC2DB3694": {
+   "Type": "AWS::EC2::Subnet",
+   "Properties": {
+    "AvailabilityZone": "dummy1c",
+    "CidrBlock": "10.0.2.0/24",
+    "MapPublicIpOnLaunch": true,
+    "Tags": [
+     {
+      "Key": "aws-cdk:subnet-name",
+      "Value": "Public"
+     },
+     {
+      "Key": "aws-cdk:subnet-type",
+      "Value": "Public"
+     },
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-08"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Staging"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PublicSubnet3"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NetworkStagingVpc3D0A177D"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PublicSubnet3/Subnet"
+   }
+  },
+  "NetworkStagingVpcPublicSubnet3RouteTable6B4926E2": {
+   "Type": "AWS::EC2::RouteTable",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-08"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Staging"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PublicSubnet3"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NetworkStagingVpc3D0A177D"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PublicSubnet3/RouteTable"
+   }
+  },
+  "NetworkStagingVpcPublicSubnet3RouteTableAssociation8CF44ADD": {
+   "Type": "AWS::EC2::SubnetRouteTableAssociation",
+   "Properties": {
+    "RouteTableId": {
+     "Ref": "NetworkStagingVpcPublicSubnet3RouteTable6B4926E2"
+    },
+    "SubnetId": {
+     "Ref": "NetworkStagingVpcPublicSubnet3SubnetC2DB3694"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PublicSubnet3/RouteTableAssociation"
+   }
+  },
+  "NetworkStagingVpcPublicSubnet3DefaultRoute7F29FBF7": {
+   "Type": "AWS::EC2::Route",
+   "Properties": {
+    "DestinationCidrBlock": "0.0.0.0/0",
+    "GatewayId": {
+     "Ref": "NetworkStagingVpcIGW98BA3B20"
+    },
+    "RouteTableId": {
+     "Ref": "NetworkStagingVpcPublicSubnet3RouteTable6B4926E2"
+    }
+   },
+   "DependsOn": [
+    "NetworkStagingVpcVPCGW6AFECB82"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PublicSubnet3/DefaultRoute"
+   }
+  },
+  "NetworkStagingVpcPrivateSubnet1Subnet3D7A6564": {
+   "Type": "AWS::EC2::Subnet",
+   "Properties": {
+    "AvailabilityZone": "dummy1a",
+    "CidrBlock": "10.0.3.0/24",
+    "MapPublicIpOnLaunch": false,
+    "Tags": [
+     {
+      "Key": "aws-cdk:subnet-name",
+      "Value": "Private"
+     },
+     {
+      "Key": "aws-cdk:subnet-type",
+      "Value": "Private"
+     },
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-08"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Staging"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PrivateSubnet1"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NetworkStagingVpc3D0A177D"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PrivateSubnet1/Subnet"
+   }
+  },
+  "NetworkStagingVpcPrivateSubnet1RouteTable39BA3684": {
+   "Type": "AWS::EC2::RouteTable",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-08"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Staging"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PrivateSubnet1"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NetworkStagingVpc3D0A177D"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PrivateSubnet1/RouteTable"
+   }
+  },
+  "NetworkStagingVpcPrivateSubnet1RouteTableAssociation81E87A0A": {
+   "Type": "AWS::EC2::SubnetRouteTableAssociation",
+   "Properties": {
+    "RouteTableId": {
+     "Ref": "NetworkStagingVpcPrivateSubnet1RouteTable39BA3684"
+    },
+    "SubnetId": {
+     "Ref": "NetworkStagingVpcPrivateSubnet1Subnet3D7A6564"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PrivateSubnet1/RouteTableAssociation"
+   }
+  },
+  "NetworkStagingVpcPrivateSubnet1DefaultRoute9E0C0816": {
+   "Type": "AWS::EC2::Route",
+   "Properties": {
+    "DestinationCidrBlock": "0.0.0.0/0",
+    "NatGatewayId": {
+     "Ref": "NetworkStagingVpcPublicSubnet1NATGateway5E5D62C4"
+    },
+    "RouteTableId": {
+     "Ref": "NetworkStagingVpcPrivateSubnet1RouteTable39BA3684"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PrivateSubnet1/DefaultRoute"
+   }
+  },
+  "NetworkStagingVpcPrivateSubnet2Subnet2ADC3E54": {
+   "Type": "AWS::EC2::Subnet",
+   "Properties": {
+    "AvailabilityZone": "dummy1b",
+    "CidrBlock": "10.0.4.0/24",
+    "MapPublicIpOnLaunch": false,
+    "Tags": [
+     {
+      "Key": "aws-cdk:subnet-name",
+      "Value": "Private"
+     },
+     {
+      "Key": "aws-cdk:subnet-type",
+      "Value": "Private"
+     },
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-08"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Staging"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PrivateSubnet2"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NetworkStagingVpc3D0A177D"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PrivateSubnet2/Subnet"
+   }
+  },
+  "NetworkStagingVpcPrivateSubnet2RouteTable1040C36E": {
+   "Type": "AWS::EC2::RouteTable",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-08"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Staging"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PrivateSubnet2"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NetworkStagingVpc3D0A177D"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PrivateSubnet2/RouteTable"
+   }
+  },
+  "NetworkStagingVpcPrivateSubnet2RouteTableAssociation62E88762": {
+   "Type": "AWS::EC2::SubnetRouteTableAssociation",
+   "Properties": {
+    "RouteTableId": {
+     "Ref": "NetworkStagingVpcPrivateSubnet2RouteTable1040C36E"
+    },
+    "SubnetId": {
+     "Ref": "NetworkStagingVpcPrivateSubnet2Subnet2ADC3E54"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PrivateSubnet2/RouteTableAssociation"
+   }
+  },
+  "NetworkStagingVpcPrivateSubnet2DefaultRouteC543B767": {
+   "Type": "AWS::EC2::Route",
+   "Properties": {
+    "DestinationCidrBlock": "0.0.0.0/0",
+    "NatGatewayId": {
+     "Ref": "NetworkStagingVpcPublicSubnet1NATGateway5E5D62C4"
+    },
+    "RouteTableId": {
+     "Ref": "NetworkStagingVpcPrivateSubnet2RouteTable1040C36E"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PrivateSubnet2/DefaultRoute"
+   }
+  },
+  "NetworkStagingVpcPrivateSubnet3SubnetDFFA4536": {
+   "Type": "AWS::EC2::Subnet",
+   "Properties": {
+    "AvailabilityZone": "dummy1c",
+    "CidrBlock": "10.0.5.0/24",
+    "MapPublicIpOnLaunch": false,
+    "Tags": [
+     {
+      "Key": "aws-cdk:subnet-name",
+      "Value": "Private"
+     },
+     {
+      "Key": "aws-cdk:subnet-type",
+      "Value": "Private"
+     },
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-08"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Staging"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PrivateSubnet3"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NetworkStagingVpc3D0A177D"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PrivateSubnet3/Subnet"
+   }
+  },
+  "NetworkStagingVpcPrivateSubnet3RouteTableB7C56FE3": {
+   "Type": "AWS::EC2::RouteTable",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-08"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Staging"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PrivateSubnet3"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NetworkStagingVpc3D0A177D"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PrivateSubnet3/RouteTable"
+   }
+  },
+  "NetworkStagingVpcPrivateSubnet3RouteTableAssociation24AD040C": {
+   "Type": "AWS::EC2::SubnetRouteTableAssociation",
+   "Properties": {
+    "RouteTableId": {
+     "Ref": "NetworkStagingVpcPrivateSubnet3RouteTableB7C56FE3"
+    },
+    "SubnetId": {
+     "Ref": "NetworkStagingVpcPrivateSubnet3SubnetDFFA4536"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PrivateSubnet3/RouteTableAssociation"
+   }
+  },
+  "NetworkStagingVpcPrivateSubnet3DefaultRoute665B639E": {
+   "Type": "AWS::EC2::Route",
+   "Properties": {
+    "DestinationCidrBlock": "0.0.0.0/0",
+    "NatGatewayId": {
+     "Ref": "NetworkStagingVpcPublicSubnet1NATGateway5E5D62C4"
+    },
+    "RouteTableId": {
+     "Ref": "NetworkStagingVpcPrivateSubnet3RouteTableB7C56FE3"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/PrivateSubnet3/DefaultRoute"
+   }
+  },
+  "NetworkStagingVpcIsolatedSubnet1Subnet21D966E6": {
+   "Type": "AWS::EC2::Subnet",
+   "Properties": {
+    "AvailabilityZone": "dummy1a",
+    "CidrBlock": "10.0.6.0/24",
+    "MapPublicIpOnLaunch": false,
+    "Tags": [
+     {
+      "Key": "aws-cdk:subnet-name",
+      "Value": "Isolated"
+     },
+     {
+      "Key": "aws-cdk:subnet-type",
+      "Value": "Isolated"
+     },
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-08"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Staging"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/IsolatedSubnet1"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NetworkStagingVpc3D0A177D"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/IsolatedSubnet1/Subnet"
+   }
+  },
+  "NetworkStagingVpcIsolatedSubnet1RouteTable4EB99065": {
+   "Type": "AWS::EC2::RouteTable",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-08"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Staging"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/IsolatedSubnet1"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NetworkStagingVpc3D0A177D"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/IsolatedSubnet1/RouteTable"
+   }
+  },
+  "NetworkStagingVpcIsolatedSubnet1RouteTableAssociationA5FBB1B7": {
+   "Type": "AWS::EC2::SubnetRouteTableAssociation",
+   "Properties": {
+    "RouteTableId": {
+     "Ref": "NetworkStagingVpcIsolatedSubnet1RouteTable4EB99065"
+    },
+    "SubnetId": {
+     "Ref": "NetworkStagingVpcIsolatedSubnet1Subnet21D966E6"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/IsolatedSubnet1/RouteTableAssociation"
+   }
+  },
+  "NetworkStagingVpcIsolatedSubnet2SubnetC5F2B685": {
+   "Type": "AWS::EC2::Subnet",
+   "Properties": {
+    "AvailabilityZone": "dummy1b",
+    "CidrBlock": "10.0.7.0/24",
+    "MapPublicIpOnLaunch": false,
+    "Tags": [
+     {
+      "Key": "aws-cdk:subnet-name",
+      "Value": "Isolated"
+     },
+     {
+      "Key": "aws-cdk:subnet-type",
+      "Value": "Isolated"
+     },
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-08"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Staging"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/IsolatedSubnet2"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NetworkStagingVpc3D0A177D"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/IsolatedSubnet2/Subnet"
+   }
+  },
+  "NetworkStagingVpcIsolatedSubnet2RouteTableBF884A3B": {
+   "Type": "AWS::EC2::RouteTable",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-08"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Staging"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/IsolatedSubnet2"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NetworkStagingVpc3D0A177D"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/IsolatedSubnet2/RouteTable"
+   }
+  },
+  "NetworkStagingVpcIsolatedSubnet2RouteTableAssociation3075CEF9": {
+   "Type": "AWS::EC2::SubnetRouteTableAssociation",
+   "Properties": {
+    "RouteTableId": {
+     "Ref": "NetworkStagingVpcIsolatedSubnet2RouteTableBF884A3B"
+    },
+    "SubnetId": {
+     "Ref": "NetworkStagingVpcIsolatedSubnet2SubnetC5F2B685"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/IsolatedSubnet2/RouteTableAssociation"
+   }
+  },
+  "NetworkStagingVpcIsolatedSubnet3Subnet65B39F37": {
+   "Type": "AWS::EC2::Subnet",
+   "Properties": {
+    "AvailabilityZone": "dummy1c",
+    "CidrBlock": "10.0.8.0/24",
+    "MapPublicIpOnLaunch": false,
+    "Tags": [
+     {
+      "Key": "aws-cdk:subnet-name",
+      "Value": "Isolated"
+     },
+     {
+      "Key": "aws-cdk:subnet-type",
+      "Value": "Isolated"
+     },
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-08"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Staging"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/IsolatedSubnet3"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NetworkStagingVpc3D0A177D"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/IsolatedSubnet3/Subnet"
+   }
+  },
+  "NetworkStagingVpcIsolatedSubnet3RouteTableD723E261": {
+   "Type": "AWS::EC2::RouteTable",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-08"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Staging"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/IsolatedSubnet3"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NetworkStagingVpc3D0A177D"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/IsolatedSubnet3/RouteTable"
+   }
+  },
+  "NetworkStagingVpcIsolatedSubnet3RouteTableAssociationF89FD715": {
+   "Type": "AWS::EC2::SubnetRouteTableAssociation",
+   "Properties": {
+    "RouteTableId": {
+     "Ref": "NetworkStagingVpcIsolatedSubnet3RouteTableD723E261"
+    },
+    "SubnetId": {
+     "Ref": "NetworkStagingVpcIsolatedSubnet3Subnet65B39F37"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/IsolatedSubnet3/RouteTableAssociation"
+   }
+  },
+  "NetworkStagingVpcIGW98BA3B20": {
+   "Type": "AWS::EC2::InternetGateway",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-08"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Staging"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/IGW"
+   }
+  },
+  "NetworkStagingVpcVPCGW6AFECB82": {
+   "Type": "AWS::EC2::VPCGatewayAttachment",
+   "Properties": {
+    "InternetGatewayId": {
+     "Ref": "NetworkStagingVpcIGW98BA3B20"
+    },
+    "VpcId": {
+     "Ref": "NetworkStagingVpc3D0A177D"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/VPCGW"
+   }
+  },
+  "NetworkStagingVpcStagingFlowLogE3F41182": {
+   "Type": "AWS::EC2::FlowLog",
+   "Properties": {
+    "DeliverLogsPermissionArn": {
+     "Fn::GetAtt": [
+      "NetworkStagingFlowLogRoleBE00BD0A",
+      "Arn"
+     ]
+    },
+    "LogDestinationType": "cloud-watch-logs",
+    "LogGroupName": {
+     "Ref": "NetworkStagingFlowLogGroup77C31BA9"
+    },
+    "ResourceId": {
+     "Ref": "NetworkStagingVpc3D0A177D"
+    },
+    "ResourceType": "VPC",
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-08"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Staging"
+     },
+     {
+      "Key": "Name",
+      "Value": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/StagingFlowLog"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ],
+    "TrafficType": "ALL"
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingVpc/StagingFlowLog/FlowLog"
+   }
+  },
+  "NetworkStagingFlowLogRoleBE00BD0A": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "vpc-flow-logs.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-08"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Staging"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingFlowLogRole/Resource"
+   }
+  },
+  "NetworkStagingFlowLogRoleDefaultPolicyA445D68E": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "logs:CreateLogStream",
+        "logs:DescribeLogStreams",
+        "logs:PutLogEvents"
+       ],
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::GetAtt": [
+         "NetworkStagingFlowLogGroup77C31BA9",
+         "Arn"
+        ]
+       }
+      },
+      {
+       "Action": "iam:PassRole",
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::GetAtt": [
+         "NetworkStagingFlowLogRoleBE00BD0A",
+         "Arn"
+        ]
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "NetworkStagingFlowLogRoleDefaultPolicyA445D68E",
+    "Roles": [
+     {
+      "Ref": "NetworkStagingFlowLogRoleBE00BD0A"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingFlowLogRole/DefaultPolicy/Resource"
+   }
+  },
+  "NetworkStagingFlowLogGroup77C31BA9": {
+   "Type": "AWS::Logs::LogGroup",
+   "Properties": {
+    "RetentionInDays": 7,
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-08"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Staging"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ]
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingFlowLogGroup/Resource"
+   }
+  },
+  "NetworkStagingApiSecurityGroup0D3A90D0": {
+   "Type": "AWS::EC2::SecurityGroup",
+   "Properties": {
+    "GroupDescription": "Security Group for API services",
+    "SecurityGroupEgress": [
+     {
+      "CidrIp": "0.0.0.0/0",
+      "Description": "Allow HTTPS outbound traffic",
+      "FromPort": 443,
+      "IpProtocol": "tcp",
+      "ToPort": 443
+     }
+    ],
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-08"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Staging"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NetworkStagingVpc3D0A177D"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingApiSecurityGroup/Resource"
+   }
+  },
+  "NetworkStagingDbSecurityGroupD97A561E": {
+   "Type": "AWS::EC2::SecurityGroup",
+   "Properties": {
+    "GroupDescription": "Security group for database access",
+    "SecurityGroupEgress": [
+     {
+      "CidrIp": "255.255.255.255/32",
+      "Description": "Disallow all traffic",
+      "FromPort": 252,
+      "IpProtocol": "icmp",
+      "ToPort": 86
+     }
+    ],
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-08"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Staging"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Network"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NetworkStagingVpc3D0A177D"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingDbSecurityGroup/Resource"
+   }
+  },
+  "NetworkStagingDbSecurityGroupfromMyAppPipelineStagingMyAppStaginguswest2NetworkStagingApiSecurityGroup22B799B43306D78B1F88": {
+   "Type": "AWS::EC2::SecurityGroupIngress",
+   "Properties": {
+    "Description": "Allow MySQL access from API",
+    "FromPort": 3306,
+    "GroupId": {
+     "Fn::GetAtt": [
+      "NetworkStagingDbSecurityGroupD97A561E",
+      "GroupId"
+     ]
+    },
+    "IpProtocol": "tcp",
+    "SourceSecurityGroupId": {
+     "Fn::GetAtt": [
+      "NetworkStagingApiSecurityGroup0D3A90D0",
+      "GroupId"
+     ]
+    },
+    "ToPort": 3306
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Network/StagingDbSecurityGroup/from MyAppPipelineStagingMyAppStaginguswest2NetworkStagingApiSecurityGroup22B799B4:3306"
+   }
+  },
+  "SecurityStagingTaskExecutionRole26712782": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "ecs-tasks.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy"
+       ]
+      ]
+     }
+    ],
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-08"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Staging"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Security"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Security/StagingTaskExecutionRole/Resource"
+   }
+  },
+  "SecurityStagingTaskExecutionRoleDefaultPolicyE3DA90A3": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+       ],
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::GetAtt": [
+         "ComputeStagingServiceTaskDefwebLogGroupE2678CF5",
+         "Arn"
+        ]
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "SecurityStagingTaskExecutionRoleDefaultPolicyE3DA90A3",
+    "Roles": [
+     {
+      "Ref": "SecurityStagingTaskExecutionRole26712782"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Security/StagingTaskExecutionRole/DefaultPolicy/Resource"
+   }
+  },
+  "SecurityStagingTaskRoleD27A2CAD": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "ecs-tasks.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-08"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Staging"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Security"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Security/StagingTaskRole/Resource"
+   }
+  },
+  "SecurityStagingTaskRoleDefaultPolicyD86683CA": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "s3:GetObject",
+        "s3:ListBucket"
+       ],
+       "Effect": "Allow",
+       "Resource": "arn:aws:s3:::my-app-*"
+      },
+      {
+       "Action": [
+        "ssm:GetParameter",
+        "ssm:GetParameters"
+       ],
+       "Effect": "Allow",
+       "Resource": "arn:aws:ssm:us-west-2:*:parameter/myapp/Staging/*"
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "SecurityStagingTaskRoleDefaultPolicyD86683CA",
+    "Roles": [
+     {
+      "Ref": "SecurityStagingTaskRoleD27A2CAD"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Security/StagingTaskRole/DefaultPolicy/Resource"
+   }
+  },
+  "ComputeStagingClusterB264C5C3": {
+   "Type": "AWS::ECS::Cluster",
+   "Properties": {
+    "ClusterName": "myapp-staging-us-west-2",
+    "ClusterSettings": [
+     {
+      "Name": "containerInsights",
+      "Value": "enabled"
+     }
+    ],
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-08"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Staging"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Compute"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Compute/StagingCluster/Resource"
+   }
+  },
+  "ComputeStagingServiceLB05721D8D": {
+   "Type": "AWS::ElasticLoadBalancingV2::LoadBalancer",
+   "Properties": {
+    "LoadBalancerAttributes": [
+     {
+      "Key": "deletion_protection.enabled",
+      "Value": "false"
+     }
+    ],
+    "Name": "myapp-staging-us-west-2",
+    "Scheme": "internet-facing",
+    "SecurityGroups": [
+     {
+      "Fn::GetAtt": [
+       "ComputeStagingServiceLBSecurityGroup6959B9BF",
+       "GroupId"
+      ]
+     }
+    ],
+    "Subnets": [
+     {
+      "Ref": "NetworkStagingVpcPublicSubnet1Subnet1695C13B"
+     },
+     {
+      "Ref": "NetworkStagingVpcPublicSubnet2Subnet1DE6EC41"
+     },
+     {
+      "Ref": "NetworkStagingVpcPublicSubnet3SubnetC2DB3694"
+     }
+    ],
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-08"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Staging"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Compute"
+     }
+    ],
+    "Type": "application"
+   },
+   "DependsOn": [
+    "NetworkStagingVpcPublicSubnet1DefaultRoute2BB8E675",
+    "NetworkStagingVpcPublicSubnet1RouteTableAssociationEBB89F27",
+    "NetworkStagingVpcPublicSubnet2DefaultRouteD3696066",
+    "NetworkStagingVpcPublicSubnet2RouteTableAssociation94D9C5C8",
+    "NetworkStagingVpcPublicSubnet3DefaultRoute7F29FBF7",
+    "NetworkStagingVpcPublicSubnet3RouteTableAssociation8CF44ADD"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Compute/StagingService/LB/Resource"
+   }
+  },
+  "ComputeStagingServiceLBSecurityGroup6959B9BF": {
+   "Type": "AWS::EC2::SecurityGroup",
+   "Properties": {
+    "GroupDescription": "Automatically created Security Group for ELB MyAppPipelineStagingMyAppStaginguswest2ComputeStagingServiceLBB245890F",
+    "SecurityGroupIngress": [
+     {
+      "CidrIp": "0.0.0.0/0",
+      "Description": "Allow from anyone on port 80",
+      "FromPort": 80,
+      "IpProtocol": "tcp",
+      "ToPort": 80
+     }
+    ],
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-08"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Staging"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Compute"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NetworkStagingVpc3D0A177D"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Compute/StagingService/LB/SecurityGroup/Resource"
+   }
+  },
+  "ComputeStagingServiceLBSecurityGrouptoMyAppPipelineStagingMyAppStaginguswest2ComputeStagingServiceSecurityGroup0E097DC780FBC31686": {
+   "Type": "AWS::EC2::SecurityGroupEgress",
+   "Properties": {
+    "Description": "Load balancer to target",
+    "DestinationSecurityGroupId": {
+     "Fn::GetAtt": [
+      "ComputeStagingServiceSecurityGroup8AA0F40A",
+      "GroupId"
+     ]
+    },
+    "FromPort": 80,
+    "GroupId": {
+     "Fn::GetAtt": [
+      "ComputeStagingServiceLBSecurityGroup6959B9BF",
+      "GroupId"
+     ]
+    },
+    "IpProtocol": "tcp",
+    "ToPort": 80
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Compute/StagingService/LB/SecurityGroup/to MyAppPipelineStagingMyAppStaginguswest2ComputeStagingServiceSecurityGroup0E097DC7:80"
+   }
+  },
+  "ComputeStagingServiceLBPublicListenerE3D21B44": {
+   "Type": "AWS::ElasticLoadBalancingV2::Listener",
+   "Properties": {
+    "DefaultActions": [
+     {
+      "TargetGroupArn": {
+       "Ref": "ComputeStagingServiceLBPublicListenerECSGroupB4EA5B1B"
+      },
+      "Type": "forward"
+     }
+    ],
+    "LoadBalancerArn": {
+     "Ref": "ComputeStagingServiceLB05721D8D"
+    },
+    "Port": 80,
+    "Protocol": "HTTP"
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Compute/StagingService/LB/PublicListener/Resource"
+   }
+  },
+  "ComputeStagingServiceLBPublicListenerECSGroupB4EA5B1B": {
+   "Type": "AWS::ElasticLoadBalancingV2::TargetGroup",
+   "Properties": {
+    "HealthCheckIntervalSeconds": 30,
+    "HealthCheckPath": "/health",
+    "HealthCheckTimeoutSeconds": 5,
+    "Matcher": {
+     "HttpCode": "200,302"
+    },
+    "Port": 80,
+    "Protocol": "HTTP",
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-08"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Staging"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Compute"
+     }
+    ],
+    "TargetGroupAttributes": [
+     {
+      "Key": "stickiness.enabled",
+      "Value": "false"
+     }
+    ],
+    "TargetType": "ip",
+    "VpcId": {
+     "Ref": "NetworkStagingVpc3D0A177D"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Compute/StagingService/LB/PublicListener/ECSGroup/Resource"
+   }
+  },
+  "ComputeStagingServiceTaskDef28821877": {
+   "Type": "AWS::ECS::TaskDefinition",
+   "Properties": {
+    "ContainerDefinitions": [
+     {
+      "Environment": [
+       {
+        "Name": "ENVIRONMENT",
+        "Value": "Staging"
+       },
+       {
+        "Name": "REGION",
+        "Value": "us-west-2"
+       }
+      ],
+      "Essential": true,
+      "Image": "dummy-value-for-/myapp/ecr-repository-uri:dummy-value-for-/myapp/image-tag",
+      "LogConfiguration": {
+       "LogDriver": "awslogs",
+       "Options": {
+        "awslogs-group": {
+         "Ref": "ComputeStagingServiceTaskDefwebLogGroupE2678CF5"
+        },
+        "awslogs-stream-prefix": "staging",
+        "awslogs-region": "us-west-2"
+       }
+      },
+      "Name": "web",
+      "PortMappings": [
+       {
+        "ContainerPort": 80,
+        "Protocol": "tcp"
+       }
+      ]
+     }
+    ],
+    "Cpu": "512",
+    "ExecutionRoleArn": {
+     "Fn::GetAtt": [
+      "SecurityStagingTaskExecutionRole26712782",
+      "Arn"
+     ]
+    },
+    "Family": "MyAppPipelineStagingMyAppStaginguswest2ComputeStagingServiceTaskDef423E4E22",
+    "Memory": "1024",
+    "NetworkMode": "awsvpc",
+    "RequiresCompatibilities": [
+     "FARGATE"
+    ],
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-08"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Staging"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Compute"
+     }
+    ],
+    "TaskRoleArn": {
+     "Fn::GetAtt": [
+      "SecurityStagingTaskRoleD27A2CAD",
+      "Arn"
+     ]
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Compute/StagingService/TaskDef/Resource"
+   }
+  },
+  "ComputeStagingServiceTaskDefwebLogGroupE2678CF5": {
+   "Type": "AWS::Logs::LogGroup",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-08"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Staging"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Compute"
+     }
+    ]
+   },
+   "UpdateReplacePolicy": "Retain",
+   "DeletionPolicy": "Retain",
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Compute/StagingService/TaskDef/web/LogGroup/Resource"
+   }
+  },
+  "ComputeStagingServiceBF33237D": {
+   "Type": "AWS::ECS::Service",
+   "Properties": {
+    "Cluster": {
+     "Ref": "ComputeStagingClusterB264C5C3"
+    },
+    "DeploymentConfiguration": {
+     "Alarms": {
+      "AlarmNames": [],
+      "Enable": false,
+      "Rollback": false
+     },
+     "DeploymentCircuitBreaker": {
+      "Enable": true,
+      "Rollback": true
+     },
+     "MaximumPercent": 200,
+     "MinimumHealthyPercent": 50
+    },
+    "DeploymentController": {
+     "Type": "ECS"
+    },
+    "DesiredCount": 2,
+    "EnableECSManagedTags": false,
+    "HealthCheckGracePeriodSeconds": 60,
+    "LaunchType": "FARGATE",
+    "LoadBalancers": [
+     {
+      "ContainerName": "web",
+      "ContainerPort": 80,
+      "TargetGroupArn": {
+       "Ref": "ComputeStagingServiceLBPublicListenerECSGroupB4EA5B1B"
+      }
+     }
+    ],
+    "NetworkConfiguration": {
+     "AwsvpcConfiguration": {
+      "AssignPublicIp": "DISABLED",
+      "SecurityGroups": [
+       {
+        "Fn::GetAtt": [
+         "ComputeStagingServiceSecurityGroup8AA0F40A",
+         "GroupId"
+        ]
+       }
+      ],
+      "Subnets": [
+       {
+        "Ref": "NetworkStagingVpcPrivateSubnet1Subnet3D7A6564"
+       },
+       {
+        "Ref": "NetworkStagingVpcPrivateSubnet2Subnet2ADC3E54"
+       },
+       {
+        "Ref": "NetworkStagingVpcPrivateSubnet3SubnetDFFA4536"
+       }
+      ]
+     }
+    },
+    "ServiceName": "myapp-staging-us-west-2",
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-08"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Staging"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Compute"
+     }
+    ],
+    "TaskDefinition": {
+     "Ref": "ComputeStagingServiceTaskDef28821877"
+    }
+   },
+   "DependsOn": [
+    "ComputeStagingServiceLBPublicListenerECSGroupB4EA5B1B",
+    "ComputeStagingServiceLBPublicListenerE3D21B44",
+    "SecurityStagingTaskRoleDefaultPolicyD86683CA",
+    "SecurityStagingTaskRoleD27A2CAD"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Compute/StagingService/Service/Service"
+   }
+  },
+  "ComputeStagingServiceSecurityGroup8AA0F40A": {
+   "Type": "AWS::EC2::SecurityGroup",
+   "Properties": {
+    "GroupDescription": "MyAppPipeline/Staging/MyAppStaginguswest2/Compute/StagingService/Service/SecurityGroup",
+    "SecurityGroupEgress": [
+     {
+      "CidrIp": "0.0.0.0/0",
+      "Description": "Allow all outbound traffic by default",
+      "IpProtocol": "-1"
+     }
+    ],
+    "SecurityGroupIngress": [
+     {
+      "CidrIp": "0.0.0.0/0",
+      "Description": "from 0.0.0.0/0:80",
+      "FromPort": 80,
+      "IpProtocol": "tcp",
+      "ToPort": 80
+     }
+    ],
+    "Tags": [
+     {
+      "Key": "DeploymentTime",
+      "Value": "2025-04-03-04-03-08"
+     },
+     {
+      "Key": "Environment",
+      "Value": "Staging"
+     },
+     {
+      "Key": "Project",
+      "Value": "MyApp"
+     },
+     {
+      "Key": "Region",
+      "Value": "us-west-2"
+     },
+     {
+      "Key": "ResourceType",
+      "Value": "Compute"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NetworkStagingVpc3D0A177D"
+    }
+   },
+   "DependsOn": [
+    "SecurityStagingTaskRoleDefaultPolicyD86683CA",
+    "SecurityStagingTaskRoleD27A2CAD"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Compute/StagingService/Service/SecurityGroup/Resource"
+   }
+  },
+  "ComputeStagingServiceSecurityGroupfromMyAppPipelineStagingMyAppStaginguswest2ComputeStagingServiceLBSecurityGroup36236B4C80813C3698": {
+   "Type": "AWS::EC2::SecurityGroupIngress",
+   "Properties": {
+    "Description": "Load balancer to target",
+    "FromPort": 80,
+    "GroupId": {
+     "Fn::GetAtt": [
+      "ComputeStagingServiceSecurityGroup8AA0F40A",
+      "GroupId"
+     ]
+    },
+    "IpProtocol": "tcp",
+    "SourceSecurityGroupId": {
+     "Fn::GetAtt": [
+      "ComputeStagingServiceLBSecurityGroup6959B9BF",
+      "GroupId"
+     ]
+    },
+    "ToPort": 80
+   },
+   "DependsOn": [
+    "SecurityStagingTaskRoleDefaultPolicyD86683CA",
+    "SecurityStagingTaskRoleD27A2CAD"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Compute/StagingService/Service/SecurityGroup/from MyAppPipelineStagingMyAppStaginguswest2ComputeStagingServiceLBSecurityGroup36236B4C:80"
+   }
+  },
+  "ComputeStagingServiceTaskCountTarget327FA14E": {
+   "Type": "AWS::ApplicationAutoScaling::ScalableTarget",
+   "Properties": {
+    "MaxCapacity": 4,
+    "MinCapacity": 2,
+    "ResourceId": {
+     "Fn::Join": [
+      "",
+      [
+       "service/",
+       {
+        "Ref": "ComputeStagingClusterB264C5C3"
+       },
+       "/",
+       {
+        "Fn::GetAtt": [
+         "ComputeStagingServiceBF33237D",
+         "Name"
+        ]
+       }
+      ]
+     ]
+    },
+    "RoleARN": "arn:aws:iam::316607856306:role/aws-service-role/ecs.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_ECSService",
+    "ScalableDimension": "ecs:service:DesiredCount",
+    "ServiceNamespace": "ecs"
+   },
+   "DependsOn": [
+    "SecurityStagingTaskRoleDefaultPolicyD86683CA",
+    "SecurityStagingTaskRoleD27A2CAD"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Compute/StagingService/Service/TaskCount/Target/Resource"
+   }
+  },
+  "ComputeStagingServiceTaskCountTargetStagingCpuScaling1D4B0C7C": {
+   "Type": "AWS::ApplicationAutoScaling::ScalingPolicy",
+   "Properties": {
+    "PolicyName": "MyAppPipelineStagingMyAppStaginguswest2ComputeStagingServiceTaskCountTargetStagingCpuScaling94EAB447",
+    "PolicyType": "TargetTrackingScaling",
+    "ScalingTargetId": {
+     "Ref": "ComputeStagingServiceTaskCountTarget327FA14E"
+    },
+    "TargetTrackingScalingPolicyConfiguration": {
+     "PredefinedMetricSpecification": {
+      "PredefinedMetricType": "ECSServiceAverageCPUUtilization"
+     },
+     "ScaleInCooldown": 60,
+     "ScaleOutCooldown": 60,
+     "TargetValue": 70
+    }
+   },
+   "DependsOn": [
+    "SecurityStagingTaskRoleDefaultPolicyD86683CA",
+    "SecurityStagingTaskRoleD27A2CAD"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Compute/StagingService/Service/TaskCount/Target/StagingCpuScaling/Resource"
+   }
+  },
+  "ComputeStagingServiceTaskCountTargetStagingMemoryScalingA528456C": {
+   "Type": "AWS::ApplicationAutoScaling::ScalingPolicy",
+   "Properties": {
+    "PolicyName": "MyAppPipelineStagingMyAppStaginguswest2ComputeStagingServiceTaskCountTargetStagingMemoryScaling1C448723",
+    "PolicyType": "TargetTrackingScaling",
+    "ScalingTargetId": {
+     "Ref": "ComputeStagingServiceTaskCountTarget327FA14E"
+    },
+    "TargetTrackingScalingPolicyConfiguration": {
+     "PredefinedMetricSpecification": {
+      "PredefinedMetricType": "ECSServiceAverageMemoryUtilization"
+     },
+     "ScaleInCooldown": 60,
+     "ScaleOutCooldown": 60,
+     "TargetValue": 70
+    }
+   },
+   "DependsOn": [
+    "SecurityStagingTaskRoleDefaultPolicyD86683CA",
+    "SecurityStagingTaskRoleD27A2CAD"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Compute/StagingService/Service/TaskCount/Target/StagingMemoryScaling/Resource"
+   }
+  },
+  "Staginguswest2LoadBalancerDnsBAF9AAD3": {
+   "Type": "AWS::SSM::Parameter",
+   "Properties": {
+    "Description": "DNS name for the load balancer in Staging environment, us-west-2 region",
+    "Name": "/myapp/Staging/us-west-2/loadbalancer-dns",
+    "Tags": {
+     "DeploymentTime": "2025-04-03-04-03-08",
+     "Environment": "Staging",
+     "Project": "MyApp",
+     "Region": "us-west-2"
+    },
+    "Type": "String",
+    "Value": {
+     "Fn::GetAtt": [
+      "ComputeStagingServiceLB05721D8D",
+      "DNSName"
+     ]
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/Stagingus-west-2LoadBalancerDns/Resource"
+   }
+  },
+  "CDKMetadata": {
+   "Type": "AWS::CDK::Metadata",
+   "Properties": {
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/31Sy27jMAz8lt4V5VGg3csesm5aBAjSIA5yLWiF9XKjSIZEJSgM//tCfrddLHzgcDiSyKEXcv7jUc7u4OYn6nSeaMpkmTKos4CbfytRLWR5LJRI3s1xl4hdyDSpNGQGOXID2tvAeIBM48AP3NJ7qwiYrOnFEazWuxi2wC/AeIMPsXN0Bcbh4rVhdAZ7QdNJmy2ZQf2+oGHxrO1tY/NY72CKKjjijxdnQ1G39V9ibXKH3n/jVzVdCYKLLPe2mbCOO6tJ1S01qBLa5l6WG5v3T3S4Eqi8LBMdPKOLlQ4+g8shGuXPT/hOhjqbvjLWMJBBN+Lasym6K6nG+hamCnS0Pl6S2GC4buCtAI5+erksCk2qXsnGwukXaDAKT18uRA2eSWkLp6xWkMmvC1n++7RrBh7lYx15RtNqOjyqH8DlyL1vo7QSMMggsPUKNJlclsOQUVyP/5lpwsGBOpPJ0+bcsLZPRCW8v8Tf30UKHFyw3VSfVJXYo7fBNV6/Bi4CV+LJ8hZ5+iBn8v5hKrerQ2IdLotickTnyZqf13s5n87lLH53fzzRxAXDdEG5b+Jfxj3SGYoDAAA="
+   },
+   "Metadata": {
+    "aws:cdk:path": "MyAppPipeline/Staging/MyAppStaginguswest2/CDKMetadata/Default"
+   }
+  }
+ },
+ "Outputs": {
+  "ComputeStagingServiceLoadBalancerDNS96B34E29": {
+   "Value": {
+    "Fn::GetAtt": [
+     "ComputeStagingServiceLB05721D8D",
+     "DNSName"
+    ]
+   }
+  },
+  "ComputeStagingServiceServiceURLCA8BA06D": {
+   "Value": {
+    "Fn::Join": [
+     "",
+     [
+      "http://",
+      {
+       "Fn::GetAtt": [
+        "ComputeStagingServiceLB05721D8D",
+        "DNSName"
+       ]
+      }
+     ]
+    ]
+   }
+  },
+  "StagingEndpoint": {
+   "Description": "Endpoint URL for the staging environment",
+   "Value": {
+    "Fn::GetAtt": [
+     "ComputeStagingServiceLB05721D8D",
+     "DNSName"
+    ]
+   },
+   "Export": {
+    "Name": "StagingEndpoint-us-west-2"
+   }
+  }
+ },
+ "Parameters": {
+  "BootstrapVersion": {
+   "Type": "AWS::SSM::Parameter::Value<String>",
+   "Default": "/cdk-bootstrap/hnb659fds/version",
+   "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]"
+  }
+ },
+ "Rules": {
+  "CheckBootstrapVersion": {
+   "Assertions": [
+    {
+     "Assert": {
+      "Fn::Not": [
+       {
+        "Fn::Contains": [
+         [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+         ],
+         {
+          "Ref": "BootstrapVersion"
+         }
+        ]
+       }
+      ]
+     },
+     "AssertDescription": "CDK bootstrap stack version 6 required. Please run 'cdk bootstrap' with a recent version of the CDK CLI."
+    }
+   ]
+  }
+ }
+}

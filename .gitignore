@@ -1,0 +1,80 @@
+# Ignore Visual Studio-specific files
+.vscode/
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Ignore build outputs
+bin/
+obj/
+out/
+*.dll
+*.exe
+*.pdb
+*.appx
+*.appxbundle
+*.msix
+*.msixbundle
+*.nuspec
+*.nupkg
+*.snupkg
+*.log
+
+# Ignore NuGet packages
+*.nupkg
+.nuget/
+packages/
+project.lock.json
+project.assets.json
+
+# Ignore Rider IDE files
+.idea/
+*.sln.iml
+
+# Ignore JetBrains ReSharper files
+_ReSharper*/
+**/*.DotSettings.user
+
+# Ignore Code Coverage results
+*.coverage
+*.coveragexml
+TestResults/
+coverage/
+
+# Ignore Entity Framework migrations
+Migrations/
+
+# Ignore application secrets
+secrets.json
+
+# Ignore Publish artifacts
+publish/
+*.publishsettings
+*.deploy.cmd
+*.deploy-readme.txt
+
+# Ignore temporary files
+*.tmp
+*.cache
+*.bak
+*.swp
+*~ 
+
+# Ignore .NET Core & ASP.NET Core runtime files
+*.deps.json
+*.runtimeconfig.json
+.python-version
+.vscode/
+# Ignore Docker-related files
+**/docker-compose.override.yml
+**/docker-compose.yml
+
+# Ignore Debug/Release configurations
+Debug/
+Release/
+
+# Ignore local development settings
+appsettings.Local.json
+appsettings.Development.json
